@@ -35,7 +35,7 @@
   const code = (params.get("code") || "").split("#")[0];
   const card = document.getElementById("card");
 
-  document.getElementById("go").href = "https://www.instagram.com/oauth/authorize?force_reauth=true&client_id=" + APP_ID +
+  document.getElementById("go").href = "https://www.instagram.com/oauth/authorize?client_id=" + APP_ID +
     "&redirect_uri=" + encodeURIComponent(REDIRECT) + "&response_type=code&scope=" + encodeURIComponent(SCOPES);
 
   if (params.get("error")) {
