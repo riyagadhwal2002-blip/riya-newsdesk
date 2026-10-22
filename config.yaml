@@ -19,6 +19,10 @@ publishing:
   post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
   instagram_api_version: "v26.0"
 
+instagram:
+  app_id: "1592311015512899"      # Instagram app ID of "Riya Newsdesk" (public, not a secret)
+  redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html"
+
 discovery:
   freshness_minutes: 50           # a story counts as new only if we saw it within 50 min of its publish time
                                   # (runs every 30 min on GitHub; set to 5 if you run it every minute on a server)
