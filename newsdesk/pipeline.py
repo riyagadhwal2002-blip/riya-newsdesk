@@ -330,6 +330,9 @@ class Pipeline:
     def full_caption(self, post: dict, items) -> str:
         outlets = list(dict.fromkeys(i["source"] for i in items if i["tier"] in ("primary", "trusted")))
         caption = re.sub(r"(?:\s*#[\w]+)+\s*$", "", post["caption"].strip())  # hashtags are added once, below
+        tags = self.mentions(" ".join([post.get("news", ""), post.get("take", ""), caption]))
+        if tags:
+            caption += "\n\n" + " ".join(tags)
         if outlets:
             caption += f"\n\nSource: {', '.join(outlets[:3])}"
         caption += "\n\n" + " ".join(post.get("hashtags", [])[:8])
@@ -487,6 +490,18 @@ class Pipeline:
         story = {"articles": [{"outlet": "Wikipedia", "url": url, "title": fact["wiki"]}], "source_text": fact["fact"]}
         outcome = self.produce_and_publish(cluster, items, pkg, story, 100, "checked on Wikipedia", set(), now)
         return {"facts": 1, "posted" if outcome == "published" else "previews": int(outcome in ("published", "dry_run"))}
+
+    def mentions(self, text: str) -> list[str]:
+        """@handles for brands named in the post — only from the checked list in config, never guessed."""
+        cfg = self.s.section("mentions")
+        found: list[str] = []
+        for name, handle in (cfg.get("handles") or {}).items():
+            flags = 0 if name[:1].isupper() else re.IGNORECASE   # 'Apple' the brand, not 'apple' the fruit
+            if re.search(r"(?<![\w@])" + re.escape(name) + r"(?:'s|’s)?(?!\w)", text, flags):
+                tag = "@" + handle
+                if tag not in found:
+                    found.append(tag)
+        return found[: int(cfg.get("max_per_post", 3))]
 
     def next_accent(self) -> str:
         """Feed colour pattern (e.g. yellow → purple → black → yellow…) based on how many posts went out."""
