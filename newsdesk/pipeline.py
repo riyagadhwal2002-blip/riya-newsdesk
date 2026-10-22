@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import cluster as clu
-from . import factcheck, hosting, scoring, tokens
+from . import factcheck, hosting, schedule, scoring, tokens
 from .db import DB, iso, parse_iso, utcnow
 from .feeds import fetch_all, fetch_article_text
 from .instagram import IGError, Instagram, TokenExpired
@@ -46,6 +46,18 @@ class Pipeline:
 
     def paused(self) -> bool:
         return (self.s.data_dir / "PAUSE").exists() or self.db.get("paused") == "1"
+
+    def windows(self) -> list[str] | None:
+        return self.pub.get("active_windows") or None
+
+    def tz(self) -> str:
+        return self.brand.get("timezone", "Asia/Kolkata")
+
+    def posting_open(self, now: datetime) -> bool:
+        return schedule.is_open(self.windows(), now, self.tz())
+
+    def story_start(self, first_published: datetime, now: datetime) -> datetime:
+        return schedule.effective_start(first_published, self.windows(), now, self.tz())
 
     def token_seed(self) -> str | None:
         """Secret used to encrypt the stored token: the token secret if set, else the app secret."""
@@ -166,17 +178,23 @@ class Pipeline:
         return [set(json.loads(p["tokens"])) for p in self.db.posts_since(since)]
 
     def expire(self, now: datetime) -> None:
+        if not self.posting_open(now):
+            return  # stories found during closed hours wait for the next opening
         window = timedelta(minutes=self.disc.get("corroboration_window_minutes", 60))
         for c in self.db.clusters_with_status("pending"):
-            if now - parse_iso(c["first_published_at"]) > window:
+            if now - self.story_start(parse_iso(c["first_published_at"]), now) > window:
                 items = self.db.cluster_items(c["id"])
                 pts, why = scoring.credibility(items, self.rank.get("allow_single_trusted", False))
-                self.db.update_cluster(c["id"], status="expired_unverified" if pts < 20 else "expired",
+                need = self.rank.get("required_credibility", 20)
+                self.db.update_cluster(c["id"], status="expired_unverified" if pts < need else "expired",
                                        reason=f"window passed; {why}")
 
     # ── candidates ──────────────────────────────────────────────────────────
     def process_candidates(self, now: datetime) -> dict:
         stats = {"processed": 0, "posted": 0, "previews": 0}
+        if not self.posting_open(now):
+            log.info("outside posting hours — stories are queued for the next window")
+            return stats
         ready = []
         for c in self.db.clusters_with_status("pending"):
             items = self.db.cluster_items(c["id"])
@@ -267,7 +285,7 @@ class Pipeline:
             self.db.update_cluster(cid, status="rejected", reason=f"AI editor: {reason}"[:300])
             return "rejected"
 
-        first_pub = min(parse_iso(i["published_at"]) for i in items)
+        first_pub = self.story_start(min(parse_iso(i["published_at"]) for i in items), now)
         score = scoring.total_score(scoring.recency_points(first_pub, now, self.rank.get("recency_full_minutes", 10)),
                                     cred, pkg.get("scores", {}))
         self.db.update_cluster(cid, score=score)
