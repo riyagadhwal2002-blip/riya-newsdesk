@@ -1,0 +1,26 @@
+[
+  {
+    "_note": "Illustrative example for the design demo only. Not a real news story.",
+    "sources": ["Adweek", "Marketing Dive"],
+    "post": {
+      "news": "A luxury fashion label just launched a \"minimalist\" ₹18,999 tote that looks exactly like the ₹30 shopping bag from your local kirana store.",
+      "take": "Somewhere in that boardroom someone said \"what if we made it unnecessarily expensive and called it innovation\" and everyone clapped."
+    }
+  },
+  {
+    "_note": "Illustrative example for the design demo only. Not a real news story.",
+    "sources": ["ET BrandEquity"],
+    "post": {
+      "news": "A snack brand's new campaign was pulled within hours after people online called it tone-deaf.",
+      "take": "The marketing team wanted brand awareness. Congratulations, the entire internet is now aware."
+    }
+  },
+  {
+    "_note": "Illustrative example for the design demo only. Not a real news story.",
+    "sources": ["TechCrunch", "The Verge"],
+    "post": {
+      "news": "A social app is testing a feature that lets you see who screenshotted your posts.",
+      "take": "Finally, a feature that turns every group chat into a crime documentary."
+    }
+  }
+]

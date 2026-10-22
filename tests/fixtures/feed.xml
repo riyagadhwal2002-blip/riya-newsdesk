@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Fixture feed</title>
+  <item>
+    <title>Brew Co rebrand: new logo swaps the cup for a crown</title>
+    <link>https://www.adweek.com/brand-marketing/brew-co-rebrand/?utm_source=rss&amp;utm_medium=feed</link>
+    <pubDate>Thu, 22 Oct 2026 13:27:00 GMT</pubDate>
+    <description>&lt;p&gt;Brew Co unveiled a new logo on Thursday.&lt;/p&gt;</description>
+  </item>
+  <item>
+    <title>Old story from this morning about ad budgets</title>
+    <link>https://www.adweek.com/old-story/</link>
+    <pubDate>Thu, 22 Oct 2026 05:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Item without a date must be ignored</title>
+    <link>https://www.adweek.com/no-date/</link>
+  </item>
+</channel>
+</rss>
