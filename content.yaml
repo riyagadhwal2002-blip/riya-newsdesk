@@ -1,0 +1,257 @@
+# Evergreen posts mixed in between news: Bollywood-song marketing explainers and hot takes.
+# Songs: TITLES ONLY (never lyrics). Hot takes: opinions about marketing/business habits,
+# never about a person, religion, gender, caste, region or politics.
+
+songs:
+  - id: abandoned-cart
+    news: "Marketing explained with Bollywood songs. Abandoned cart emails:"
+    take: "Abhi Na Jao Chhod Kar."
+    caption: "You add shoes to cart, close the app, and suddenly your inbox is begging you to come back. 🛒🎵 That's an abandoned cart email: brands remind you about things you almost bought. Which brand chases you the hardest? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Marketing101", "#EmailMarketing", "#Bollywood", "#Desi"]
+    first_comment: "Myntra singing this to me every Sunday night."
+
+  - id: retargeting
+    news: "Marketing explained with Bollywood songs. Retargeting ads:"
+    take: "Tujhe Dekha Toh Yeh Jaana Sanam. You looked once, now it follows you everywhere."
+    caption: "Looked at a lamp once. Now it's on Instagram, YouTube and every website you open. 💡 That's retargeting: ads that follow people who already showed interest. Creepy or smart? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Retargeting", "#DigitalMarketing", "#Bollywood", "#Marketing101"]
+    first_comment: "That one sofa has been following me since 2023."
+
+  - id: cancel-subscription
+    news: "Marketing explained with Bollywood songs. Trying to cancel a subscription:"
+    take: "Kabhi Alvida Naa Kehna."
+    caption: "Signing up takes one tap. Cancelling takes 6 screens, 2 offers and one guilt trip. 😩 Brands call it 'retention'. Users call it a trap. Which app was hardest to quit? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Subscriptions", "#UXDesign", "#Bollywood", "#Marketing101"]
+    first_comment: "'Are you sure? Here's 50% off.' Yes I'm sure. 'Here's 70%.'… hmm."
+
+  - id: brand-loyalty
+    news: "Marketing explained with Bollywood songs. Brand loyalty:"
+    take: "Tum Hi Ho. The person who only buys Amul butter, no matter what."
+    caption: "Brand loyalty is when people stick with one brand even when cheaper options exist. 🧈 It's the dream of every marketer. Which brand are you loyal to, no matter what? 👇"
+    hashtags: ["#MarketingWithBollywood", "#BrandLoyalty", "#Branding", "#Bollywood", "#Marketing101"]
+    first_comment: "My mom and Surf Excel. Unbreakable."
+
+  - id: flash-sale
+    news: "Marketing explained with Bollywood songs. 'Sale ends at midnight':"
+    take: "Kal Ho Naa Ho. (It's back tomorrow. It's always back tomorrow.)"
+    caption: "Urgency makes us buy faster. That's why sales 'end tonight'… and come back next week. ⏰ It's called scarcity marketing. Have you ever fallen for it? Be honest 👇"
+    hashtags: ["#MarketingWithBollywood", "#ScarcityMarketing", "#Sale", "#Bollywood", "#ConsumerPsychology"]
+    first_comment: "The 'last day of sale' has had more sequels than Fast & Furious."
+
+  - id: midnight-notifications
+    news: "Marketing explained with Bollywood songs. Food app notifications at 1 AM:"
+    take: "Raat Baaki, Baat Baaki."
+    caption: "Food apps know exactly when you're hungry and bored. 🍕🌙 Timing is a big part of marketing: the right message at the right moment. Which app tempts you the most at night? 👇"
+    hashtags: ["#MarketingWithBollywood", "#PushNotifications", "#FoodDelivery", "#Bollywood", "#Marketing101"]
+    first_comment: "'Hungry? We miss you' — sir it's 1 AM."
+
+  - id: going-viral
+    news: "Marketing explained with Bollywood songs. When a brand's ad goes viral:"
+    take: "Kar Gayi Chull."
+    caption: "A viral ad gets shared by people for free. That's the best kind of marketing: your audience does the promotion for you. 🚀 What's the last ad you actually shared? 👇"
+    hashtags: ["#MarketingWithBollywood", "#ViralMarketing", "#Advertising", "#Bollywood", "#Marketing101"]
+    first_comment: "Every marketer's dream and every marketer's 2 AM prayer."
+
+  - id: pricing
+    news: "Marketing explained with Bollywood songs. Pricing at ₹999 instead of ₹1,000:"
+    take: "Paisa Yeh Paisa. That one rupee is doing a lot of work."
+    caption: "₹999 feels cheaper than ₹1,000 even though it's just ₹1 less. 🧠 That's called charm pricing, and almost every brand uses it. Did you know this trick? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Pricing", "#ConsumerPsychology", "#Bollywood", "#Marketing101"]
+    first_comment: "My brain: '₹999 is basically ₹900'."
+
+  - id: unsubscribe
+    news: "Marketing explained with Bollywood songs. The unsubscribe link in emails:"
+    take: "Chhupana Bhi Nahi Aata. Tiny, grey, hidden at the very bottom."
+    caption: "Brands make 'Buy now' huge and 'Unsubscribe' tiny. 🔍 Designers call these dark patterns. Good marketing doesn't need to hide the exit. Agree? 👇"
+    hashtags: ["#MarketingWithBollywood", "#DarkPatterns", "#EmailMarketing", "#Bollywood", "#UXDesign"]
+    first_comment: "Font size 2, colour light grey, location: the ocean floor."
+
+  - id: ten-minute-delivery
+    news: "Marketing explained with Bollywood songs. '10-minute delivery' arriving in 25 minutes:"
+    take: "Kya Hua Tera Waada."
+    caption: "Big promises get attention. Broken promises get screenshots. 🛵 In marketing, under-promise and over-deliver always wins. What's the biggest promise a brand broke for you? 👇"
+    hashtags: ["#MarketingWithBollywood", "#QuickCommerce", "#BrandPromise", "#Bollywood", "#Marketing101"]
+    first_comment: "The rider is 'nearby' for 15 minutes. Nearby where?"
+
+  - id: fanboys
+    news: "Marketing explained with Bollywood songs. Apple fans looking at a new iPhone that looks like the old one:"
+    take: "Tujh Mein Rab Dikhta Hai."
+    caption: "When people love a brand this much, they'll buy almost anything it launches. 🍏 That's called brand love, and it takes years to build. Which brand has fans like this in India? 👇"
+    hashtags: ["#MarketingWithBollywood", "#BrandLove", "#Apple", "#Bollywood", "#Branding"]
+    first_comment: "New colour = new phone. That's the rule."
+
+  - id: customer-support
+    news: "Marketing explained with Bollywood songs. Finally reaching a real human in customer support:"
+    take: "Koi Mil Gaya."
+    caption: "After 5 bot menus and 'press 9 to repeat', a real person answers. 📞 Good support is marketing too: it decides if people come back. Worst support experience you've had? 👇"
+    hashtags: ["#MarketingWithBollywood", "#CustomerExperience", "#CustomerService", "#Bollywood", "#Marketing101"]
+    first_comment: "The bot asked me to 'rate my experience'. With the bot."
+
+  - id: price-hike
+    news: "Marketing explained with Bollywood songs. Your streaming app raising prices again:"
+    take: "Mehngai Maar Gayi."
+    caption: "Subscriptions start cheap to get you hooked, then prices go up slowly. 📺 It's called a 'land and expand' strategy. How many subscriptions are you paying for right now? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Subscriptions", "#Pricing", "#Bollywood", "#Marketing101"]
+    first_comment: "My bank statement is just a list of OTT apps."
+
+  - id: daily-emails
+    news: "Marketing explained with Bollywood songs. Brands that email you every single day:"
+    take: "Pal Pal Dil Ke Paas."
+    caption: "Staying top of mind is good. Being in the inbox 3 times a day is too much. 📧 The best brands know when to stay quiet. Which brand spams you the most? 👇"
+    hashtags: ["#MarketingWithBollywood", "#EmailMarketing", "#Marketing101", "#Bollywood", "#DigitalMarketing"]
+    first_comment: "Unsubscribed. Still getting them. Pal pal indeed."
+
+  - id: one-hit-trend
+    news: "Marketing explained with Bollywood songs. A brand jumping on a trend 3 weeks late:"
+    take: "Ek Pal Ka Jeena. The trend is already over."
+    caption: "Trends move fast. Brands that join late look out of touch, not relatable. ⏳ Speed matters in social media marketing. What's the latest a brand has been to a trend? 👇"
+    hashtags: ["#MarketingWithBollywood", "#SocialMediaMarketing", "#Trends", "#Bollywood", "#Marketing101"]
+    first_comment: "The intern found the trend on LinkedIn."
+
+  - id: clickbait
+    news: "Marketing explained with Bollywood songs. 'You won't believe what happened next' headlines:"
+    take: "Dil To Pagal Hai. (Nothing happened next.)"
+    caption: "Clickbait gets the click but loses the trust. 🎣 Good headlines create curiosity AND deliver. Do you still click on these? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Clickbait", "#ContentMarketing", "#Bollywood", "#Marketing101"]
+    first_comment: "What happened next: an ad."
+
+  - id: loyalty-points
+    news: "Marketing explained with Bollywood songs. Loyalty points you'll never actually use:"
+    take: "Saathiya. Always with you, never useful."
+    caption: "Loyalty programs keep you coming back for 'rewards'. Most points expire before people use them. 🎟️ Have you ever actually redeemed loyalty points? 👇"
+    hashtags: ["#MarketingWithBollywood", "#LoyaltyProgram", "#Marketing101", "#Bollywood", "#ConsumerPsychology"]
+    first_comment: "I have 4,000 points. They're worth ₹12."
+
+  - id: personalization
+    news: "Marketing explained with Bollywood songs. When your music app's playlist is a little too accurate:"
+    take: "Tera Hone Laga Hoon."
+    caption: "Apps learn what you like and show you more of it. That's personalisation, and it's why you keep coming back. 🎧 Has an app ever known you a bit too well? 👇"
+    hashtags: ["#MarketingWithBollywood", "#Personalisation", "#Spotify", "#Bollywood", "#Marketing101"]
+    first_comment: "The 'sad songs for 2 AM' playlist was personal."
+
+hot_takes:
+  - id: viral-budget
+    news: "Unpopular opinion: most 'viral' campaigns aren't that creative. They just had a huge budget."
+    take: "Creativity is great. A ₹5 crore media spend is greater."
+    caption: "We call it 'viral', but often it was pushed hard with money first. 💸 Real organic virality is rare. Agree or disagree? Fight me in the comments 👇"
+    hashtags: ["#HotTake", "#UnpopularOpinion", "#Marketing", "#Advertising", "#ViralMarketing"]
+    first_comment: "Say 'organic reach' without laughing. I'll wait."
+
+  - id: mascot
+    news: "Hot take: your brand doesn't need a mascot. It needs a reason to exist."
+    take: "A cute cartoon can't save a product nobody needs."
+    caption: "Mascots are fun, but they don't fix a weak product. 🐻 Strong brands start with a real problem solved. Agree or disagree? 👇"
+    hashtags: ["#HotTake", "#Branding", "#Marketing", "#Startups", "#UnpopularOpinion"]
+    first_comment: "Amul girl is the exception. She has a reason AND a vibe."
+
+  - id: weekly-limited-offer
+    news: "Hot take: a 'limited time offer' that runs every week is just the normal price."
+    take: "Limited time, unlimited reruns."
+    caption: "If the 'sale' never ends, it's not a sale. 🏷️ Customers notice, and trust drops. Have you caught a brand doing this? 👇"
+    hashtags: ["#HotTake", "#Pricing", "#Marketing", "#ConsumerPsychology", "#UnpopularOpinion"]
+    first_comment: "The 'final clearance' sale since 2019."
+
+  - id: our-story
+    news: "Unpopular opinion: nobody reads your brand's 'Our Story' page."
+    take: "Three paragraphs about 'passion' and a photo of the founders in a garage."
+    caption: "People don't read your story. They feel it through your product and service. 📖 Do you ever read 'About us' pages? Be honest 👇"
+    hashtags: ["#HotTake", "#Branding", "#Storytelling", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "Every D2C brand: 'It all started with a problem…'"
+
+  - id: rebrand-fix
+    news: "Hot take: a rebrand doesn't fix a bad product. It just puts a new logo on it."
+    take: "New font, same problems."
+    caption: "A fresh logo can't hide old complaints. 🎨 Fix the product first, then the branding. Agree? 👇"
+    hashtags: ["#HotTake", "#Rebranding", "#Branding", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "The rebrand budget could've fixed the app crashes."
+
+  - id: meme-brands
+    news: "Unpopular opinion: brands posting a meme on every trend look desperate, not relatable."
+    take: "Not every brand needs to be your funny friend. Some can just sell good soap."
+    caption: "Trend-jacking works when it fits the brand. When it doesn't, it's cringe. 😬 Which brand overdoes memes? 👇"
+    hashtags: ["#HotTake", "#SocialMediaMarketing", "#Memes", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "A bank account posting 'POV: you're broke' is a choice."
+
+  - id: work-family
+    news: "Hot take: 'We're like a family here' in a job post is a red flag, not a perk."
+    take: "Translation: unpaid overtime with extra guilt."
+    caption: "Good companies offer fair pay and clear boundaries. Families don't send performance reviews. 💼 Agree or disagree? Share with that one friend 👇"
+    hashtags: ["#HotTake", "#WorkCulture", "#Careers", "#GenZ", "#UnpopularOpinion"]
+    first_comment: "'Family' until appraisal season."
+
+  - id: growth-hacks
+    news: "Unpopular opinion: most 'growth hacks' are just spam with better branding."
+    take: "Calling it a hack doesn't make it less annoying."
+    caption: "Real growth comes from a product people love and tell friends about. 📈 Shortcuts burn trust. Agree? 👇"
+    hashtags: ["#HotTake", "#GrowthMarketing", "#Startups", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "'Hack #7: DM 500 people a day.' Groundbreaking."
+
+  - id: service-beats-cool
+    news: "Hot take: a boring product with great customer service beats a cool product with none."
+    take: "Nobody remembers your aesthetic when their refund is stuck for 3 weeks."
+    caption: "Customers forgive a lot if you treat them well. They forgive nothing if you ghost them. 🤝 Agree or disagree? 👇"
+    hashtags: ["#HotTake", "#CustomerExperience", "#Branding", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "Pretty packaging, zero replies. A tragic love story."
+
+  - id: disclaimer
+    news: "Hot take: if your ad needs a disclaimer longer than the ad, the product is the problem."
+    take: "*Terms and conditions apply. Also, the product doesn't."
+    caption: "When the fine print is longer than the offer, people stop trusting the offer. 📜 Have you ever been tricked by the fine print? 👇"
+    hashtags: ["#HotTake", "#Advertising", "#Marketing", "#ConsumerRights", "#UnpopularOpinion"]
+    first_comment: "Read the T&C once. Now I have trust issues."
+
+  - id: quick-commerce
+    news: "Unpopular opinion: 10-minute delivery isn't saving us time. It's making us buy chips at 1 AM."
+    take: "Convenience is just impulse shopping with a fast bike."
+    caption: "Quick commerce makes buying so easy that we buy things we didn't plan to. 🛵🍟 Has a 10-minute app made you spend more? 👇"
+    hashtags: ["#HotTake", "#QuickCommerce", "#ConsumerBehaviour", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "Ordered one lemon. Cart total: ₹640."
+
+  - id: phone-number
+    news: "Hot take: customers don't want 'personalised experiences'. They want you to stop asking for their phone number."
+    take: "Just let me buy the socks, please."
+    caption: "Every store wants your number for 'offers'. Most people just want to pay and leave. 📱 Do you give your number at billing counters? 👇"
+    hashtags: ["#HotTake", "#CustomerExperience", "#Retail", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "'Sir, number for bill?' The bill doesn't need my number."
+
+  - id: up-to-80
+    news: "Unpopular opinion: 'Up to 80% off' means two items are 80% off and everything else is 10%."
+    take: "'Up to' is the most hardworking word in Indian retail."
+    caption: "'Up to' lets brands advertise the biggest discount while most items get a small one. 🏷️ Read the fine print before the hype. Agree? 👇"
+    hashtags: ["#HotTake", "#Sale", "#ConsumerPsychology", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "The 80% off item: one sock, size XXS."
+
+  - id: best-marketing
+    news: "Hot take: the best marketing is a product people talk about without being paid."
+    take: "No influencer can save a product that friends don't recommend."
+    caption: "Word of mouth beats any ad budget. 🗣️ What's a product you recommend to everyone, for free? 👇"
+    hashtags: ["#HotTake", "#WordOfMouth", "#Marketing", "#Branding", "#UnpopularOpinion"]
+    first_comment: "Mine: a ₹99 phone stand that changed my life."
+
+  - id: apology-posts
+    news: "Unpopular opinion: most brand apology posts are written for the algorithm, not the customer."
+    take: "'We hear you' — but do you, though?"
+    caption: "A real apology comes with real changes, not just a nice post on a black background. 🖤 Which brand apology actually felt real? 👇"
+    hashtags: ["#HotTake", "#PR", "#CrisisCommunication", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "Notes app apology, white font, black background. Classic."
+
+  - id: link-in-bio
+    news: "Hot take: 'link in bio' is where engagement goes to die."
+    take: "Nobody has ever gone to the link in bio. Not once."
+    caption: "Every extra step loses people. Make it easy to act right where they are. 🔗 When did you last click a 'link in bio'? 👇"
+    hashtags: ["#HotTake", "#InstagramMarketing", "#SocialMediaMarketing", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "My link in bio has 3 clicks. All me, checking it works."
+
+  - id: followers-vanity
+    news: "Unpopular opinion: followers are a vanity number. Saves and shares are the real money."
+    take: "10K followers who don't care < 1K who share everything."
+    caption: "Brands now look at saves, shares and comments, not just follower count. 📊 Save this if you agree (yes, I see what I did). 👇"
+    hashtags: ["#HotTake", "#CreatorEconomy", "#InfluencerMarketing", "#Marketing", "#UnpopularOpinion"]
+    first_comment: "Okay but share it too. For science."
+
+  - id: genz-loyalty
+    news: "Hot take: Gen Z isn't loyal to brands. They're loyal to vibes."
+    take: "Change the vibe, lose the customer. It's that simple."
+    caption: "Gen Z switches brands fast if the values, look or feel stop matching them. ✨ Gen Z, is this true for you? 👇"
+    hashtags: ["#HotTake", "#GenZ", "#Branding", "#ConsumerBehaviour", "#UnpopularOpinion"]
+    first_comment: "Unfollowed a brand because their font changed. Valid."

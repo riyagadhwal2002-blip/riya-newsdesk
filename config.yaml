@@ -27,10 +27,16 @@ instagram:
   app_id: "1592311015512899"      # Instagram app ID of "Riya Newsdesk" (public, not a secret)
   redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html"
 
+# Posts that fill quiet stretches between news, in rotation:
+# "Did you know?" facts (facts.yaml) → Bollywood-song marketing explainers → hot takes (content.yaml)
+evergreen:
+  enabled: true
+  rotation: ["fact", "song", "hot_take"]
+  max_per_day: 6
+  min_gap_minutes: 75             # only when nothing was posted in the last 75 minutes
+
 facts:
-  enabled: true                   # "Did you know?" posts from facts.yaml when no news post went out
-  max_per_day: 3
-  min_gap_minutes: 90             # only when nothing was posted in the last 90 minutes
+  enabled: true
   file: "facts.yaml"
 
 discovery:
