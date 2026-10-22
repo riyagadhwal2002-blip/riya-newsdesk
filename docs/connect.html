@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect Instagram</title>
+<style>
+  :root { --bg:#FFFDF5; --ink:#141414; --muted:#5d5d5d; --accent:#FFC72C; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--bg); color:var(--ink);
+         font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; padding:16px; }
+  .card { max-width:460px; width:100%; background:#fff; border:2px solid var(--ink); border-radius:18px; padding:32px;
+          box-shadow:6px 6px 0 var(--ink); }
+  h1 { font-size:26px; line-height:1.2; margin:0 0 10px; }
+  p { color:var(--muted); margin:0 0 22px; }
+  a.btn { display:block; text-align:center; background:var(--accent); color:var(--ink); font-weight:700; font-size:18px;
+          text-decoration:none; padding:16px; border-radius:12px; border:2px solid var(--ink); }
+  a.btn:hover { transform:translate(-1px,-1px); box-shadow:3px 3px 0 var(--ink); }
+  .small { font-size:14px; margin-top:16px; }
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <h1>Connect Instagram to your newsdesk</h1>
+  <p>Tap the button, check you're logged in as <b>@riyaagadhwal</b>, then tap <b>Allow</b>.</p>
+  <a class="btn" id="go" href="#">Connect Instagram</a>
+  <p class="small">This only lets your own "Riya Newsdesk" app post for you. You can remove it any time in Instagram → Settings → Apps and websites.</p>
+</main>
+<script>
+  const APP_ID = "1592311015512899";
+  const REDIRECT = "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html";
+  const REPO = "riyagadhwal2002-blip/riya-newsdesk";
+  const SCOPES = "instagram_business_basic,instagram_business_content_publish,instagram_business_manage_comments,instagram_business_manage_insights";
+  const params = new URLSearchParams(location.search);
+  const code = (params.get("code") || "").split("#")[0];
+  const card = document.getElementById("card");
+
+  document.getElementById("go").href = "https://www.instagram.com/oauth/authorize?force_reauth=true&client_id=" + APP_ID +
+    "&redirect_uri=" + encodeURIComponent(REDIRECT) + "&response_type=code&scope=" + encodeURIComponent(SCOPES);
+
+  if (params.get("error")) {
+    card.innerHTML = "<h1>Not connected</h1><p>Instagram said: " +
+      (params.get("error_description") || params.get("error")).replace(/[<>]/g, "") +
+      "</p><a class='btn' href='" + REDIRECT + "'>Try again</a>";
+  } else if (code) {
+    const issue = "https://github.com/" + REPO + "/issues/new?title=connect-instagram&body=" + encodeURIComponent(code);
+    card.innerHTML = "<h1>Almost done ✅</h1><p>On the next page, just click the green <b>Create</b> button. " +
+      "Your newsdesk then finishes the connection by itself within a minute.</p>" +
+      "<a class='btn' href='" + issue + "'>Continue</a>";
+    history.replaceState(null, "", REDIRECT);  // don't leave the code in the address bar
+    setTimeout(() => { location.href = issue; }, 2500);
+  }
+</script>
+</body>
+</html>
