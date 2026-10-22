@@ -18,6 +18,7 @@ publishing:
   active_windows: ["10:00-13:00", "18:00-02:00"]
   daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
   min_gap_minutes: 25             # minimum time between two posts (runs every 30 min)
+  post_story: true                # also share every post to your story (full-screen version)
   post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
   instagram_api_version: "v26.0"
 
