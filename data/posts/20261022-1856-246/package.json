@@ -1,0 +1,49 @@
+{
+  "cluster_id": 246,
+  "score": 84,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "Sylvester Stallone is officially leaning into the AI wave, admitting on a podcast that he faced heavy backlash from Hollywood for trying to pitch a half-human, half-AI movie. While he agrees with the creative community's complaints, he argued that the tech is an unstoppable avalanche and even advised his daughter to look into gaming instead. As AI avatars and digital likenesses reshape entertainment, how long before legacy stars become their own digital franchises? Let me know your thoughts below! 🎬🤖✨\n\nSource: Variety\n\n#ArtificialIntelligence #CreatorEconomy #HollywoodNews #EntertainmentMarketing #FutureOfWork",
+  "post": {
+    "news": "Sylvester Stallone defended AI on a podcast after facing backlash for pitching a half-human, half-AI movie, admitting it will make acting harder.",
+    "take": "Even Rocky knows you can't outrun a generative algorithm, so he's just telling his daughter to learn gaming instead.",
+    "insight": "When legendary creators start telling the next generation to pivot careers because of tech shifts, the disruption is no longer theoretical.",
+    "caption": "Sylvester Stallone is officially leaning into the AI wave, admitting on a podcast that he faced heavy backlash from Hollywood for trying to pitch a half-human, half-AI movie. While he agrees with the creative community's complaints, he argued that the tech is an unstoppable avalanche and even advised his daughter to look into gaming instead. As AI avatars and digital likenesses reshape entertainment, how long before legacy stars become their own digital franchises? Let me know your thoughts below! 🎬🤖✨ #ArtificialIntelligence #CreatorEconomy #HollywoodNews #EntertainmentMarketing #FutureOfWork",
+    "hashtags": [
+      "#ArtificialIntelligence",
+      "#CreatorEconomy",
+      "#HollywoodNews",
+      "#EntertainmentMarketing",
+      "#FutureOfWork"
+    ],
+    "first_comment": "Bro looked at the future of cinema and said 'go play video games instead'",
+    "alt_text": "Text card with Sylvester Stallone AI news and a sarcastic punchline about the movie industry."
+  },
+  "claims": [
+    {
+      "text": "Sylvester Stallone defended AI on a podcast after facing backlash for pitching a half-human, half-AI movie",
+      "evidence": "Sylvester Stallone is ready to embrace AI. During an interview on “The Overlap” podcast, the Oscar winner said that he received backlash for trying to get a “half human, half AI” movie off the ground"
+    },
+    {
+      "text": "admitting it will make acting harder",
+      "evidence": "Stallone acknowledged that AI will make it increasingly difficult for new actors to break into the industry"
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Sylvester Stallone Defends AI After His Pitch for a ‘Half Human, Half AI’ Movie Ignited Outrage: ‘You Get Blasted’ by Hollywood but ‘I Would Take That Risk’",
+      "summary": "Sylvester Stallone is ready to embrace AI. During an interview on “The Overlap” podcast, the Oscar winner said that he received backlash for trying to get a “half human, half AI” movie off the ground but he didn’t care because “AI is here to stay.” Stallone did not mention the project, but he’s spoken previously […]",
+      "published_at": "2026-10-22T17:46:13+00:00",
+      "url": "https://variety.com/2026/film/news/sylvester-stallone-ai-rambo-movie-backlash-1236921508"
+    }
+  ],
+  "created_at": "2026-10-22T18:56:00+00:00"
+}
