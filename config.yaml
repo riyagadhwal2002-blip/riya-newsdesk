@@ -14,6 +14,8 @@ publishing:
   # dry_run = build everything, send previews to Telegram, publish nothing.
   # live    = publish automatically after every check passes.
   mode: "dry_run"
+  # Posting hours (India time, from brand.timezone). Outside these, stories are queued, not posted.
+  active_windows: ["10:00-13:00", "18:00-02:00"]
   daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
   min_gap_minutes: 25             # minimum time between two posts (runs every 30 min)
   post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
@@ -43,6 +45,7 @@ ranking:
 llm:
   provider: "gemini"              # gemini (free tier) | anthropic (paid) | mock (offline testing)
   gemini_model: "gemini-flash-latest"   # any free Flash model listed in Google AI Studio
+  gemini_models: ["gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"]  # backups when busy
   anthropic_model: "claude-sonnet-5-5"
   max_calls_per_day: 300          # hard stop so the free quota is never blown
   temperature: 0.8
