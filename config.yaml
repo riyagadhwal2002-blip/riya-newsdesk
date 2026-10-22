@@ -13,7 +13,7 @@ brand:
 publishing:
   # dry_run = build everything, send previews to Telegram, publish nothing.
   # live    = publish automatically after every check passes.
-  mode: "dry_run"
+  mode: "live"
   # Posting hours (India time, from brand.timezone). Outside these, stories are queued, not posted.
   active_windows: ["10:00-13:00", "18:00-02:00"]
   daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
