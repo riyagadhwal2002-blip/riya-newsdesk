@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import cluster as clu
-from . import factcheck, hosting, schedule, scoring, tokens
+from . import factcheck, facts, hosting, schedule, scoring, tokens
 from .db import DB, iso, parse_iso, utcnow
 from .feeds import fetch_all, fetch_article_text
 from .instagram import IGError, Instagram, TokenExpired
@@ -23,7 +23,8 @@ MAX_LLM_STORIES_PER_CYCLE = 2
 
 class Pipeline:
     def __init__(self, settings, db: DB, llm, telegram: Telegram, ig_factory=None, now_fn=utcnow,
-                 fetch_fn=fetch_all, article_fn=fetch_article_text, verify_public_url: bool = True):
+                 fetch_fn=fetch_all, article_fn=fetch_article_text, verify_public_url: bool = True,
+                 wiki_fn=None):
         self.s = settings
         self.db = db
         self.llm = llm
@@ -33,6 +34,7 @@ class Pipeline:
         self.fetch_fn = fetch_fn
         self.article_fn = article_fn
         self.verify_public_url = verify_public_url
+        self.wiki_fn = wiki_fn or facts.wiki_text
         self.disc = settings.section("discovery")
         self.pub = settings.section("publishing")
         self.kw = settings.section("keywords")
@@ -120,6 +122,8 @@ class Pipeline:
             if self.effective_mode() == "live":
                 self.maybe_refresh_token(now)
             stats.update(self.process_candidates(now))
+            if stats.get("posted", 0) + stats.get("previews", 0) == 0:
+                stats.update(self.maybe_post_fact(now))
             if self.effective_mode() == "live":
                 self.maybe_collect_metrics(now)
 
@@ -388,6 +392,54 @@ class Pipeline:
             self.tg.send(f"❌ Publishing failed (nothing went live): {exc}")
             log.error("publish failed: %s", exc)
             return "failed"
+
+    # ── "Did you know?" posts ───────────────────────────────────────────────
+    def maybe_post_fact(self, now: datetime) -> dict:
+        cfg = self.s.section("facts")
+        if not cfg.get("enabled", True) or not self.posting_open(now) or self._cap_block(now):
+            return {}
+        statuses = ("published", "publishing") if self.effective_mode() == "live" else ("dry_run",)
+        recent = self.db.posts_since(iso(now - timedelta(minutes=int(cfg.get("min_gap_minutes", 90)))), statuses)
+        if recent:
+            return {}  # a post went out recently; facts only fill quiet stretches
+        today = [p for p in self.db.posts_since(iso(now - timedelta(hours=24)), statuses)
+                 if json.loads(p["package"]).get("category") == "Did you know?"]
+        if len(today) >= int(cfg.get("max_per_day", 3)):
+            return {}
+        all_facts = facts.load(self.s.root / cfg.get("file", "facts.yaml"))
+        used = set(json.loads(self.db.get("facts_used", "[]")))
+        for _ in range(3):
+            fact = facts.next_fact(all_facts, used)
+            if not fact:
+                return {}
+            used.add(fact["id"])
+            self.db.set("facts_used", json.dumps(sorted(used)))
+            try:
+                ok, missing = facts.verified(fact, self.wiki_fn(fact["wiki"]))
+            except Exception as exc:  # Wikipedia down → try again next cycle
+                used.discard(fact["id"])
+                self.db.set("facts_used", json.dumps(sorted(used)))
+                log.warning("wikipedia check failed: %s", exc)
+                return {}
+            if not ok:
+                log.warning("fact %s skipped — not confirmed on Wikipedia (missing: %s)", fact["id"], missing)
+                continue
+            return self.publish_fact(fact, now)
+        return {}
+
+    def publish_fact(self, fact: dict, now: datetime) -> dict:
+        url = "https://en.wikipedia.org/wiki/" + fact["wiki"].replace(" ", "_")
+        post = {"news": fact["fact"], "take": fact["take"], "caption": fact["caption"],
+                "hashtags": fact.get("hashtags", []), "first_comment": fact.get("first_comment", ""),
+                "alt_text": f"{fact['fact']} {fact['take']}"}
+        pkg = {"post": post, "category": "Did you know?", "claims": [{"text": fact["fact"], "evidence": url}],
+               "scores": {}}
+        cid = self.db.add_cluster(f"fact:{fact['id']}", [], iso(now), True, "pending", iso(now))
+        cluster = self.db.get_cluster(cid)
+        items = [{"source": "Wikipedia", "tier": "primary", "url": url, "title": fact["fact"]}]
+        story = {"articles": [{"outlet": "Wikipedia", "url": url, "title": fact["wiki"]}], "source_text": fact["fact"]}
+        outcome = self.produce_and_publish(cluster, items, pkg, story, 100, "checked on Wikipedia", set(), now)
+        return {"facts": 1, "posted" if outcome == "published" else "previews": int(outcome in ("published", "dry_run"))}
 
     def share_to_story(self, ig, card: Path, post_id: int) -> None:
         try:
