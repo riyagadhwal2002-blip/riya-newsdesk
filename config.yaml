@@ -37,7 +37,8 @@ discovery:
 ranking:
   threshold: 80                   # out of 100
   recency_full_minutes: 45        # full 25 recency points while a story is under 45 min old
-  required_credibility: 20        # 20/20 = verified (official source, or 2+ independent trusted outlets)
+  required_credibility: 18        # 20 = official source or 2+ trusted outlets; 18 = one trusted outlet
+  allow_single_trusted: true      # one trusted outlet is enough for plain news; contested stories still need 20
 
 llm:
   provider: "gemini"              # gemini (free tier) | anthropic (paid) | mock (offline testing)
@@ -69,7 +70,10 @@ keywords:
             "bomb", "bombing", "war", "missile", "airstrike", "earthquake", "flood", "cyclone", "stampede", "crash victims",
             "suicide", "election", "minister", "parliament", "lok sabha", "rajya sabha", "president trump",
             "prime minister", "bjp", "congress party", "court verdict", "arrested", "custody", "molest*",
-            "child abuse", "overdose", "hostage", "riot", "riots", "lynching", "communal"]
+            "child abuse", "overdose", "hostage", "riot", "riots", "lynching", "communal",
+            "trump", "biden", "harris", "governor", "senator", "republican*", "democrat*", "gop", "congressman",
+            "campaign ad", "attack ad", "voter*", "ballot", "polling", "midterm*", "election commission",
+            "modi", "rahul gandhi", "kejriwal", "mamata", "bjp", "aap", "lawsuit", "sued", "indicted", "fraud"]
 
 # Where stories come from. tier: primary = official newsroom; trusted = reputable outlet.
 sources:
@@ -107,6 +111,9 @@ sources:
     "brandequity.economictimes.indiatimes.com", "livemint.com", "moneycontrol.com", "business-standard.com",
     "thehindubusinessline.com", "hindustantimes.com", "indianexpress.com", "ndtv.com", "timesofindia.indiatimes.com",
     "afaqs.com", "exchange4media.com", "inc42.com", "entrackr.com", "yourstory.com", "news18.com", "fastcompany.com",
-    "axios.com", "theinformation.com", "mashable.com"]
+    "axios.com", "theinformation.com", "mashable.com", "lbbonline.com", "prweek.com", "inc.com", "standard.co.uk",
+    "tubefilter.com", "androidauthority.com", "socialsamosa.com", "storyboard18.com", "bestmediainfo.com",
+    "medianews4u.com", "impactonnet.com", "marketing-interactive.com", "marketingweek.com", "creativebloq.com",
+    "businesstoday.in", "financialexpress.com", "techcrunch.com", "9to5mac.com", "macrumors.com", "the-decoder.com"]
   primary_domains: ["about.fb.com", "about.instagram.com", "blog.google", "openai.com", "anthropic.com", "apple.com",
     "newsroom.tiktok.com", "blog.youtube", "news.microsoft.com", "prnewswire.com", "businesswire.com"]
