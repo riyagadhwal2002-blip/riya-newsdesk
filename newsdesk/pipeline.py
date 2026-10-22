@@ -123,7 +123,7 @@ class Pipeline:
                 self.maybe_refresh_token(now)
             stats.update(self.process_candidates(now))
             if stats.get("posted", 0) + stats.get("previews", 0) == 0:
-                stats.update(self.maybe_post_fact(now))
+                stats.update(self.maybe_post_evergreen(now))
             if self.effective_mode() == "live":
                 self.maybe_collect_metrics(now)
 
@@ -330,7 +330,8 @@ class Pipeline:
     def full_caption(self, post: dict, items) -> str:
         outlets = list(dict.fromkeys(i["source"] for i in items if i["tier"] in ("primary", "trusted")))
         caption = re.sub(r"(?:\s*#[\w]+)+\s*$", "", post["caption"].strip())  # hashtags are added once, below
-        caption += f"\n\nSource: {', '.join(outlets[:3])}"
+        if outlets:
+            caption += f"\n\nSource: {', '.join(outlets[:3])}"
         caption += "\n\n" + " ".join(post.get("hashtags", [])[:8])
         return caption[:2150]
 
@@ -395,17 +396,38 @@ class Pipeline:
             return "failed"
 
     # ── "Did you know?" posts ───────────────────────────────────────────────
-    def maybe_post_fact(self, now: datetime) -> dict:
-        cfg = self.s.section("facts")
-        if not cfg.get("enabled", True) or not self.posting_open(now) or self._cap_block(now):
+    EVERGREEN_CATEGORIES = {"fact": "Did you know?", "song": "Marketing x Bollywood", "hot_take": "Hot take"}
+
+    def maybe_post_fact(self, now: datetime) -> dict:  # kept for older callers
+        return self.maybe_post_evergreen(now)
+
+    def maybe_post_evergreen(self, now: datetime) -> dict:
+        """Fills quiet stretches with a rotation of 'Did you know?' facts, Bollywood-song explainers and hot takes."""
+        cfg = {"enabled": True, "max_per_day": 6, "min_gap_minutes": 75,
+               "rotation": ["fact", "song", "hot_take"], **(self.s.section("evergreen") or {})}
+        if not cfg["enabled"] or not self.posting_open(now) or self._cap_block(now):
             return {}
         statuses = ("published", "publishing") if self.effective_mode() == "live" else ("dry_run",)
-        recent = self.db.posts_since(iso(now - timedelta(minutes=int(cfg.get("min_gap_minutes", 90)))), statuses)
-        if recent:
-            return {}  # a post went out recently; facts only fill quiet stretches
+        if self.db.posts_since(iso(now - timedelta(minutes=int(cfg["min_gap_minutes"]))), statuses):
+            return {}  # something went out recently; these only fill quiet stretches
+        cats = set(self.EVERGREEN_CATEGORIES.values())
         today = [p for p in self.db.posts_since(iso(now - timedelta(hours=24)), statuses)
-                 if json.loads(p["package"]).get("category") == "Did you know?"]
-        if len(today) >= int(cfg.get("max_per_day", 3)):
+                 if json.loads(p["package"]).get("category") in cats]
+        if len(today) >= int(cfg["max_per_day"]):
+            return {}
+        rotation = cfg["rotation"]
+        turn = int(self.db.get("evergreen_turn", "0") or 0)
+        for step in range(len(rotation)):
+            kind = rotation[(turn + step) % len(rotation)]
+            result = self.fact_turn(now) if kind == "fact" else self.content_turn(kind, now)
+            if result:
+                self.db.set("evergreen_turn", str(turn + step + 1))
+                return result
+        return {}
+
+    def fact_turn(self, now: datetime) -> dict:
+        cfg = self.s.section("facts")
+        if not cfg.get("enabled", True):
             return {}
         all_facts = facts.load(self.s.root / cfg.get("file", "facts.yaml"))
         used = set(json.loads(self.db.get("facts_used", "[]")))
@@ -426,6 +448,30 @@ class Pipeline:
                 log.warning("fact %s skipped — not confirmed on Wikipedia (missing: %s)", fact["id"], missing)
                 continue
             return self.publish_fact(fact, now)
+        return {}
+
+    def content_turn(self, kind: str, now: datetime) -> dict:
+        bank = facts.load_content(self.s.root / "content.yaml").get({"song": "songs", "hot_take": "hot_takes"}[kind], [])
+        key = f"content_used_{kind}"
+        used = set(json.loads(self.db.get(key, "[]")))
+        for item in bank:
+            if item["id"] in used:
+                continue
+            used.add(item["id"])
+            self.db.set(key, json.dumps(sorted(used)))
+            text = " ".join([item["news"], item["take"], item["caption"], item.get("first_comment", "")])
+            if scoring.blocked_terms(text, self.kw.get("blocked", [])):
+                log.warning("%s %s skipped — mentions a blocked topic", kind, item["id"])
+                continue
+            post = {"news": item["news"], "take": item["take"], "caption": item["caption"],
+                    "hashtags": item.get("hashtags", []), "first_comment": item.get("first_comment", ""),
+                    "alt_text": f"{item['news']} {item['take']}"}
+            pkg = {"post": post, "category": self.EVERGREEN_CATEGORIES[kind], "claims": [], "scores": {}}
+            cid = self.db.add_cluster(f"{kind}:{item['id']}", [], iso(now), True, "pending", iso(now))
+            outcome = self.produce_and_publish(self.db.get_cluster(cid), [], pkg,
+                                               {"articles": [], "source_text": ""}, 100, "opinion/evergreen", set(), now)
+            return {kind: 1, "posted" if outcome == "published" else "previews":
+                    int(outcome in ("published", "dry_run"))}
         return {}
 
     def publish_fact(self, fact: dict, now: datetime) -> dict:

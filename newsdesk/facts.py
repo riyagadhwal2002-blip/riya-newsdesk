@@ -37,3 +37,9 @@ def next_fact(all_facts: list[dict], used: set[str]) -> dict | None:
         if f["id"] not in used:
             return f
     return None
+
+
+def load_content(path: Path) -> dict:
+    if not Path(path).exists():
+        return {}
+    return yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {}
