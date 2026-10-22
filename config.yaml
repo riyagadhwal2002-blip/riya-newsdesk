@@ -26,6 +26,12 @@ instagram:
   app_id: "1592311015512899"      # Instagram app ID of "Riya Newsdesk" (public, not a secret)
   redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html"
 
+facts:
+  enabled: true                   # "Did you know?" posts from facts.yaml when no news post went out
+  max_per_day: 3
+  min_gap_minutes: 90             # only when nothing was posted in the last 90 minutes
+  file: "facts.yaml"
+
 discovery:
   freshness_minutes: 50           # a story counts as new only if we saw it within 50 min of its publish time
                                   # (runs every 30 min on GitHub; set to 5 if you run it every minute on a server)

@@ -1,0 +1,255 @@
+# "Did you know?" posts. Each fact is checked against its Wikipedia page right before posting:
+# every word/number in `must_contain` has to appear on that page, otherwise the fact is skipped (never posted).
+# Add more any time — same shape. Keep words simple.
+
+- id: nintendo
+  wiki: Nintendo
+  must_contain: ["1889", "hanafuda"]
+  fact: "Did you know? Nintendo started in 1889 making playing cards."
+  take: "130+ years later they're still printing money. Just with Mario now."
+  caption: "Before Mario and Pokémon, Nintendo sold handmade playing cards in Japan. 🎴 Your first idea doesn't have to be your final one. What's the wildest 'it started as…' story you know? 👇"
+  hashtags: ["#DidYouKnow", "#Nintendo", "#BrandStory", "#BusinessFacts", "#Marketing"]
+  first_comment: "Imagine telling the 1889 team about Animal Crossing."
+
+- id: samsung
+  wiki: Samsung
+  must_contain: ["1938", "dried fish"]
+  fact: "Did you know? Samsung started in 1938 as a small trading company selling dried fish and noodles."
+  take: "From dried fish to foldable phones. Career switch goals."
+  caption: "Samsung didn't start with phones or TVs. It started by trading groceries like dried fish and noodles. 🐟📱 Which brand do you think had the biggest glow-up? 👇"
+  hashtags: ["#DidYouKnow", "#Samsung", "#BrandStory", "#BusinessFacts", "#Entrepreneurship"]
+  first_comment: "Galaxy Fish Ultra coming soon."
+
+- id: nokia
+  wiki: Nokia
+  must_contain: ["1865", "pulp mill"]
+  fact: "Did you know? Nokia started in 1865 as a paper pulp mill in Finland."
+  take: "That explains the 3310. They were building with tree-level strength from day one."
+  caption: "Before phones, Nokia made paper pulp. Then rubber boots. Then cables. Then the phone everyone's dad still swears by. 📟 Did you own a Nokia? Which one? 👇"
+  hashtags: ["#DidYouKnow", "#Nokia", "#BrandStory", "#Nostalgia", "#BusinessFacts"]
+  first_comment: "Snake on the 3310 > every game on my phone right now."
+
+- id: bubblewrap
+  wiki: Bubble wrap
+  must_contain: ["1957", "wallpaper"]
+  fact: "Did you know? Bubble Wrap was first invented in 1957 as textured wallpaper."
+  take: "Nobody wanted it on their walls. Everybody wanted to pop it. Know your audience."
+  caption: "The inventors tried to sell Bubble Wrap as wallpaper. It flopped. Then it found its real job: protecting stuff (and our stress levels). 🫧 Be honest, can you resist popping it? 👇"
+  hashtags: ["#DidYouKnow", "#BubbleWrap", "#ProductStory", "#Marketing", "#Pivot"]
+  first_comment: "Popped 3 sheets while writing this."
+
+- id: playdoh
+  wiki: Play-Doh
+  must_contain: ["wallpaper cleaner"]
+  fact: "Did you know? Play-Doh was first sold as a wallpaper cleaner."
+  take: "Best pivot ever: from cleaning walls to kids trying to eat it."
+  caption: "Play-Doh started as a putty for cleaning wallpaper. When that market died, it became a toy. 🎨 Sometimes your product is right, just sold to the wrong people. Agree? 👇"
+  hashtags: ["#DidYouKnow", "#PlayDoh", "#Pivot", "#ProductStory", "#Marketing"]
+  first_comment: "Childhood smell unlocked."
+
+- id: instagram
+  wiki: Instagram
+  must_contain: ["Burbn"]
+  fact: "Did you know? Instagram started as Burbn, a check-in app. The founders cut everything except photos."
+  take: "They deleted most of their app and it became huge. Some of us can't even delete old selfies."
+  caption: "Burbn had too many features. Users only loved the photos. So the founders kept just that. 📸 Less really is more. What app do you wish would do LESS? 👇"
+  hashtags: ["#DidYouKnow", "#Instagram", "#StartupStory", "#ProductThinking", "#Founders"]
+  first_comment: "Burbn-gram doesn't have the same ring."
+
+- id: slack
+  wiki: Slack (software)
+  must_contain: ["Glitch"]
+  fact: "Did you know? Slack began as the office chat tool for a video game called Glitch. The game failed."
+  take: "The game flopped, the office chat won. Your side project might be the real project."
+  caption: "The team built a chat tool to make their game. The game shut down. The chat tool became Slack. 💬 Ever had a 'side thing' turn into the main thing? 👇"
+  hashtags: ["#DidYouKnow", "#Slack", "#StartupStory", "#Pivot", "#Founders"]
+  first_comment: "Every 'quick tool' at work is one pivot away from a unicorn."
+
+- id: google
+  wiki: Google
+  must_contain: ["BackRub"]
+  fact: "Did you know? Google's first name was BackRub."
+  take: "Imagine saying 'just BackRub it'. That rebrand saved us all."
+  caption: "Before Google, the search engine was called BackRub. 😅 A good name can change everything. What's the worst brand name you've seen? 👇"
+  hashtags: ["#DidYouKnow", "#Google", "#Branding", "#BrandName", "#Marketing"]
+  first_comment: "BackRub Maps would've been a whole different experience."
+
+- id: ronaldwayne
+  wiki: Ronald Wayne
+  must_contain: ["800", "1976"]
+  fact: "Did you know? Apple had a third co-founder, Ronald Wayne. In 1976 he sold his share for $800."
+  take: "Worst exit ever. Or the calmest sleep ever. Depends how you look at it."
+  caption: "Steve Jobs, Steve Wozniak… and Ronald Wayne. He left Apple days after it started and sold his share for $800. 🍎 Would you have stayed? 👇"
+  hashtags: ["#DidYouKnow", "#Apple", "#Founders", "#StartupStory", "#BusinessFacts"]
+  first_comment: "Somewhere a calculator just cried."
+
+- id: kfc
+  wiki: Colonel Sanders
+  must_contain: ["1890", "1952", "franchis"]
+  fact: "Did you know? Colonel Sanders started franchising KFC in 1952, when he was in his 60s."
+  take: "And you think 25 is too late to start something?"
+  caption: "The KFC founder didn't hit it big until his 60s. 🍗 There's no deadline on starting. What would you start if age didn't matter? 👇"
+  hashtags: ["#DidYouKnow", "#KFC", "#Founders", "#Motivation", "#Entrepreneurship"]
+  first_comment: "Late bloomers, this one's for you."
+
+- id: lamborghini
+  wiki: Ferruccio Lamborghini
+  must_contain: ["tractor", "Ferrari"]
+  fact: "Did you know? Lamborghini started out making tractors. The founder began building sports cars after a clash with Enzo Ferrari."
+  take: "The most expensive revenge in car history. And honestly? Worth it."
+  caption: "A tractor maker got annoyed with Ferrari and decided to build his own supercar. 🚜➡️🏎️ Petty? Maybe. Iconic? Definitely. Best business revenge story you know? 👇"
+  hashtags: ["#DidYouKnow", "#Lamborghini", "#Ferrari", "#BrandStory", "#Founders"]
+  first_comment: "Spite is a renewable energy source."
+
+- id: ikea
+  wiki: IKEA
+  must_contain: ["Ingvar Kamprad", "Elmtaryd", "Agunnaryd"]
+  fact: "Did you know? IKEA stands for Ingvar Kamprad, Elmtaryd and Agunnaryd: the founder, his family farm and his village."
+  take: "Even the brand name came flat-packed and needed assembly."
+  caption: "IKEA is just the founder's initials plus his farm and his village. 🪑 Simple, personal, unforgettable. What would YOUR brand name be? 👇"
+  hashtags: ["#DidYouKnow", "#IKEA", "#Branding", "#BrandName", "#Marketing"]
+  first_comment: "Mine would come with 3 missing screws."
+
+- id: lego
+  wiki: Lego
+  must_contain: ["leg godt", "play well"]
+  fact: "Did you know? LEGO comes from the Danish words 'leg godt', which mean 'play well'."
+  take: "Play well. Unless you step on one. Then nothing is well."
+  caption: "LEGO's name is literally its promise: play well. 🧱 A name that tells you the point of the product. What brand name do you think nails it? 👇"
+  hashtags: ["#DidYouKnow", "#LEGO", "#Branding", "#BrandName", "#Marketing"]
+  first_comment: "Stepping on one at 2 AM is a core memory."
+
+- id: haagendazs
+  wiki: Häagen-Dazs
+  must_contain: ["Bronx", "Mattus"]
+  fact: "Did you know? Häagen-Dazs isn't from Denmark. The name was made up in the Bronx, New York, to sound European."
+  take: "The original 'fake it till you make it' was an ice cream tub."
+  caption: "No Danish roots, just a clever made-up name that sounds fancy. 🍨 Branding can make people pay more. Would you still buy it? 👇"
+  hashtags: ["#DidYouKnow", "#HaagenDazs", "#Branding", "#ConsumerPsychology", "#Marketing"]
+  first_comment: "The umlaut is doing a lot of heavy lifting."
+
+- id: nikeswoosh
+  wiki: Swoosh
+  must_contain: ["Carolyn Davidson", "35"]
+  fact: "Did you know? Nike's swoosh was designed by a student, Carolyn Davidson, for just $35."
+  take: "$35 for one of the most famous logos ever. Designers everywhere are crying into their invoices."
+  caption: "One of the world's most famous logos cost $35. ✔️ (She did get Nike shares later, so it ended well.) Should brands pay designers more for logos? 👇"
+  hashtags: ["#DidYouKnow", "#Nike", "#LogoDesign", "#Branding", "#DesignTwitter"]
+  first_comment: "Freelancers, send this to every client asking for 'a quick logo'."
+
+- id: pepsi
+  wiki: Pepsi
+  must_contain: ["Brad's Drink"]
+  fact: "Did you know? Pepsi was first called Brad's Drink."
+  take: "Imagine the cola wars as Coke vs Brad. The rebrand was necessary."
+  caption: "Pepsi's first name was Brad's Drink, after its inventor Caleb Bradham. 🥤 Names matter more than you think. Team Coke or Team Brad? 👇"
+  hashtags: ["#DidYouKnow", "#Pepsi", "#Branding", "#BrandName", "#Marketing"]
+  first_comment: "One Brad's Drink, please. Extra ice."
+
+- id: starbucks
+  wiki: Starbucks
+  must_contain: ["Moby-Dick"]
+  fact: "Did you know? Starbucks is named after a character in the novel Moby-Dick."
+  take: "A coffee giant named after a whaling book. English literature students finally got a win."
+  caption: "The name comes from Starbuck, the first mate in Moby-Dick. ☕📚 Would you have guessed that? Drop your Starbucks order 👇"
+  hashtags: ["#DidYouKnow", "#Starbucks", "#BrandName", "#Branding", "#Marketing"]
+  first_comment: "Caramel macchiato, and yes I know."
+
+- id: wd40
+  wiki: WD-40
+  must_contain: ["Water Displacement", "40th"]
+  fact: "Did you know? WD-40 means 'Water Displacement, 40th formula'. The first 39 didn't work."
+  take: "39 failures, and they put the failure count in the name. Iconic."
+  caption: "WD-40 literally names its 40th try. 🔧 Proof that the 'failed' attempts are part of the win. How many tries did your best thing take? 👇"
+  hashtags: ["#DidYouKnow", "#WD40", "#ProductStory", "#Motivation", "#Innovation"]
+  first_comment: "My 40th attempt at waking up early is going great."
+
+- id: dyson
+  wiki: James Dyson
+  must_contain: ["5,127"]
+  fact: "Did you know? James Dyson made 5,127 prototypes before his vacuum finally worked."
+  take: "And we give up on the gym after three days."
+  caption: "5,127 tries before it worked. 🌀 Most people quit at try number 3. What's something you refuse to give up on? 👇"
+  hashtags: ["#DidYouKnow", "#Dyson", "#Founders", "#Motivation", "#Innovation"]
+  first_comment: "Prototype 5,126 must have been heartbreaking."
+
+- id: netflixblockbuster
+  wiki: Netflix
+  must_contain: ["Blockbuster", "50 million"]
+  fact: "Did you know? In 2000, Netflix offered to sell itself to Blockbuster for $50 million. Blockbuster said no."
+  take: "Blockbuster laughed. Now Blockbuster is the fun fact."
+  caption: "Blockbuster could have bought Netflix for $50 million. They passed. 🎬 The biggest business 'no' ever? Or is there a worse one? 👇"
+  hashtags: ["#DidYouKnow", "#Netflix", "#Blockbuster", "#BusinessFacts", "#StartupStory"]
+  first_comment: "Be kind, rewind… your decisions."
+
+- id: toyota
+  wiki: Toyota
+  must_contain: ["Toyoda Automatic Loom"]
+  fact: "Did you know? Toyota began inside a company that made machines for weaving cloth."
+  take: "From weaving cloth to weaving through traffic."
+  caption: "Toyota started as a car division of Toyoda Automatic Loom Works. 🧵🚗 Big brands often start somewhere unexpected. Which origin story surprised you most? 👇"
+  hashtags: ["#DidYouKnow", "#Toyota", "#BrandStory", "#BusinessFacts", "#Cars"]
+  first_comment: "Seat covers were the original product, apparently. (Kidding.)"
+
+- id: peugeot
+  wiki: Peugeot
+  must_contain: ["pepper mill"]
+  fact: "Did you know? Peugeot made pepper mills before cars. It still sells them."
+  take: "Grinding pepper since before grinding gears was a thing."
+  caption: "Peugeot pepper mills are still sold today, long after the cars arrived. 🌶️🚗 Name a brand that does two totally random things 👇"
+  hashtags: ["#DidYouKnow", "#Peugeot", "#BrandStory", "#BusinessFacts", "#Marketing"]
+  first_comment: "Free pepper mill with every test drive when?"
+
+- id: twitter
+  wiki: Twitter
+  must_contain: ["Odeo"]
+  fact: "Did you know? Twitter was born inside Odeo, a podcast company that was losing to iTunes."
+  take: "A struggling podcast app gave us the place where everyone argues in public."
+  caption: "Odeo was struggling, so the team brainstormed new ideas. One became Twitter. 🐦 Sometimes losing is how you find the real idea. Agree? 👇"
+  hashtags: ["#DidYouKnow", "#Twitter", "#StartupStory", "#Pivot", "#Founders"]
+  first_comment: "From podcasts to hot takes. Full circle."
+
+- id: cocacola
+  wiki: Coca-Cola
+  must_contain: ["Pemberton", "1886"]
+  fact: "Did you know? Coca-Cola was invented in 1886 by a pharmacist, John Pemberton, and sold as a medicine."
+  take: "Doctor said drink more water. Coke said 'close enough'."
+  caption: "Coke started in a pharmacy, sold as a health tonic. 🥤 Marketing has always been… creative. What's another brand that changed its whole pitch? 👇"
+  hashtags: ["#DidYouKnow", "#CocaCola", "#BrandStory", "#Marketing", "#BusinessFacts"]
+  first_comment: "Prescription: one cold Coke, twice a day."
+
+- id: amazon
+  wiki: Amazon (company)
+  must_contain: ["Cadabra", "cadaver"]
+  fact: "Did you know? Amazon was almost called Cadabra. It was changed because it sounded like 'cadaver'."
+  take: "'Your Cadaver order is arriving tomorrow.' Yeah, good call."
+  caption: "Cadabra was the first pick. Then a lawyer heard it as 'cadaver'. 📦 Always say your brand name out loud before launch! Worst brand name fail you know? 👇"
+  hashtags: ["#DidYouKnow", "#Amazon", "#Branding", "#BrandName", "#Marketing"]
+  first_comment: "Cadabra Prime Day hits different."
+
+- id: avon
+  wiki: Avon Products
+  must_contain: ["McConnell", "perfume", "book"]
+  fact: "Did you know? Avon's founder sold books door to door and gave away free perfume. People wanted the perfume more."
+  take: "Classic case of the freebie becoming the business. Marketers, take notes."
+  caption: "The free gift was more popular than the product, so the free gift became the company. 💄 Ever bought something just for the freebie? 👇"
+  hashtags: ["#DidYouKnow", "#Avon", "#Marketing", "#BrandStory", "#Pivot"]
+  first_comment: "Me buying a magazine for the free lip balm in 2010."
+
+- id: sony
+  wiki: Sony
+  must_contain: ["rice cooker"]
+  fact: "Did you know? One of Sony's first products was an electric rice cooker. It flopped."
+  take: "From burnt rice to PlayStation. Real character development."
+  caption: "Sony's early rice cooker didn't work well. They moved on, and the rest is history. 🍚🎮 Your first flop isn't your final chapter. Agree? 👇"
+  hashtags: ["#DidYouKnow", "#Sony", "#BrandStory", "#Motivation", "#BusinessFacts"]
+  first_comment: "PS5 can't cook rice either, to be fair."
+
+- id: amulgirl
+  wiki: Amul girl
+  must_contain: ["1966"]
+  fact: "Did you know? The Amul girl has been joking about the news in ads since 1966."
+  take: "The original Indian meme page. Still posting, still undefeated."
+  caption: "Amul's topical ads have roasted the news for decades with one cute mascot. 🧈 That's consistency. Which Amul ad do you still remember? 👇"
+  hashtags: ["#DidYouKnow", "#Amul", "#Marketing", "#Advertising", "#IndianBrands"]
+  first_comment: "Utterly butterly undefeated."
