@@ -172,6 +172,43 @@ def cmd_telegram_id(args) -> int:
     return 0
 
 
+def cmd_connect(args) -> int:
+    """Turns the one-time Instagram login code into a 60-day token, stored encrypted in the state file."""
+    import requests
+    from . import tokens
+    from .instagram import Instagram
+    settings, db, pipe, tg = build(args)
+    ig_cfg = settings.section("instagram")
+    secret = settings.secret("IG_APP_SECRET")
+    if not secret:
+        print("IG_APP_SECRET is not set")
+        return 1
+    code = args.code.strip().split("#")[0].strip()
+    r = requests.post("https://api.instagram.com/oauth/access_token", timeout=30, data={
+        "client_id": ig_cfg["app_id"], "client_secret": secret, "grant_type": "authorization_code",
+        "redirect_uri": ig_cfg["redirect_uri"], "code": code})
+    data = r.json()
+    if isinstance(data.get("data"), list) and data["data"]:
+        data = data["data"][0]
+    if "access_token" not in data:
+        print(f"Code exchange failed: {data.get('error_message') or data.get('error') or r.status_code}")
+        return 1
+    user_id = str(data["user_id"])
+    r2 = requests.get("https://graph.instagram.com/access_token", timeout=30, params={
+        "grant_type": "ig_exchange_token", "client_secret": secret, "access_token": data["access_token"]})
+    long_lived = r2.json().get("access_token")
+    if not long_lived:
+        print(f"Long-lived exchange failed: HTTP {r2.status_code}")
+        return 1
+    tokens.save(db, long_lived, pipe.token_seed())
+    db.set("ig_user_id", user_id)
+    db.set("ig_token_refreshed_at", iso(utcnow()))
+    me = Instagram(user_id, long_lived).me()
+    print(f"Connected @{me.get('username')} ({me.get('account_type')}), user id {user_id}")
+    db.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    return 0
+
+
 def cmd_report(args) -> int:
     settings, db, _, tg = build(args)
     rows = db.conn.execute(
@@ -217,6 +254,8 @@ def main(argv=None) -> int:
     sub.add_parser("feeds", help="test every news feed")
     sub.add_parser("demo", help="render sample cards offline")
     sub.add_parser("telegram-id", help="print your Telegram chat id")
+    cp = sub.add_parser("connect", help="finish Instagram login with a one-time code")
+    cp.add_argument("--code", required=True)
     sub.add_parser("status")
     sub.add_parser("pause", help="emergency stop for publishing")
     sub.add_parser("resume")
@@ -228,7 +267,7 @@ def main(argv=None) -> int:
 
     handlers = {
         "run-once": cmd_run_once, "loop": cmd_loop, "check": cmd_check, "feeds": cmd_feeds, "demo": cmd_demo,
-        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id,
+        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id, "connect": cmd_connect,
         "pause": lambda a: cmd_set(a, "paused", "1", "⏸ Publishing paused."),
         "resume": lambda a: cmd_set(a, "paused", "0", "▶️ Publishing resumed."),
         "live": lambda a: cmd_set(a, "mode_override", "live", "🔴 LIVE mode: posts publish automatically."),

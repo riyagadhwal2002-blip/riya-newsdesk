@@ -47,9 +47,13 @@ class Pipeline:
     def paused(self) -> bool:
         return (self.s.data_dir / "PAUSE").exists() or self.db.get("paused") == "1"
 
+    def token_seed(self) -> str | None:
+        """Secret used to encrypt the stored token: the token secret if set, else the app secret."""
+        return self.s.secret("IG_ACCESS_TOKEN") or self.s.secret("IG_APP_SECRET")
+
     def _default_ig(self) -> Instagram:
-        token = tokens.load(self.db, self.s.secret("IG_ACCESS_TOKEN")) or self.s.secret("IG_ACCESS_TOKEN")
-        user_id = self.s.secret("IG_USER_ID") or "me"   # `newsdesk check` prints the real id to fill in
+        token = tokens.load(self.db, self.token_seed()) or self.s.secret("IG_ACCESS_TOKEN")
+        user_id = self.s.secret("IG_USER_ID") or self.db.get("ig_user_id") or "me"
         if not token:
             raise IGError("IG_ACCESS_TOKEN not configured")
         return Instagram(user_id, token, self.pub.get("instagram_api_version", "v26.0"))
@@ -366,7 +370,7 @@ class Pipeline:
             return
         try:
             token, expires = self.ig_factory().refresh_token()
-            tokens.save(self.db, token, self.s.secret("IG_ACCESS_TOKEN"))
+            tokens.save(self.db, token, self.token_seed())
             self.db.set("ig_token_refreshed_at", iso(now))
             log.info("Instagram token refreshed (valid %d days)", expires // 86400)
         except TokenExpired:
