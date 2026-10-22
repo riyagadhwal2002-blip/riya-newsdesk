@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -324,7 +325,7 @@ class Pipeline:
     # ── output ──────────────────────────────────────────────────────────────
     def full_caption(self, post: dict, items) -> str:
         outlets = list(dict.fromkeys(i["source"] for i in items if i["tier"] in ("primary", "trusted")))
-        caption = post["caption"].strip()
+        caption = re.sub(r"(?:\s*#[\w]+)+\s*$", "", post["caption"].strip())  # hashtags are added once, below
         caption += f"\n\nSource: {', '.join(outlets[:3])}"
         caption += "\n\n" + " ".join(post.get("hashtags", [])[:8])
         return caption[:2150]

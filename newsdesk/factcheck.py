@@ -36,6 +36,27 @@ def evidence_supported(evidence: str, source: str) -> bool:
     return bool(words) and sum(w in src_words for w in words) / len(words) >= 0.9
 
 
+_NAME = re.compile(r"(?:[A-Z][\w&'’.-]*\s+){1,4}[A-Z][\w&'’.-]*")
+
+
+def names_missing(text: str, source: str) -> list[str]:
+    """Multi-word proper names in the news line must appear in the sources (catches 'Warp Sciences' vs 'Warp Science')."""
+    src = norm(source)
+    missing = []
+    for m in _NAME.finditer(text or ""):
+        seq = m.group(0).strip(" .,'’")
+        words = seq.split()
+        options = [words]
+        at_sentence_start = m.start() == 0 or text[:m.start()].rstrip().endswith((".", "!", "?", ":"))
+        if at_sentence_start and len(words) > 2:
+            options.append(words[1:])
+        elif at_sentence_start and len(words) == 2:
+            continue  # "Former OpenAI", "The Verge"… too ambiguous to check
+        if not any(norm(" ".join(o).replace("’s", "").replace("'s", "")) in src for o in options):
+            missing.append(seq)
+    return missing
+
+
 def check_package(pkg: dict, source_text: str, source_titles: list[str], blocked: list[str]) -> list[str]:
     """Returns a list of problems. Empty list = passed."""
     problems: list[str] = []
@@ -66,6 +87,11 @@ def check_package(pkg: dict, source_text: str, source_titles: list[str], blocked
     joke_missing = [n for n in _numbers(take) - src_numbers if not (n.isdigit() and int(n) <= 10)]
     if joke_missing:
         problems.append(f"take uses numbers not in sources: {', '.join(sorted(joke_missing))}")
+
+    # 2b. multi-word names must match the sources exactly
+    bad_names = names_missing(news, source_text)
+    if bad_names:
+        problems.append(f"news line has names not found in sources: {', '.join(bad_names)}")
 
     # 3. no invented quotes
     for field, text in (("news", news), ("take", take), ("caption", caption), ("first comment", comment)):
