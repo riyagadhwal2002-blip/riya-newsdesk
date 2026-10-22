@@ -146,3 +146,15 @@ def render_card(post: dict, sources: list[str], brand: dict, out_path: Path, fon
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
+
+
+def render_story(card_path: Path, out_path: Path, brand: dict) -> Path:
+    """Full-screen 9:16 story: the same post card centred on a soft background."""
+    card = Image.open(card_path).convert("RGB")
+    bg = "#FFF4CC" if brand.get("theme", "light") == "light" else "#111111"
+    story = Image.new("RGB", (1080, 1920), bg)
+    story.paste(card, (0, (1920 - card.height) // 2))
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    story.save(out_path, "JPEG", quality=92, optimize=True)
+    return out_path

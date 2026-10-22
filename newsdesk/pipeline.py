@@ -15,7 +15,7 @@ from .instagram import IGError, Instagram, TokenExpired
 from .llm import BudgetExceeded, LLMError
 from .log import log
 from .prompts import CHECKER_SYSTEM, WRITER_SYSTEM, checker_user, writer_user
-from .render import render_card
+from .render import render_card, render_story
 from .telegram import HELP, Telegram
 
 MAX_LLM_STORIES_PER_CYCLE = 2
@@ -370,6 +370,8 @@ class Pipeline:
                     ig.comment(media_id, post["first_comment"])
                 except IGError as exc:
                     log.warning("first comment failed: %s", exc)
+            if self.pub.get("post_story", True):
+                self.share_to_story(ig, card, post_id)
             self.tg.send_photo(card, f"✅ Published · score {score}/100\n{permalink}\n\n{caption[:600]}")
             self.tg.send(f"Sources:\n{links}")
             return "published"
@@ -386,6 +388,20 @@ class Pipeline:
             self.tg.send(f"❌ Publishing failed (nothing went live): {exc}")
             log.error("publish failed: %s", exc)
             return "failed"
+
+    def share_to_story(self, ig, card: Path, post_id: int) -> None:
+        try:
+            story = render_story(card, Path(card).with_name("story.jpg"), self.brand)
+            url = hosting.publish_image(story, self.s.public_dir, self.s.public_base_url,
+                                        verify=self.verify_public_url, git_push=os.environ.get("HOSTING") == "git")
+            container = ig.create_story_container(url)
+            ig.wait_until_ready(container)
+            story_id = ig.publish_story(container)
+            self.db.set(f"story_for_post_{post_id}", story_id)
+            log.info("story published for post %s", post_id)
+        except (IGError, hosting.HostingError, OSError) as exc:
+            log.warning("story failed (feed post is fine): %s", exc)
+            self.tg.send(f"⚠️ Feed post is live, but adding it to your story failed: {exc}")
 
     # ── maintenance ─────────────────────────────────────────────────────────
     def maybe_refresh_token(self, now: datetime) -> None:

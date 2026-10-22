@@ -88,6 +88,14 @@ class Instagram:
                 raise
         return self._retry(call)["id"]
 
+    def create_story_container(self, image_url: str) -> str:
+        return self._retry(lambda: self._request("POST", f"{self.user_id}/media", image_url=image_url,
+                                                  media_type="STORIES"))["id"]
+
+    def publish_story(self, container_id: str) -> str:
+        """Stories are published once, without the caption-matching recovery used for feed posts."""
+        return self._request("POST", f"{self.user_id}/media_publish", creation_id=container_id)["id"]
+
     def container_status(self, container_id: str) -> str:
         return self._request("GET", container_id, fields="status_code").get("status_code", "")
 
