@@ -8,6 +8,7 @@ brand:
   avatar_path: "assets/avatar.jpg" # square photo of you; a lettered circle is used if missing
   theme: "light"                  # "light" (white card, like a tweet screenshot) or "dark"
   accent: "#FFC72C"               # sunflower yellow "Follow for more" strip
+  accent_cycle: ["#FFC72C", "#6C3CE1", "#111111"]   # feed pattern: yellow → purple → black → repeat
   timezone: "Asia/Kolkata"
 
 publishing:
