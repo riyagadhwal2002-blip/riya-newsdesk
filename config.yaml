@@ -1,0 +1,108 @@
+# ─────────────────────────────────────────────────────────────
+#  Newsdesk config. Secrets (API keys, tokens) go in .env, never here.
+# ─────────────────────────────────────────────────────────────
+
+brand:
+  display_name: "Riya Gadhwal"    # shown on every post card
+  handle: "riyaagadhwal"          # Instagram handle WITHOUT the @
+  avatar_path: "assets/avatar.jpg" # square photo of you; a lettered circle is used if missing
+  theme: "light"                  # "light" (white card, like a tweet screenshot) or "dark"
+  accent: "#FFC72C"               # sunflower yellow "Follow for more" strip
+  timezone: "Asia/Kolkata"
+
+publishing:
+  # dry_run = build everything, send previews to Telegram, publish nothing.
+  # live    = publish automatically after every check passes.
+  mode: "dry_run"
+  daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
+  min_gap_minutes: 25             # minimum time between two posts (runs every 30 min)
+  post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
+  instagram_api_version: "v26.0"
+
+discovery:
+  freshness_minutes: 50           # a story counts as new only if we saw it within 50 min of its publish time
+                                  # (runs every 30 min on GitHub; set to 5 if you run it every minute on a server)
+  max_clock_skew_minutes: 2       # items dated further in the future than this are treated as suspicious
+  corroboration_window_minutes: 120 # how long we wait for a second trusted outlet before giving up
+  ignore_older_than_hours: 6
+  cluster_lookback_hours: 48
+  history_dedupe_days: 7          # never cover a story that resembles something posted in the last 7 days
+  fetch_timeout_seconds: 10
+  fetch_article_text: true        # fetch the article page to give the fact-checker more source text
+
+ranking:
+  threshold: 80                   # out of 100
+  recency_full_minutes: 45        # full 25 recency points while a story is under 45 min old
+  required_credibility: 20        # 20/20 = verified (official source, or 2+ independent trusted outlets)
+
+llm:
+  provider: "gemini"              # gemini (free tier) | anthropic (paid) | mock (offline testing)
+  gemini_model: "gemini-flash-latest"   # any free Flash model listed in Google AI Studio
+  anthropic_model: "claude-sonnet-5-5"
+  max_calls_per_day: 300          # hard stop so the free quota is never blown
+  temperature: 0.8
+
+analytics:
+  enabled: true
+  metrics: ["reach", "likes", "comments", "shares", "saved", "views", "total_interactions"]
+  refresh_hours: 6
+
+# Keyword scoring. Whole words only; a trailing * means "starts with" (apolog* = apology, apologises).
+# A story needs at least one niche hit to reach the AI writer.
+keywords:
+  niche:
+    3: ["campaign*", "ad", "ads", "advert*", "commercial", "rebrand", "logo", "branding", "marketing", "brand ambassador",
+        "influencer", "creator economy", "creators", "viral", "backlash", "troll*", "boycott*", "pr disaster",
+        "apolog*", "collab", "collaboration", "limited edition", "merch", "packaging", "tagline", "mascot"]
+    2: ["instagram", "tiktok", "youtube", "threads", "snapchat", "reels", "meta", "x.com", "linkedin", "netflix",
+        "launch*", "unveil*", "gen z", "meme*", "trend*", "celebrity", "endorse*", "sponsor*",
+        "nike", "apple", "zomato", "swiggy", "blinkit", "zepto", "amul", "cred", "mcdonald*", "starbucks",
+        "coca-cola", "pepsi", "ikea", "spotify", "chatgpt", "openai", "ai-generated", "ai ad", "deepfake"]
+    1: ["startup", "funding", "ipo", "valuation", "ceo", "founder", "consumer", "sales", "price hike", "subscription",
+        "ai", "app", "feature", "update", "ban"]
+  # Hard skip: tragedy, crime, politics, conflict. Your rules say no jokes at victims' expense.
+  blocked: ["killed", "dead", "death", "dies", "died", "murder", "rape", "sexual assault", "terror*", "shooting",
+            "bomb", "bombing", "war", "missile", "airstrike", "earthquake", "flood", "cyclone", "stampede", "crash victims",
+            "suicide", "election", "minister", "parliament", "lok sabha", "rajya sabha", "president trump",
+            "prime minister", "bjp", "congress party", "court verdict", "arrested", "custody", "molest*",
+            "child abuse", "overdose", "hostage", "riot", "riots", "lynching", "communal"]
+
+# Where stories come from. tier: primary = official newsroom; trusted = reputable outlet.
+sources:
+  feeds:
+    # Trade press — marketing, advertising, creators
+    - {name: "Adweek",             url: "https://www.adweek.com/feed/",                          tier: trusted}
+    - {name: "Digiday",            url: "https://digiday.com/feed/",                             tier: trusted}
+    - {name: "Marketing Dive",     url: "https://www.marketingdive.com/feeds/news/",             tier: trusted}
+    - {name: "Social Media Today",  url: "https://www.socialmediatoday.com/feeds/news/",          tier: trusted}
+    - {name: "ET BrandEquity",     url: "https://brandequity.economictimes.indiatimes.com/rss/topstories", tier: trusted}
+    # Tech, business, culture
+    - {name: "TechCrunch",         url: "https://techcrunch.com/feed/",                          tier: trusted}
+    - {name: "The Verge",          url: "https://www.theverge.com/rss/index.xml",                tier: trusted}
+    - {name: "Business Insider",   url: "https://feeds.businessinsider.com/custom/all",          tier: trusted}
+    - {name: "Variety",            url: "https://variety.com/feed/",                             tier: trusted}
+    - {name: "Livemint Companies", url: "https://www.livemint.com/rss/companies",                tier: trusted}
+    - {name: "Inc42",              url: "https://inc42.com/feed/",                               tier: trusted}
+    # Official newsrooms (primary sources)
+    - {name: "Meta Newsroom",      url: "https://about.fb.com/feed/",                            tier: primary}
+    - {name: "Google Blog",        url: "https://blog.google/rss/",                              tier: primary}
+    - {name: "OpenAI News",        url: "https://openai.com/news/rss.xml",                       tier: primary}
+    # Google News searches catch everything else (outlet decided per article below)
+    - {name: "GN: brand campaign IN", url: "https://news.google.com/rss/search?q=brand+campaign+when:1h&hl=en-IN&gl=IN&ceid=IN:en", tier: google_news}
+    - {name: "GN: ad backlash",       url: "https://news.google.com/rss/search?q=ad+backlash+OR+trolled+brand+when:1h&hl=en-IN&gl=IN&ceid=IN:en", tier: google_news}
+    - {name: "GN: marketing US",      url: "https://news.google.com/rss/search?q=marketing+campaign+viral+when:1h&hl=en-US&gl=US&ceid=US:en", tier: google_news}
+    - {name: "GN: influencer",        url: "https://news.google.com/rss/search?q=influencer+OR+creator+brand+when:1h&hl=en-IN&gl=IN&ceid=IN:en", tier: google_news}
+    - {name: "GN: Instagram update",  url: "https://news.google.com/rss/search?q=Instagram+OR+TikTok+OR+YouTube+new+feature+when:1h&hl=en-US&gl=US&ceid=US:en", tier: google_news}
+
+  # Articles found via Google News count as trusted only if their outlet is listed here.
+  trusted_domains: ["reuters.com", "bloomberg.com", "apnews.com", "bbc.com", "bbc.co.uk", "cnbc.com", "cnn.com",
+    "nytimes.com", "theguardian.com", "wsj.com", "ft.com", "forbes.com", "fortune.com", "businessinsider.com",
+    "theverge.com", "techcrunch.com", "wired.com", "engadget.com", "adweek.com", "adage.com", "digiday.com",
+    "marketingdive.com", "thedrum.com", "campaignlive.com", "campaignlive.co.uk", "campaignindia.in",
+    "socialmediatoday.com", "variety.com", "hollywoodreporter.com", "deadline.com", "economictimes.indiatimes.com",
+    "brandequity.economictimes.indiatimes.com", "livemint.com", "moneycontrol.com", "business-standard.com",
+    "thehindubusinessline.com", "hindustantimes.com", "indianexpress.com", "ndtv.com", "timesofindia.indiatimes.com",
+    "afaqs.com", "exchange4media.com", "inc42.com", "entrackr.com", "yourstory.com", "news18.com", "fastcompany.com",
+    "axios.com", "theinformation.com", "mashable.com"]
+  primary_domains: ["about.fb.com", "about.instagram.com", "blog.google", "openai.com", "anthropic.com", "apple.com",
+    "newsroom.tiktok.com", "blog.youtube", "news.microsoft.com", "prnewswire.com", "businesswire.com"]
