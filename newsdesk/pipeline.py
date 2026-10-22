@@ -339,7 +339,8 @@ class Pipeline:
         post = pkg["post"]
         outlets = list(dict.fromkeys(i["source"] for i in items if i["tier"] in ("primary", "trusted")))
         post_dir = self.s.data_dir / "posts" / f"{now.strftime('%Y%m%d-%H%M')}-{cid}"
-        card = render_card(post, outlets, self.brand, post_dir / "card.jpg", self.s.root / "fonts", when=now)
+        brand = dict(self.brand, accent=self.next_accent())
+        card = render_card(post, outlets, brand, post_dir / "card.jpg", self.s.root / "fonts", when=now)
         caption = self.full_caption(post, items)
         package = {"cluster_id": cid, "score": score, "credibility": cred_why, "caption": caption,
                    "post": post, "claims": pkg.get("claims", []), "category": pkg.get("category"),
@@ -441,9 +442,19 @@ class Pipeline:
         outcome = self.produce_and_publish(cluster, items, pkg, story, 100, "checked on Wikipedia", set(), now)
         return {"facts": 1, "posted" if outcome == "published" else "previews": int(outcome in ("published", "dry_run"))}
 
+    def next_accent(self) -> str:
+        """Feed colour pattern (e.g. yellow → purple → black → yellow…) based on how many posts went out."""
+        cycle = self.brand.get("accent_cycle") or [self.brand.get("accent", "#FFC72C")]
+        status = "published" if self.effective_mode() == "live" else "dry_run"
+        done = self.db.conn.execute("SELECT COUNT(*) FROM posts WHERE status=?", (status,)).fetchone()[0]
+        return cycle[done % len(cycle)]
+
     def share_to_story(self, ig, card: Path, post_id: int) -> None:
         try:
-            story = render_story(card, Path(card).with_name("story.jpg"), self.brand)
+            done = self.db.conn.execute("SELECT COUNT(*) FROM posts WHERE status='published'").fetchone()[0]
+            cycle = self.brand.get("accent_cycle") or [self.brand.get("accent", "#FFC72C")]
+            accent = cycle[(done - 1) % len(cycle)]  # same colour as the post that just went live
+            story = render_story(card, Path(card).with_name("story.jpg"), dict(self.brand, accent=accent))
             url = hosting.publish_image(story, self.s.public_dir, self.s.public_base_url,
                                         verify=self.verify_public_url, git_push=os.environ.get("HOSTING") == "git")
             container = ig.create_story_container(url)
