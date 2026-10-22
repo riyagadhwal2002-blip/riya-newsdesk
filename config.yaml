@@ -19,7 +19,7 @@ publishing:
   active_windows: ["10:00-13:00", "18:00-02:00"]
   daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
   min_gap_minutes: 25             # minimum time between two posts (runs every 30 min)
-  post_story: true                # also share every post to your story (full-screen version)
+  post_story: false               # Riya asked: don't share posts to stories
   post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
   instagram_api_version: "v26.0"
 
@@ -34,6 +34,48 @@ evergreen:
   rotation: ["fact", "song", "hot_take"]
   max_per_day: 6
   min_gap_minutes: 75             # only when nothing was posted in the last 75 minutes
+
+# @mentions added to captions when a post names one of these brands (max 3 per post).
+# Every handle below was checked on Instagram (verified account, right brand) on 23 Oct 2026.
+# Names in ALL CAPS or with a capital first letter that could be a normal word are matched case-sensitively.
+mentions:
+  max_per_post: 3
+  handles:
+    Zomato: zomato
+    Swiggy: swiggyindia
+    Zepto: zeptonow
+    Myntra: myntra
+    Nykaa: mynykaa
+    Flipkart: flipkart
+    CRED: cred_club
+    Amul: amul_india
+    Netflix: netflix_in
+    Prime Video: primevideoin
+    Spotify: spotifyindia
+    Nike: nike
+    Adidas: adidas
+    Starbucks: starbucks
+    IKEA: ikea
+    LEGO: lego
+    Samsung: samsung
+    Coca-Cola: cocacola
+    Coke: cocacola
+    Pepsi: pepsi
+    Google: google
+    Apple: apple
+    Amazon: amazon
+    Dyson: dyson
+    Nintendo: nintendoamerica
+    Lamborghini: lamborghini
+    Ferrari: ferrari
+    KFC: kfc
+    McDonald's: mcdonalds
+    Toyota: toyota
+    Peugeot: peugeot
+    OpenAI: openai
+    ChatGPT: openai
+    YouTube: youtube
+    Instagram: instagram
 
 facts:
   enabled: true
