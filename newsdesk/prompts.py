@@ -43,6 +43,7 @@ Return ONLY JSON with exactly this shape:
   "relevant": true,
   "sensitive": false,
   "new_development": true,
+  "contested": false,
   "category": "short label, e.g. Brand fail / Clever campaign / Platform update / AI x marketing",
   "scores": {{"relevance": 0-25, "interest": 0-20, "wit": 0-10}},
   "skip_reason": "",
@@ -59,6 +60,9 @@ Return ONLY JSON with exactly this shape:
     {{"text": "each factual statement used in news/caption", "evidence": "exact words copied from SOURCE TEXT that support it"}}
   ]
 }}
+contested = true when the story rests on allegations, accusations, leaks, rumours, disputed numbers or one side of a
+fight (e.g. "X accused of", "reportedly plans", "sources say"). Plain announcements, launches, campaigns, results and
+platform updates are contested = false.
 Scoring guide: relevance = fit with the niche; interest = how likely this audience shares/saves it;
 wit = how genuinely good the punchline is (be harsh; 9-10 only for lines you'd screenshot)."""
 

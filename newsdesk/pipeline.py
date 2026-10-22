@@ -170,7 +170,7 @@ class Pipeline:
         for c in self.db.clusters_with_status("pending"):
             if now - parse_iso(c["first_published_at"]) > window:
                 items = self.db.cluster_items(c["id"])
-                pts, why = scoring.credibility(items)
+                pts, why = scoring.credibility(items, self.rank.get("allow_single_trusted", False))
                 self.db.update_cluster(c["id"], status="expired_unverified" if pts < 20 else "expired",
                                        reason=f"window passed; {why}")
 
@@ -180,10 +180,14 @@ class Pipeline:
         ready = []
         for c in self.db.clusters_with_status("pending"):
             items = self.db.cluster_items(c["id"])
-            pts, why = scoring.credibility(items)
+            text = " ".join(f"{i['title']} {i['summary']}" for i in items)
+            hits = scoring.blocked_terms(text, self.kw.get("blocked", []))
+            if hits:  # re-checked here so rule changes also apply to stories already waiting
+                self.db.update_cluster(c["id"], status="blocked", reason="sensitive topic: " + ", ".join(hits))
+                continue
+            pts, why = scoring.credibility(items, self.rank.get("allow_single_trusted", False))
             if pts < self.rank.get("required_credibility", 20):
                 continue  # keep waiting for corroboration
-            text = " ".join(f"{i['title']} {i['summary']}" for i in items)
             pre = scoring.keyword_score(text, self.kw.get("niche", {})) + len({i["domain"] for i in items})
             ready.append((pre, c, items, pts, why))
         if not ready:
@@ -254,6 +258,10 @@ class Pipeline:
             return "llm_error"
 
         # ── editorial gates ──
+        if cred < 20 and pkg.get("contested"):
+            self.db.update_cluster(cid, status="rejected",
+                                   reason="contested/alleged story needs a 2nd outlet or official source")
+            return "rejected"
         if not pkg.get("relevant") or pkg.get("sensitive") or not pkg.get("new_development", True):
             reason = pkg.get("skip_reason") or ("sensitive" if pkg.get("sensitive") else "not relevant/new")
             self.db.update_cluster(cid, status="rejected", reason=f"AI editor: {reason}"[:300])

@@ -6,8 +6,9 @@ from datetime import datetime
 from functools import lru_cache
 
 
-def credibility(items) -> tuple[int, str]:
-    """20 = verified: an official primary source, or 2+ independent trusted outlets."""
+def credibility(items, allow_single_trusted: bool = False) -> tuple[int, str]:
+    """20 = verified: an official primary source, or 2+ independent trusted outlets.
+    18 = one trusted outlet (only counts when allow_single_trusted; contested stories still need 20)."""
     primary = {i["domain"] for i in items if i["tier"] == "primary"}
     trusted = {i["domain"] for i in items if i["tier"] == "trusted"}
     unknown = {i["domain"] for i in items if i["tier"] == "unknown"}
@@ -15,6 +16,8 @@ def credibility(items) -> tuple[int, str]:
         return 20, f"official source ({', '.join(sorted(primary))})"
     if len(trusted) >= 2:
         return 20, f"{len(trusted)} independent trusted outlets"
+    if len(trusted) == 1 and allow_single_trusted:
+        return 18, f"1 trusted outlet ({next(iter(trusted))})"
     if len(trusted) == 1 and unknown:
         return 12, "1 trusted outlet + unverified outlets"
     if len(trusted) == 1:
