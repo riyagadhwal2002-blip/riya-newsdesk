@@ -1,0 +1,49 @@
+{
+  "cluster_id": 285,
+  "score": 92,
+  "credibility": "1 trusted outlet (techcrunch.com)",
+  "caption": "The AI gold rush is officially leaving the screen and putting on safety goggles. Former OpenAI science lead Kevin Weil just launched Warp Sciences with a whopping $215 million led by Lightspeed, using robots and sensor gloves to automate lab work. Instead of outsourcing to contractors, they're reshoring the grind so robots can synthesize compounds around the clock. At this rate, your next prescription is going to be coded by a machine that never sleeps and probably doesn't drink coffee either. Would you trust a drug synthesized by a robot on the night shift? Let's talk in the comments. 🤖💊 #WarpSciences #OpenAI #ArtificialIntelligence #TechNews #StartupFunding #FutureOfWork\n\nSource: TechCrunch\n\n#WarpSciences #OpenAI #ArtificialIntelligence #StartupFunding #FutureOfWork",
+  "post": {
+    "news": "Former OpenAI science lead Kevin Weil launched Warp Sciences to automate wet labs with robots, raising a $215 million round led by Lightspeed.",
+    "take": "We really told AI to take our jobs and it said bet, let me put on sensor gloves and mix your chemicals at 3 AM.",
+    "insight": "AI isn't just writing emails anymore; it's moving into physical lab infrastructure to speed up supply chains.",
+    "caption": "The AI gold rush is officially leaving the screen and putting on safety goggles. Former OpenAI science lead Kevin Weil just launched Warp Sciences with a whopping $215 million led by Lightspeed, using robots and sensor gloves to automate lab work. Instead of outsourcing to contractors, they're reshoring the grind so robots can synthesize compounds around the clock. At this rate, your next prescription is going to be coded by a machine that never sleeps and probably doesn't drink coffee either. Would you trust a drug synthesized by a robot on the night shift? Let's talk in the comments. 🤖💊 #WarpSciences #OpenAI #ArtificialIntelligence #TechNews #StartupFunding #FutureOfWork",
+    "hashtags": [
+      "#WarpSciences",
+      "#OpenAI",
+      "#ArtificialIntelligence",
+      "#StartupFunding",
+      "#FutureOfWork"
+    ],
+    "first_comment": "Bro saw ChatGPT write an essay and said let's make it handle toxic chemicals.",
+    "alt_text": "Text card showing news about Warp Sciences raising $215M for lab robots and a sarcastic take on AI taking physical lab jobs."
+  },
+  "claims": [
+    {
+      "text": "Former OpenAI science lead Kevin Weil launched Warp Sciences to automate wet labs with robots",
+      "evidence": "Former OpenAI science lead Kevin Weil has launched Warp Sciences, a new AI startup focused on automating lab work for drug discovery."
+    },
+    {
+      "text": "raising a $215 million round led by Lightspeed",
+      "evidence": "The new startup raised a $215 million round led by Lightspeed."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "Former OpenAI science lead launches Warp Science to automate wet labs with robots",
+      "summary": "The new startup raised a $215 million round led by Lightspeed.",
+      "published_at": "2026-10-22T18:38:47+00:00",
+      "url": "https://techcrunch.com/2026/10/22/former-openai-science-lead-launches-warp-science-to-automate-wet-labs-with-robots"
+    }
+  ],
+  "created_at": "2026-10-22T18:47:49+00:00"
+}
