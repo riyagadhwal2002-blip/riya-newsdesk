@@ -75,6 +75,12 @@ class BaseLLM:
 class GeminiLLM(BaseLLM):
     URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
+    def models(self) -> list[str]:
+        """Primary model first, then backups (free models are often briefly 'overloaded')."""
+        listed = self.cfg.get("gemini_models") or []
+        first = self.cfg.get("gemini_model", "gemini-flash-latest")
+        return list(dict.fromkeys([first, *listed]))
+
     def _call(self, system: str, user: str, temperature: float) -> str:
         key = self.settings.secret("GEMINI_API_KEY")
         if not key:
@@ -84,16 +90,23 @@ class GeminiLLM(BaseLLM):
             "contents": [{"role": "user", "parts": [{"text": user}]}],
             "generationConfig": {"temperature": temperature, "responseMimeType": "application/json"},
         }
-        r = requests.post(self.URL.format(model=self.cfg.get("gemini_model", "gemini-flash-latest")),
-                          headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-                          json=body, timeout=90)
-        r.raise_for_status()
-        data = r.json()
-        try:
-            parts = data["candidates"][0]["content"]["parts"]
-        except (KeyError, IndexError):
-            raise LLMError(f"empty Gemini response: {str(data)[:300]}")
-        return "".join(p.get("text", "") for p in parts)
+        last_err: Exception | None = None
+        for model in self.models():
+            r = requests.post(self.URL.format(model=model),
+                              headers={"x-goog-api-key": key, "Content-Type": "application/json"},
+                              json=body, timeout=90)
+            if r.status_code in (404, 429, 500, 503):
+                log.warning("Gemini model %s unavailable (HTTP %s), trying next", model, r.status_code)
+                last_err = requests.HTTPError(f"{r.status_code} for model {model}", response=r)
+                continue
+            r.raise_for_status()
+            data = r.json()
+            try:
+                parts = data["candidates"][0]["content"]["parts"]
+            except (KeyError, IndexError):
+                raise LLMError(f"empty Gemini response: {str(data)[:300]}")
+            return "".join(p.get("text", "") for p in parts)
+        raise last_err or LLMError("no Gemini model configured")
 
 
 class AnthropicLLM(BaseLLM):
