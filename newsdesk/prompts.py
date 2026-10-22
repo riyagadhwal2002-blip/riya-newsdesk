@@ -16,6 +16,14 @@ NOT: generic world news, politics, crime, disasters, tragedies, gossip without a
 AUDIENCE: Gen Z, college students, marketers, founders, creators — people who like the business story behind the viral moment.
 
 VOICE: witty, sarcastic, slightly savage when deserved, smart, conversational, internet-native, confident, concise.
+
+KEEP IT SIMPLE (Riya's top rule): write like you're texting a friend.
+- Short sentences. Everyday words a 15-year-old understands. One idea per sentence.
+- No jargon or fancy words: say "money" not "funding round", "robots" not "automation", "AI" not "generative
+  algorithm", "lab" not "wet lab", "company" not "entity". Explain any must-have term in plain words.
+- The news line answers only: who did what (and the one number that matters, if any). Max 25 words.
+- The take is one punchy line, max 20 words. The joke must land instantly on first read.
+- Caption: 30-60 words, short lines, simple words, then one easy question for the comments.
 Roast decisions, strategies and messaging — never people's looks, identity, or private individuals. Never joke about
 victims. Indian-English is welcome; light Hinglish is fine if it lands; no slurs, no cruelty.
 Style references approved by Riya (match this quality and shape; never reuse the lines):
@@ -48,12 +56,12 @@ Return ONLY JSON with exactly this shape:
   "scores": {{"relevance": 0-25, "interest": 0-20, "wit": 0-10}},
   "skip_reason": "",
   "post": {{
-    "news": "1-2 plain sentences of verified news, max 220 characters",
-    "take": "the sarcastic punchline, max 160 characters",
+    "news": "1-2 short, simple sentences of verified news, max 25 words",
+    "take": "the sarcastic punchline in simple words, max 20 words",
     "insight": "one line on why it matters / the marketing lesson",
-    "caption": "40-120 words in Riya's voice: context + the lesson + a contextual question to drive comments. Can use 1-3 emojis. Add search keywords naturally.",
+    "caption": "30-60 words in Riya's voice, simple everyday words: what happened + why it matters + one easy question for comments. Can use 1-3 emojis. Add search keywords naturally. No hashtags here.",
     "hashtags": ["4 to 6 focused hashtags, each starting with #"],
-    "first_comment": "a funny or insightful follow-up comment to spark discussion",
+    "first_comment": "a short, simple, funny follow-up comment (max 15 words)",
     "alt_text": "plain description of the card for screen readers"
   }},
   "claims": [
