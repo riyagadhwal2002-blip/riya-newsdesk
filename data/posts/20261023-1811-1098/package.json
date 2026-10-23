@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1098,
+  "score": 85,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Google just updated its rules so that connecting your Gmail or Photos to AI features can open the door to targeted ads based on that private data. Nothing says a smart assistant like your emails secretly setting up your next shopping ad. Would you trade your data privacy for a better AI recommendation? 🤖💡\n\n@google\n\nSource: The Verge\n\n#Google #DataPrivacy #AIFeatures #TechNews #Marketing",
+  "post": {
+    "news": "Google updated its privacy policy to let personalized ads use data from Gmail, Drive, and Photos if you use its AI features.",
+    "take": "We wanted a personal assistant, not a guy reading our emails to sell us running shoes.",
+    "insight": "AI features are free because your personal memories and messages are the real product being monetised.",
+    "caption": "Google just updated its rules so that connecting your Gmail or Photos to AI features can open the door to targeted ads based on that private data. Nothing says a smart assistant like your emails secretly setting up your next shopping ad. Would you trade your data privacy for a better AI recommendation? 🤖💡",
+    "hashtags": [
+      "#Google",
+      "#DataPrivacy",
+      "#AIFeatures",
+      "#TechNews",
+      "#Marketing"
+    ],
+    "first_comment": "My inbox is literally just flight tickets and food delivery, please spare me.",
+    "alt_text": "Text card about Google using Gmail and Photos data for targeted ads when using AI features."
+  },
+  "claims": [
+    {
+      "text": "Google updated its privacy policy to let personalized ads use data from Gmail, Drive, and Photos if you use its AI features.",
+      "evidence": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features."
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 24,
+    "interest": 19,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "summary": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Authority, adds an exception to its promise about not using your Drive, Gmail, or Google Photos for personalized ads. While the previous […]",
+      "published_at": "2026-10-23T16:52:55+00:00",
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update"
+    }
+  ],
+  "created_at": "2026-10-23T18:11:49+00:00"
+}
