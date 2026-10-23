@@ -1,9 +1,11 @@
 name: newsdesk
 
-# Runs every 30 minutes on GitHub's servers (free), even when your laptop is off.
+# Checks every 10 minutes on GitHub's servers (free), even when your laptop is off.
+# GitHub often delays or skips scheduled runs, so checking often keeps posts close to every 30 min;
+# publishing.min_gap_minutes (25) stops it posting more often than that.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch: {}
 
 permissions:
