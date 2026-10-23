@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1008,
+  "score": 95,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "Prediction markets are really going all out with celebrity ads. Kalshi got Danny McBride and Shane Gillis for a four-minute comedy spot about weather forecasting. Branding is wild when a betting app needs a magic oracle and an Oompa Loompa to explain how it works. Would you trust a weather prediction app with your money? Let us know below.\n\nSource: Variety\n\n#marketing #branding #advertising #contentcreator #popculture",
+  "post": {
+    "news": "Shane Gillis and Danny McBride star in a four-minute ad for prediction market Kalshi where Gillis plays a clueless weatherman.",
+    "take": "We used to watch TV for the weather. Now we need an Oompa Loompa and a betting app to know if it rains.",
+    "insight": "Prediction markets are spending big on celebrity-led comedy campaigns to make betting on real-world events feel like pop culture.",
+    "caption": "Prediction markets are really going all out with celebrity ads. Kalshi got Danny McBride and Shane Gillis for a four-minute comedy spot about weather forecasting. Branding is wild when a betting app needs a magic oracle and an Oompa Loompa to explain how it works. Would you trust a weather prediction app with your money? Let us know below.",
+    "hashtags": [
+      "#marketing",
+      "#branding",
+      "#advertising",
+      "#contentcreator",
+      "#popculture"
+    ],
+    "first_comment": "Next up: betting on when your Swiggy delivery will actually arrive.",
+    "alt_text": "Text card showing news about Shane Gillis and Danny McBride starring in a Kalshi prediction market ad, followed by a sarcastic take about weather apps."
+  },
+  "claims": [
+    {
+      "text": "Shane Gillis and Danny McBride star in a four-minute ad for prediction market Kalshi where Gillis plays a clueless weatherman.",
+      "evidence": "Shane Gillis goes head to head with Danny McBride in an absurdly funny new ad for prediction market platform Kalshi. McBride wrote the four-minute commercial, which stars Gillis as a weatherman who can’t seem to get the forecast right."
+    }
+  ],
+  "category": "Clever campaign",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Shane Gillis and Danny McBride Are Rival Weathermen in Absurdist, 4-Minute Kalshi Ad (EXCLUSIVE)",
+      "summary": "Shane Gillis goes head to head with Danny McBride in an absurdly funny new ad for prediction market platform Kalshi. McBride wrote the four-minute commercial, which stars Gillis as a weatherman who can’t seem to get the forecast right. McBride isa meteorologist at a competing network who is somehow always spot on. Fed up with […]",
+      "published_at": "2026-10-23T15:00:00+00:00",
+      "url": "https://variety.com/2026/tv/news/shane-gillis-danny-mcbride-kalshi-ad-1236921825"
+    }
+  ],
+  "created_at": "2026-10-23T15:19:50+00:00"
+}
