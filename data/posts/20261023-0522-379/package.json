@@ -1,0 +1,53 @@
+{
+  "cluster_id": 379,
+  "score": 88,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Meta paused and updated sharing on Muse after researchers easily spotted public links to private business files and loan applications. 😅 Meta swapped the old web links, but this is your reminder to think twice before feeding company secrets into new AI tools.\n\nDo you trust AI tools with work files?\n\nSource: The Verge\n\n#Meta #TechNews #DataPrivacy #AItools #MarketingNews",
+  "post": {
+    "news": "Meta restarted sharing on Muse after researchers found public links exposing user files, including a marketing companys internal revenue review.",
+    "take": "Nothing says protected user data like strangers casually reading your internal company files over breakfast.",
+    "insight": "Rushing out collaboration tools without locking down privacy turns basic user trust into an immediate PR risk.",
+    "caption": "Meta paused and updated sharing on Muse after researchers easily spotted public links to private business files and loan applications. 😅 Meta swapped the old web links, but this is your reminder to think twice before feeding company secrets into new AI tools.\n\nDo you trust AI tools with work files?",
+    "hashtags": [
+      "#Meta",
+      "#TechNews",
+      "#DataPrivacy",
+      "#AItools",
+      "#MarketingNews"
+    ],
+    "first_comment": "My company files are safe because even I cannot find them.",
+    "alt_text": "Text card about Meta fixing Muse sharing after researchers found links to private business documents, with a witty punchline about privacy."
+  },
+  "claims": [
+    {
+      "text": "Meta restarted Muse sharing after researchers found public links exposing user files.",
+      "evidence": "Meta has re-enabled Muse sharing after security researchers had reported that public conversation links could be easy to find."
+    },
+    {
+      "text": "The exposed files included a marketing company's internal revenue review and a loan application.",
+      "evidence": "The researchers said they had been able to find Muse pages like a marketing company’s internal revenue review and a small business owner’s loan application."
+    },
+    {
+      "text": "Meta replaced the old shared links with new URLs.",
+      "evidence": "If you shared an artifact before the fix: it now has a new URL"
+    }
+  ],
+  "category": "Brand fail",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Meta turns Muse sharing back on",
+      "summary": "Meta has re-enabled Muse sharing after security researchers had reported that public conversation links could be easy to find. The researchers said they had been able to find Muse pages like a marketing company's internal revenue review and a small business owner's loan application. Researchers at Claroc reported earlier this week that Muse the web […]",
+      "published_at": "2026-10-22T20:24:04+00:00",
+      "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts"
+    }
+  ],
+  "created_at": "2026-10-23T05:22:39+00:00"
+}
