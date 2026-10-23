@@ -1,0 +1,36 @@
+{
+  "cluster_id": 953,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Samsung didn't start with phones or TVs. It started by trading groceries like dried fish and noodles. 🐟📱 Which brand do you think had the biggest glow-up? 👇\n\n@samsung\n\nSource: Wikipedia\n\n#DidYouKnow #Samsung #BrandStory #BusinessFacts #Entrepreneurship",
+  "post": {
+    "news": "Did you know? Samsung started in 1938 as a small trading company selling dried fish and noodles.",
+    "take": "From dried fish to foldable phones. Career switch goals.",
+    "caption": "Samsung didn't start with phones or TVs. It started by trading groceries like dried fish and noodles. 🐟📱 Which brand do you think had the biggest glow-up? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Samsung",
+      "#BrandStory",
+      "#BusinessFacts",
+      "#Entrepreneurship"
+    ],
+    "first_comment": "Galaxy Fish Ultra coming soon.",
+    "alt_text": "Did you know? Samsung started in 1938 as a small trading company selling dried fish and noodles. From dried fish to foldable phones. Career switch goals."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Samsung started in 1938 as a small trading company selling dried fish and noodles.",
+      "evidence": "https://en.wikipedia.org/wiki/Samsung"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samsung",
+      "title": "Samsung"
+    }
+  ],
+  "created_at": "2026-10-23T14:07:03+00:00"
+}
