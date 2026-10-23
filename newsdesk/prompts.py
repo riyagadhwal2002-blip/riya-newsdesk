@@ -59,7 +59,7 @@ Return ONLY JSON with exactly this shape:
     "news": "1-2 short, simple sentences of verified news, max 25 words",
     "take": "the sarcastic punchline in simple words, max 20 words",
     "insight": "one line on why it matters / the marketing lesson",
-    "caption": "30-60 words in Riya's voice, simple everyday words: what happened + why it matters + one easy question for comments. Can use 1-3 emojis. Add search keywords naturally. No hashtags here.",
+    "caption": "30-60 words in Riya's voice, simple everyday words: what happened + why it matters + one easy question for comments. Can use 1-3 emojis. Weave 1-2 search words into normal sentences; NEVER add a separate list of keywords. No hashtags here.",
     "hashtags": ["4 to 6 focused hashtags, each starting with #"],
     "first_comment": "a short, simple, funny follow-up comment (max 15 words)",
     "alt_text": "plain description of the card for screen readers"
