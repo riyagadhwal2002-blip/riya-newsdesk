@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1201,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Before phones, Nokia made paper pulp. Then rubber boots. Then cables. Then the phone everyone's dad still swears by. 📟 Did you own a Nokia? Which one? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #Nokia #BrandStory #Nostalgia #BusinessFacts",
+  "post": {
+    "news": "Did you know? Nokia started in 1865 as a paper pulp mill in Finland.",
+    "take": "That explains the 3310. They were building with tree-level strength from day one.",
+    "caption": "Before phones, Nokia made paper pulp. Then rubber boots. Then cables. Then the phone everyone's dad still swears by. 📟 Did you own a Nokia? Which one? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Nokia",
+      "#BrandStory",
+      "#Nostalgia",
+      "#BusinessFacts"
+    ],
+    "first_comment": "Snake on the 3310 > every game on my phone right now.",
+    "alt_text": "Did you know? Nokia started in 1865 as a paper pulp mill in Finland. That explains the 3310. They were building with tree-level strength from day one."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Nokia started in 1865 as a paper pulp mill in Finland.",
+      "evidence": "https://en.wikipedia.org/wiki/Nokia"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nokia",
+      "title": "Nokia"
+    }
+  ],
+  "created_at": "2026-10-23T19:31:02+00:00"
+}
