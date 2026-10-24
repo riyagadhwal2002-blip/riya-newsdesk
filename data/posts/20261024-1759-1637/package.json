@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1637,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "The KFC founder didn't hit it big until his 60s. 🍗 There's no deadline on starting. What would you start if age didn't matter? 👇\n\n@kfc\n\nSource: Wikipedia\n\n#DidYouKnow #KFC #Founders #Motivation #Entrepreneurship",
+  "post": {
+    "news": "Did you know? Colonel Sanders started franchising KFC in 1952, when he was in his 60s.",
+    "take": "And you think 25 is too late to start something?",
+    "caption": "The KFC founder didn't hit it big until his 60s. 🍗 There's no deadline on starting. What would you start if age didn't matter? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#KFC",
+      "#Founders",
+      "#Motivation",
+      "#Entrepreneurship"
+    ],
+    "first_comment": "Late bloomers, this one's for you.",
+    "alt_text": "Did you know? Colonel Sanders started franchising KFC in 1952, when he was in his 60s. And you think 25 is too late to start something?"
+  },
+  "claims": [
+    {
+      "text": "Did you know? Colonel Sanders started franchising KFC in 1952, when he was in his 60s.",
+      "evidence": "https://en.wikipedia.org/wiki/Colonel_Sanders"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colonel_Sanders",
+      "title": "Colonel Sanders"
+    }
+  ],
+  "created_at": "2026-10-24T17:59:10+00:00"
+}
