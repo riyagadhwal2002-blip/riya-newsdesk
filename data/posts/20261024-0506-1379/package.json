@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1379,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "The inventors tried to sell Bubble Wrap as wallpaper. It flopped. Then it found its real job: protecting stuff (and our stress levels). 🫧 Be honest, can you resist popping it? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #BubbleWrap #ProductStory #Marketing #Pivot",
+  "post": {
+    "news": "Did you know? Bubble Wrap was first invented in 1957 as textured wallpaper.",
+    "take": "Nobody wanted it on their walls. Everybody wanted to pop it. Know your audience.",
+    "caption": "The inventors tried to sell Bubble Wrap as wallpaper. It flopped. Then it found its real job: protecting stuff (and our stress levels). 🫧 Be honest, can you resist popping it? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#BubbleWrap",
+      "#ProductStory",
+      "#Marketing",
+      "#Pivot"
+    ],
+    "first_comment": "Popped 3 sheets while writing this.",
+    "alt_text": "Did you know? Bubble Wrap was first invented in 1957 as textured wallpaper. Nobody wanted it on their walls. Everybody wanted to pop it. Know your audience."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Bubble Wrap was first invented in 1957 as textured wallpaper.",
+      "evidence": "https://en.wikipedia.org/wiki/Bubble_wrap"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+      "title": "Bubble wrap"
+    }
+  ],
+  "created_at": "2026-10-24T05:06:46+00:00"
+}
