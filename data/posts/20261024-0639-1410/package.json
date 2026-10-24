@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1410,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Play-Doh started as a putty for cleaning wallpaper. When that market died, it became a toy. 🎨 Sometimes your product is right, just sold to the wrong people. Agree? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #PlayDoh #Pivot #ProductStory #Marketing",
+  "post": {
+    "news": "Did you know? Play-Doh was first sold as a wallpaper cleaner.",
+    "take": "Best pivot ever: from cleaning walls to kids trying to eat it.",
+    "caption": "Play-Doh started as a putty for cleaning wallpaper. When that market died, it became a toy. 🎨 Sometimes your product is right, just sold to the wrong people. Agree? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#PlayDoh",
+      "#Pivot",
+      "#ProductStory",
+      "#Marketing"
+    ],
+    "first_comment": "Childhood smell unlocked.",
+    "alt_text": "Did you know? Play-Doh was first sold as a wallpaper cleaner. Best pivot ever: from cleaning walls to kids trying to eat it."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Play-Doh was first sold as a wallpaper cleaner.",
+      "evidence": "https://en.wikipedia.org/wiki/Play-Doh"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Play-Doh",
+      "title": "Play-Doh"
+    }
+  ],
+  "created_at": "2026-10-24T06:39:40+00:00"
+}
