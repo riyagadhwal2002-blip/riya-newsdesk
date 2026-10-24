@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1588,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "The team built a chat tool to make their game. The game shut down. The chat tool became Slack. 💬 Ever had a 'side thing' turn into the main thing? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #Slack #StartupStory #Pivot #Founders",
+  "post": {
+    "news": "Did you know? Slack began as the office chat tool for a video game called Glitch. The game failed.",
+    "take": "The game flopped, the office chat won. Your side project might be the real project.",
+    "caption": "The team built a chat tool to make their game. The game shut down. The chat tool became Slack. 💬 Ever had a 'side thing' turn into the main thing? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Slack",
+      "#StartupStory",
+      "#Pivot",
+      "#Founders"
+    ],
+    "first_comment": "Every 'quick tool' at work is one pivot away from a unicorn.",
+    "alt_text": "Did you know? Slack began as the office chat tool for a video game called Glitch. The game failed. The game flopped, the office chat won. Your side project might be the real project."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Slack began as the office chat tool for a video game called Glitch. The game failed.",
+      "evidence": "https://en.wikipedia.org/wiki/Slack_(software)"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Slack_(software)",
+      "title": "Slack (software)"
+    }
+  ],
+  "created_at": "2026-10-24T15:02:22+00:00"
+}
