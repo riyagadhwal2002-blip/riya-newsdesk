@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1656,
+  "score": 95,
+  "credibility": "1 trusted outlet (techcrunch.com)",
+  "caption": "The tech world loves launching shiny new AI tools, but reality catches up fast. Turns out, 42 percent of corporate AI projects get quietly dumped into the digital graveyard. Are we building actual solutions, or just expensive toys? Let's talk in the comments. 🤖📉\n\nSource: TechCrunch\n\n#TechNews #AIFails #CreatorEconomy #StartupLife #MarketingStrategy",
+  "post": {
+    "news": "TechCrunch reported that about 42 percent of corporate AI initiatives are abandoned, alongside a growing graveyard of failed tools and gadgets.",
+    "take": "We spent billions building robots that can write poetry just to watch them join the startup graveyard six months later.",
+    "insight": "Building tech just because it has the word AI attached to it is a fast track to becoming a case study.",
+    "caption": "The tech world loves launching shiny new AI tools, but reality catches up fast. Turns out, 42 percent of corporate AI projects get quietly dumped into the digital graveyard. Are we building actual solutions, or just expensive toys? Let's talk in the comments. 🤖📉",
+    "hashtags": [
+      "#TechNews",
+      "#AIFails",
+      "#CreatorEconomy",
+      "#StartupLife",
+      "#MarketingStrategy"
+    ],
+    "first_comment": "RIP to all those little AI agents that never made it past month three.",
+    "alt_text": "A card showing news about the growing AI project graveyard and a sarcastic joke about failed tech tools."
+  },
+  "claims": [
+    {
+      "text": "TechCrunch reported that about 42 percent of corporate AI initiatives are abandoned, alongside a growing graveyard of failed tools and gadgets.",
+      "evidence": "According to S&P Global Market Intelligence, about 42% of AI initiatives are ultimately abandoned by their corporate parents."
+    }
+  ],
+  "category": "Brand fail / AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "published_at": "2026-10-24T19:00:00+00:00",
+      "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it"
+    }
+  ],
+  "created_at": "2026-10-24T19:22:39+00:00"
+}

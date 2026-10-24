@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1659,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "A tractor maker got annoyed with Ferrari and decided to build his own supercar. 🚜➡️🏎️ Petty? Maybe. Iconic? Definitely. Best business revenge story you know? 👇\n\n@lamborghini @ferrari\n\nSource: Wikipedia\n\n#DidYouKnow #Lamborghini #Ferrari #BrandStory #Founders",
+  "post": {
+    "news": "Did you know? Lamborghini started out making tractors. The founder began building sports cars after a clash with Enzo Ferrari.",
+    "take": "The most expensive revenge in car history. And honestly? Worth it.",
+    "caption": "A tractor maker got annoyed with Ferrari and decided to build his own supercar. 🚜➡️🏎️ Petty? Maybe. Iconic? Definitely. Best business revenge story you know? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Lamborghini",
+      "#Ferrari",
+      "#BrandStory",
+      "#Founders"
+    ],
+    "first_comment": "Spite is a renewable energy source.",
+    "alt_text": "Did you know? Lamborghini started out making tractors. The founder began building sports cars after a clash with Enzo Ferrari. The most expensive revenge in car history. And honestly? Worth it."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Lamborghini started out making tractors. The founder began building sports cars after a clash with Enzo Ferrari.",
+      "evidence": "https://en.wikipedia.org/wiki/Ferruccio_Lamborghini"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferruccio_Lamborghini",
+      "title": "Ferruccio Lamborghini"
+    }
+  ],
+  "created_at": "2026-10-24T19:22:39+00:00"
+}
