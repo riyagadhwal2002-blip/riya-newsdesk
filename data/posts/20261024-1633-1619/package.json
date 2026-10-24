@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1619,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Steve Jobs, Steve Wozniak… and Ronald Wayne. He left Apple days after it started and sold his share for $800. 🍎 Would you have stayed? 👇\n\n@apple\n\nSource: Wikipedia\n\n#DidYouKnow #Apple #Founders #StartupStory #BusinessFacts",
+  "post": {
+    "news": "Did you know? Apple had a third co-founder, Ronald Wayne. In 1976 he sold his share for $800.",
+    "take": "Worst exit ever. Or the calmest sleep ever. Depends how you look at it.",
+    "caption": "Steve Jobs, Steve Wozniak… and Ronald Wayne. He left Apple days after it started and sold his share for $800. 🍎 Would you have stayed? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Apple",
+      "#Founders",
+      "#StartupStory",
+      "#BusinessFacts"
+    ],
+    "first_comment": "Somewhere a calculator just cried.",
+    "alt_text": "Did you know? Apple had a third co-founder, Ronald Wayne. In 1976 he sold his share for $800. Worst exit ever. Or the calmest sleep ever. Depends how you look at it."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Apple had a third co-founder, Ronald Wayne. In 1976 he sold his share for $800.",
+      "evidence": "https://en.wikipedia.org/wiki/Ronald_Wayne"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ronald_Wayne",
+      "title": "Ronald Wayne"
+    }
+  ],
+  "created_at": "2026-10-24T16:33:36+00:00"
+}
