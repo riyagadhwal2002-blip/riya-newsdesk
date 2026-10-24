@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1550,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Burbn had too many features. Users only loved the photos. So the founders kept just that. 📸 Less really is more. What app do you wish would do LESS? 👇\n\n@instagram\n\nSource: Wikipedia\n\n#DidYouKnow #Instagram #StartupStory #ProductThinking #Founders",
+  "post": {
+    "news": "Did you know? Instagram started as Burbn, a check-in app. The founders cut everything except photos.",
+    "take": "They deleted most of their app and it became huge. Some of us can't even delete old selfies.",
+    "caption": "Burbn had too many features. Users only loved the photos. So the founders kept just that. 📸 Less really is more. What app do you wish would do LESS? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Instagram",
+      "#StartupStory",
+      "#ProductThinking",
+      "#Founders"
+    ],
+    "first_comment": "Burbn-gram doesn't have the same ring.",
+    "alt_text": "Did you know? Instagram started as Burbn, a check-in app. The founders cut everything except photos. They deleted most of their app and it became huge. Some of us can't even delete old selfies."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Instagram started as Burbn, a check-in app. The founders cut everything except photos.",
+      "evidence": "https://en.wikipedia.org/wiki/Instagram"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Instagram",
+      "title": "Instagram"
+    }
+  ],
+  "created_at": "2026-10-24T13:35:10+00:00"
+}
