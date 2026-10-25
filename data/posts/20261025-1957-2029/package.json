@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2029,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "5,127 tries before it worked. 🌀 Most people quit at try number 3. What's something you refuse to give up on? 👇\n\n@dyson\n\nSource: Wikipedia\n\n#DidYouKnow #Dyson #Founders #Motivation #Innovation",
+  "post": {
+    "news": "Did you know? James Dyson made 5,127 prototypes before his vacuum finally worked.",
+    "take": "And we give up on the gym after three days.",
+    "caption": "5,127 tries before it worked. 🌀 Most people quit at try number 3. What's something you refuse to give up on? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Dyson",
+      "#Founders",
+      "#Motivation",
+      "#Innovation"
+    ],
+    "first_comment": "Prototype 5,126 must have been heartbreaking.",
+    "alt_text": "Did you know? James Dyson made 5,127 prototypes before his vacuum finally worked. And we give up on the gym after three days."
+  },
+  "claims": [
+    {
+      "text": "Did you know? James Dyson made 5,127 prototypes before his vacuum finally worked.",
+      "evidence": "https://en.wikipedia.org/wiki/James_Dyson"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/James_Dyson",
+      "title": "James Dyson"
+    }
+  ],
+  "created_at": "2026-10-25T19:57:34+00:00"
+}
