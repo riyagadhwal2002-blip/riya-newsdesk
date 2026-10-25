@@ -1,0 +1,54 @@
+{
+  "cluster_id": 1958,
+  "score": 88,
+  "credibility": "1 trusted outlet (techcrunch.com)",
+  "caption": "The US government wants driverless cars to glow cyan so we all know a robot is behind the wheel. Because nothing says futuristic travel quite like adding RGB gaming lights to a minivan.\n\nWould you trust a cyan-lit robot taxi on your commute? Drop your thoughts below! 👇\n\nSource: TechCrunch\n\n#AutonomousVehicles #TechNews #FutureOfTransportation #ArtificialIntelligence #Innovation",
+  "post": {
+    "news": "US safety regulators proposed using cyan lights to signal when a vehicle is operating autonomously without a human monitoring the road.",
+    "take": "Finally, a giant neon sign telling you the car driving itself is about to make your insurance rates jump.",
+    "insight": "As autonomous vehicles take over our roads, regulators are scrambling for standard ways to signal safety and automation to the public.",
+    "caption": "The US government wants driverless cars to glow cyan so we all know a robot is behind the wheel. Because nothing says futuristic travel quite like adding RGB gaming lights to a minivan.\n\nWould you trust a cyan-lit robot taxi on your commute? Drop your thoughts below! 👇",
+    "hashtags": [
+      "#AutonomousVehicles",
+      "#TechNews",
+      "#FutureOfTransportation",
+      "#ArtificialIntelligence",
+      "#Innovation"
+    ],
+    "first_comment": "Gaming PC aesthetics are officially taking over public transit.",
+    "alt_text": "Text card showing news about US regulators proposing cyan lights for autonomous vehicles and a joke about glowing cars."
+  },
+  "claims": [
+    {
+      "text": "US safety regulators proposed using cyan lights to signal when a vehicle is operating autonomously without a human monitoring the road.",
+      "evidence": "The National Highway Traffic Safety Administration has proposed new lighting requirements for autonomous vehicles that include an option (dare I say a strong suggestion?) to use cyan-colored lights to signal when a vehicle is operating autonomously without a human occupant monitoring the road."
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 22,
+    "interest": 15,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
+      "summary": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, the role AI is playing in it.",
+      "published_at": "2026-10-25T16:05:00+00:00",
+      "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy"
+    },
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
+      "summary": "TechCrunch Mobility: Blue-green is the color of autonomy TechCrunch",
+      "published_at": "2026-10-25T16:05:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2dYR191VGlfbG04TXZEU04tc09VREFySHNhM3JuTTUwRDFGbEhHUGN5MjM5b3NhN1BQa2g1RGRfc2QyeFRoQ01aSGxNeERjWXZKaXBjS0MtbFB5ZG9oQjFNaXJFMTBEQ1lzZ1JtdG5CYUVaaDFZbnNRWUtJUXhCbnB2YjdzcW04SE9aakhpb0RsZThD?oc=5"
+    }
+  ],
+  "created_at": "2026-10-25T16:11:25+00:00"
+}

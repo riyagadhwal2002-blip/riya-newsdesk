@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1956,
+  "score": 95,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Investment giant Apollo says normal companies are seeing zero financial payoff from AI. While big tech is cashing in, the rest of corporate America is treating AI spending as a boring cost rather than a money printer. Are your bosses still forcing you to use AI for everything? 🤖📉\n\nWhat is the most pointless way your office has tried to use AI so far?\n\nSource: Business Insider\n\n#ArtificialIntelligence #TechTrends #MarketingStrategy #CreatorEconomy #BusinessNews",
+  "post": {
+    "news": "Investment firm Apollo Global Management says AI has delivered zero financial payoff to corporate America outside of the tech industry.",
+    "take": "We spent billions on a magic robot that basically just helps us write better emails about why we have no money.",
+    "insight": "Every major tech shift eventually has to prove it makes money for normal businesses, not just the people selling the tools.",
+    "caption": "Investment giant Apollo says normal companies are seeing zero financial payoff from AI. While big tech is cashing in, the rest of corporate America is treating AI spending as a boring cost rather than a money printer. Are your bosses still forcing you to use AI for everything? 🤖📉\n\nWhat is the most pointless way your office has tried to use AI so far?",
+    "hashtags": [
+      "#ArtificialIntelligence",
+      "#TechTrends",
+      "#MarketingStrategy",
+      "#CreatorEconomy",
+      "#BusinessNews"
+    ],
+    "first_comment": "An expensive chat partner is still just an expensive chat partner.",
+    "alt_text": "Text card showing news about Apollo stating AI has given zero financial payoff outside tech, followed by a sarcastic punchline."
+  },
+  "claims": [
+    {
+      "text": "Investment firm Apollo Global Management says AI has delivered zero financial payoff to corporate America outside of the tech industry.",
+      "evidence": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry. Only tech companies are seeing growth from the AI boom, Apollo Global Management said."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+      "summary": "Only tech companies are seeing growth from the AI boom, Apollo Global Management said.",
+      "published_at": "2026-10-25T16:02:08+00:00",
+      "url": "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10"
+    }
+  ],
+  "created_at": "2026-10-25T16:11:25+00:00"
+}
