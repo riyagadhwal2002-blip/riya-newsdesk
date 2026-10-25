@@ -1,0 +1,49 @@
+{
+  "cluster_id": 1905,
+  "score": 84,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Reddit mods are really trying to gatekeep the future. The opensource group just said no to AI, solo builders, and non-English speakers all at once. Naturally, people already made a rival group called trueopensource. 💀\n\nWould you stay in a club that keeps changing the rules just to lock everyone out?\n\nSource: The Verge\n\n#Reddit #OpenSource #ArtificialIntelligence #TechNews #CommunityBuilding",
+  "post": {
+    "news": "Reddit's opensource community banned any projects involving AI and told non-English speakers to find another group.",
+    "take": "Nothing says community spirit like banning most of the world and the exact thing everyone is building.",
+    "insight": "When mods try to turn the clock back, they usually just create a brand new rival community by breakfast.",
+    "caption": "Reddit mods are really trying to gatekeep the future. The opensource group just said no to AI, solo builders, and non-English speakers all at once. Naturally, people already made a rival group called trueopensource. 💀\n\nWould you stay in a club that keeps changing the rules just to lock everyone out?",
+    "hashtags": [
+      "#Reddit",
+      "#OpenSource",
+      "#ArtificialIntelligence",
+      "#TechNews",
+      "#CommunityBuilding"
+    ],
+    "first_comment": "Bro woke up and chose complete isolation.",
+    "alt_text": "Text card stating Reddit opensource subreddit banned AI and non-English speakers, with a sarcastic punchline about gatekeeping."
+  },
+  "claims": [
+    {
+      "text": "Reddit's opensource community banned any projects involving AI",
+      "evidence": "If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource"
+    },
+    {
+      "text": "told non-English speakers to find another group",
+      "evidence": "If you don’t speak English, you need to find a different community"
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "r/opensource just banned AI, non-English speakers and more",
+      "summary": "The mods at r/opensource posted new submission rules that, among other things, banned projects that use AI. The post made Saturday evening opens by saying, \"If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource. AI, as it exists today, is incongruent to this Open Source […]",
+      "published_at": "2026-10-25T13:25:32+00:00",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban"
+    }
+  ],
+  "created_at": "2026-10-25T14:49:54+00:00"
+}
