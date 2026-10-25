@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1889,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "No Danish roots, just a clever made-up name that sounds fancy. 🍨 Branding can make people pay more. Would you still buy it? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #HaagenDazs #Branding #ConsumerPsychology #Marketing",
+  "post": {
+    "news": "Did you know? Häagen-Dazs isn't from Denmark. The name was made up in the Bronx, New York, to sound European.",
+    "take": "The original 'fake it till you make it' was an ice cream tub.",
+    "caption": "No Danish roots, just a clever made-up name that sounds fancy. 🍨 Branding can make people pay more. Would you still buy it? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#HaagenDazs",
+      "#Branding",
+      "#ConsumerPsychology",
+      "#Marketing"
+    ],
+    "first_comment": "The umlaut is doing a lot of heavy lifting.",
+    "alt_text": "Did you know? Häagen-Dazs isn't from Denmark. The name was made up in the Bronx, New York, to sound European. The original 'fake it till you make it' was an ice cream tub."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Häagen-Dazs isn't from Denmark. The name was made up in the Bronx, New York, to sound European.",
+      "evidence": "https://en.wikipedia.org/wiki/Häagen-Dazs"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Häagen-Dazs",
+      "title": "Häagen-Dazs"
+    }
+  ],
+  "created_at": "2026-10-25T12:46:45+00:00"
+}

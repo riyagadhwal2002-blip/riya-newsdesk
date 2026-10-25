@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1807,
+  "score": 91,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Bill Gates says artificial intelligence will eventually fix the world, but the next twenty years will bring massive job losses and chaos. When the ultra-rich start telling you to prepare for a twenty-year bumpy ride, maybe it is time to check your career plan. How are you future-proofing your job against robots? 🤖💼\n\nSource: Business Insider\n\n#artificialintelligence #futureofwork #billgates #techtrends #creatoreconomy",
+  "post": {
+    "news": "Bill Gates says AI will lead to true abundance, but warns the next twenty years will bring massive job losses and social turmoil.",
+    "take": "Billionaires warning us about twenty years of joblessness while they play pickleball is my favorite dystopian trend.",
+    "insight": "Tech leaders are openly forecasting massive workplace disruption, meaning future career planning requires looking past current job titles.",
+    "caption": "Bill Gates says artificial intelligence will eventually fix the world, but the next twenty years will bring massive job losses and chaos. When the ultra-rich start telling you to prepare for a twenty-year bumpy ride, maybe it is time to check your career plan. How are you future-proofing your job against robots? 🤖💼",
+    "hashtags": [
+      "#artificialintelligence",
+      "#futureofwork",
+      "#billgates",
+      "#techtrends",
+      "#creatoreconomy"
+    ],
+    "first_comment": "Time to practice my pickleball swing just in case.",
+    "alt_text": "Text card stating Bill Gates predicts twenty years of turmoil before AI abundance, with a sarcastic take about billionaires playing pickleball."
+  },
+  "claims": [
+    {
+      "text": "Bill Gates says AI will lead to true abundance, but warns the next twenty years will bring massive job losses and social turmoil.",
+      "evidence": "Bill Gates says AI will create \"true abundance,\" but the next two decades before it arrives will be \"as tumultuous a period as there's been in human history.\""
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "Bill Gates predicts 20 years of turmoil before AI creates 'true abundance'",
+      "summary": "Bill Gates says AI will solve many of the world's problems, but the next 20 years will be \"as tumultuous a period as there's been in human history.\"",
+      "published_at": "2026-10-25T08:37:01+00:00",
+      "url": "https://www.businessinsider.com/bill-gates-ai-abundance-job-losses-unemployment-robots-musk-amodei-2026-10"
+    }
+  ],
+  "created_at": "2026-10-25T12:46:45+00:00"
+}
