@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1777,
+  "score": 88,
+  "credibility": "1 trusted outlet (livemint.com)",
+  "caption": "Festive travel trends are shifting fast! Cleartrip says Gen Z bookings jumped 60% this Diwali while leisure hotel stays rose 135%. Brands are finally realising young people prefer offbeat trips over sitting through three hours of judgmental aunties. ✈️\n\nWhere are you escaping to this season? Tell me below! 👇\n\nSource: Livemint Companies\n\n#GenZ #TravelTrends #Diwali2026 #Cleartrip #ConsumerBehaviour",
+  "post": {
+    "news": "Cleartrip data shows Diwali leisure hotel bookings jumped 135%, while bookings by 15 to 24 year olds grew 60%.",
+    "take": "Gen Z is skipping family pujas to go find themselves in Cebu. Meanwhile, my relatives are asking why I am breathing near them.",
+    "insight": "Travel brands are shifting their festive marketing from pure family nostalgia to independent youth getaways.",
+    "caption": "Festive travel trends are shifting fast! Cleartrip says Gen Z bookings jumped 60% this Diwali while leisure hotel stays rose 135%. Brands are finally realising young people prefer offbeat trips over sitting through three hours of judgmental aunties. ✈️\n\nWhere are you escaping to this season? Tell me below! 👇",
+    "hashtags": [
+      "#GenZ",
+      "#TravelTrends",
+      "#Diwali2026",
+      "#Cleartrip",
+      "#ConsumerBehaviour"
+    ],
+    "first_comment": "Bro really chose Cebu over answering why he is still single.",
+    "alt_text": "Text card showing Cleartrip festive travel data and a sarcastic take on Gen Z holiday habits"
+  },
+  "claims": [
+    {
+      "text": "Cleartrip data shows Diwali leisure hotel bookings jumped 135%, while bookings by 15 to 24 year olds grew 60%.",
+      "evidence": "Diwali leisure hotel bookings rose 135%, while bookings by travellers aged 15–24 increased 60%."
+    }
+  ],
+  "category": "Consumer behaviour",
+  "scores": {
+    "relevance": 20,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Livemint Companies",
+      "domain": "livemint.com",
+      "tier": "trusted",
+      "title": "How Gen Z is driving festival travel trend: Hotel bookings up 135% for Diwali—Bangalore, Jaipur, Taipei, Cebu see growth",
+      "summary": "Cleartrip’s festive-season tracker found travel demand shifting beyond traditional hubs. Diwali leisure hotel bookings rose 135%, while bookings by travellers aged 15–24 increased 60%. Offbeat domestic and international destinations have strong growth.",
+      "published_at": "2026-10-25T06:22:30+00:00",
+      "url": "https://www.livemint.com/companies/news/how-gen-z-is-driving-festival-travel-trend-hotel-bookings-up-135-for-diwali-bangalore-jaipur-taipei-cebu-see-growth-11792904939646.html"
+    }
+  ],
+  "created_at": "2026-10-25T06:41:45+00:00"
+}

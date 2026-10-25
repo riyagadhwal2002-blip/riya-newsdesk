@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1779,
+  "score": 91,
+  "credibility": "1 trusted outlet (livemint.com)",
+  "caption": "Google just hired a new sustainability PR boss to handle all the noise about power-hungry AI servers drinking up local water supplies.\n\nBecause when your computers need a small town's daily water supply to run, you do not need engineers. You need a very good storyteller.\n\nHow would you pitch an AI data center to thirsty neighbors?\n\n@google @amazon\n\nSource: Livemint Companies\n\n#Google #AI #Sustainability #MarketingPR #TechNews",
+  "post": {
+    "news": "Google hired former Amazon and Schneider Electric executive Luis Davila to lead its strategic sustainability communications.",
+    "take": "Nothing says green future like hiring a professional to explain why your data center is drinking the local lake.",
+    "insight": "Tech giants are scaling up PR teams to handle mounting public pressure over the heavy water and energy demands of AI data centers.",
+    "caption": "Google just hired a new sustainability PR boss to handle all the noise about power-hungry AI servers drinking up local water supplies.\n\nBecause when your computers need a small town's daily water supply to run, you do not need engineers. You need a very good storyteller.\n\nHow would you pitch an AI data center to thirsty neighbors?",
+    "hashtags": [
+      "#Google",
+      "#AI",
+      "#Sustainability",
+      "#MarketingPR",
+      "#TechNews"
+    ],
+    "first_comment": "PR departments working overtime to spin gigawatts as a group activity.",
+    "alt_text": "A card showing news of Google hiring Luis Davila for sustainability communications alongside a sarcastic take on data center water use."
+  },
+  "claims": [
+    {
+      "text": "Google hired former Amazon and Schneider Electric executive Luis Davila to lead its strategic communications for sustainability",
+      "evidence": "Google has appointed Luis Davila, a seasoned communications professional, to lead its strategic communications for sustainability. Davila, who served as senior director, corporate communications at Schneider Electric... had also worked at Amazon in the past, where he was the head of Sustainability Communications."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Livemint Companies",
+      "domain": "livemint.com",
+      "tier": "trusted",
+      "title": "Who is Luis Davila? Google appoints former Schneider executive to lead strategic communications for sustainability",
+      "summary": "Luis Davila will lead Google’s strategic sustainability communications after roles at Schneider Electric, Amazon and the UNFCCC. The move comes amid backlash over AI data centers, whose energy and water demands have raised concerns about pressure on local supplies.",
+      "published_at": "2026-10-25T06:37:32+00:00",
+      "url": "https://www.livemint.com/companies/people/who-is-luis-davila-google-appoints-former-schneider-executive-to-lead-strategic-communications-for-sustainability-11792909144379.html"
+    }
+  ],
+  "created_at": "2026-10-25T06:41:45+00:00"
+}
