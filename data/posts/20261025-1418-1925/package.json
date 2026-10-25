@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1925,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "One of the world's most famous logos cost $35. ✔️ (She did get Nike shares later, so it ended well.) Should brands pay designers more for logos? 👇\n\n@nike\n\nSource: Wikipedia\n\n#DidYouKnow #Nike #LogoDesign #Branding #DesignTwitter",
+  "post": {
+    "news": "Did you know? Nike's swoosh was designed by a student, Carolyn Davidson, for just $35.",
+    "take": "$35 for one of the most famous logos ever. Designers everywhere are crying into their invoices.",
+    "caption": "One of the world's most famous logos cost $35. ✔️ (She did get Nike shares later, so it ended well.) Should brands pay designers more for logos? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Nike",
+      "#LogoDesign",
+      "#Branding",
+      "#DesignTwitter"
+    ],
+    "first_comment": "Freelancers, send this to every client asking for 'a quick logo'.",
+    "alt_text": "Did you know? Nike's swoosh was designed by a student, Carolyn Davidson, for just $35. $35 for one of the most famous logos ever. Designers everywhere are crying into their invoices."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Nike's swoosh was designed by a student, Carolyn Davidson, for just $35.",
+      "evidence": "https://en.wikipedia.org/wiki/Swoosh"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Swoosh",
+      "title": "Swoosh"
+    }
+  ],
+  "created_at": "2026-10-25T14:18:19+00:00"
+}
