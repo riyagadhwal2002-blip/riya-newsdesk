@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1975,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "The name comes from Starbuck, the first mate in Moby-Dick. ☕📚 Would you have guessed that? Drop your Starbucks order 👇\n\n@starbucks\n\nSource: Wikipedia\n\n#DidYouKnow #Starbucks #BrandName #Branding #Marketing",
+  "post": {
+    "news": "Did you know? Starbucks is named after a character in the novel Moby-Dick.",
+    "take": "A coffee giant named after a whaling book. English literature students finally got a win.",
+    "caption": "The name comes from Starbuck, the first mate in Moby-Dick. ☕📚 Would you have guessed that? Drop your Starbucks order 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Starbucks",
+      "#BrandName",
+      "#Branding",
+      "#Marketing"
+    ],
+    "first_comment": "Caramel macchiato, and yes I know.",
+    "alt_text": "Did you know? Starbucks is named after a character in the novel Moby-Dick. A coffee giant named after a whaling book. English literature students finally got a win."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Starbucks is named after a character in the novel Moby-Dick.",
+      "evidence": "https://en.wikipedia.org/wiki/Starbucks"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Starbucks",
+      "title": "Starbucks"
+    }
+  ],
+  "created_at": "2026-10-25T17:12:27+00:00"
+}
