@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1952,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Pepsi's first name was Brad's Drink, after its inventor Caleb Bradham. 🥤 Names matter more than you think. Team Coke or Team Brad? 👇\n\n@cocacola @pepsi\n\nSource: Wikipedia\n\n#DidYouKnow #Pepsi #Branding #BrandName #Marketing",
+  "post": {
+    "news": "Did you know? Pepsi was first called Brad's Drink.",
+    "take": "Imagine the cola wars as Coke vs Brad. The rebrand was necessary.",
+    "caption": "Pepsi's first name was Brad's Drink, after its inventor Caleb Bradham. 🥤 Names matter more than you think. Team Coke or Team Brad? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Pepsi",
+      "#Branding",
+      "#BrandName",
+      "#Marketing"
+    ],
+    "first_comment": "One Brad's Drink, please. Extra ice.",
+    "alt_text": "Did you know? Pepsi was first called Brad's Drink. Imagine the cola wars as Coke vs Brad. The rebrand was necessary."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Pepsi was first called Brad's Drink.",
+      "evidence": "https://en.wikipedia.org/wiki/Pepsi"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pepsi",
+      "title": "Pepsi"
+    }
+  ],
+  "created_at": "2026-10-25T15:47:43+00:00"
+}
