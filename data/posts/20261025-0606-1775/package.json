@@ -1,0 +1,36 @@
+{
+  "cluster_id": 1775,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "LEGO's name is literally its promise: play well. 🧱 A name that tells you the point of the product. What brand name do you think nails it? 👇\n\n@lego\n\nSource: Wikipedia\n\n#DidYouKnow #LEGO #Branding #BrandName #Marketing",
+  "post": {
+    "news": "Did you know? LEGO comes from the Danish words 'leg godt', which mean 'play well'.",
+    "take": "Play well. Unless you step on one. Then nothing is well.",
+    "caption": "LEGO's name is literally its promise: play well. 🧱 A name that tells you the point of the product. What brand name do you think nails it? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#LEGO",
+      "#Branding",
+      "#BrandName",
+      "#Marketing"
+    ],
+    "first_comment": "Stepping on one at 2 AM is a core memory.",
+    "alt_text": "Did you know? LEGO comes from the Danish words 'leg godt', which mean 'play well'. Play well. Unless you step on one. Then nothing is well."
+  },
+  "claims": [
+    {
+      "text": "Did you know? LEGO comes from the Danish words 'leg godt', which mean 'play well'.",
+      "evidence": "https://en.wikipedia.org/wiki/Lego"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lego",
+      "title": "Lego"
+    }
+  ],
+  "created_at": "2026-10-25T06:06:30+00:00"
+}

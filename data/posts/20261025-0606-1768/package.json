@@ -1,0 +1,45 @@
+{
+  "cluster_id": 1768,
+  "score": 94,
+  "credibility": "1 trusted outlet (inc42.com)",
+  "caption": "Flipkart is dealing with a serious leadership exodus and employee pushback over stock option payouts while chasing profitability. If your big wealth event keeps getting delayed, people stop believing the corporate PowerPoint slides and start updating their resumes. 📉\n\nWould you stay for future stock options or grab a new job right now?\n\n@flipkart\n\nSource: Inc42\n\n#Flipkart #StartupLife #ESOP #BusinessNews #TechNews",
+  "post": {
+    "news": "Flipkart has seen 14 senior exits and employee concerns over ESOP cash-outs as its IPO timeline remains unclear.",
+    "take": "When the IPO takes longer to arrive than your last three tech jobs, people start asking uncomfortable questions.",
+    "insight": "Stock options are supposed to keep top talent loyal, but delayed listings and cash-out frustrations turn senior leaders into ex-employees fast.",
+    "caption": "Flipkart is dealing with a serious leadership exodus and employee pushback over stock option payouts while chasing profitability. If your big wealth event keeps getting delayed, people stop believing the corporate PowerPoint slides and start updating their resumes. 📉\n\nWould you stay for future stock options or grab a new job right now?",
+    "hashtags": [
+      "#Flipkart",
+      "#StartupLife",
+      "#ESOP",
+      "#BusinessNews",
+      "#TechNews"
+    ],
+    "first_comment": "Waiting for an IPO is the corporate version of 'we will leave in five minutes.'",
+    "alt_text": "Text card about Flipkart facing senior exits and ESOP concerns while delaying its IPO."
+  },
+  "claims": [
+    {
+      "text": "Flipkart has seen 14 senior exits and employee concerns over ESOP cash-outs as its IPO timeline remains unclear.",
+      "evidence": "the ecommerce giant has seen 14 senior level exits... employees have raised concerns over ESOP liquidity and the company’s long-awaited IPO remains without a firm timeline"
+    }
+  ],
+  "category": "Brand fail",
+  "scores": {
+    "relevance": 24,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Inc42",
+      "domain": "inc42.com",
+      "tier": "trusted",
+      "title": "Flipkart’s Summer Of Discontent",
+      "summary": "Questions over an IPO and ESOPs, huge investments in quick commerce and food delivery and the pressure to deliver profits:…",
+      "published_at": "2026-10-25T05:30:22+00:00",
+      "url": "https://inc42.com/features/flipkarts-summer-of-discontent"
+    }
+  ],
+  "created_at": "2026-10-25T06:06:30+00:00"
+}
