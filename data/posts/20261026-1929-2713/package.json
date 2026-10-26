@@ -1,0 +1,49 @@
+{
+  "cluster_id": 2713,
+  "score": 90,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "Even famous actors with forty shows under their belt are one gig away from losing health insurance. Cheyenne Jackson launched an Instagram campaign to help union members hit their yearly minimum. When the system forces TV stars to hustle for random guest spots just to see a doctor, something is seriously broken. Would you trade a steady desk job for the Hollywood grind? 🎬📉\n\n@instagram\n\nSource: Variety\n\n#Hollywood #CreatorEconomy #Union #Instagram #EntertainmentNews",
+  "post": {
+    "news": "Cheyenne Jackson launched the One Job Away campaign on Instagram to help actors meet the twenty-eight thousand dollar union health insurance minimum.",
+    "take": "Being in forty TV shows and still begging Instagram for health insurance is a wild plot twist.",
+    "insight": "Even top actors are struggling with broken union rules, proving that old systems do not fit the modern creator economy.",
+    "caption": "Even famous actors with forty shows under their belt are one gig away from losing health insurance. Cheyenne Jackson launched an Instagram campaign to help union members hit their yearly minimum. When the system forces TV stars to hustle for random guest spots just to see a doctor, something is seriously broken. Would you trade a steady desk job for the Hollywood grind? 🎬📉",
+    "hashtags": [
+      "#Hollywood",
+      "#CreatorEconomy",
+      "#Union",
+      "#Instagram",
+      "#EntertainmentNews"
+    ],
+    "first_comment": "Even Glee and American Horror Story stars are checking their union balance like college kids.",
+    "alt_text": "Text card showing news about Cheyenne Jackson's Instagram campaign for SAG-AFTRA health insurance and a sarcastic take on Hollywood."
+  },
+  "claims": [
+    {
+      "text": "Cheyenne Jackson launched the One Job Away campaign on Instagram to help actors meet the twenty-eight thousand dollar union health insurance minimum.",
+      "evidence": "Jackson is now paying it forward by launching the “One Job Away” initiative. Started just yesterday, he’s posting headshots and bios on his Instagram feed of actors who are on the verge of losing their SAG-AFTRA health insurance."
+    },
+    {
+      "text": "Cheyenne Jackson launched the One Job Away campaign on Instagram to help actors meet the twenty-eight thousand dollar union health insurance minimum.",
+      "evidence": "he didn’t meet the qualifying annual minimum of about $28,000 in earnings."
+    }
+  ],
+  "category": "Creator economy",
+  "scores": {
+    "relevance": 22,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Actors on the Verge of Losing SAG-AFTRA Health Insurance Find Support via ‘One Job Away’ Instagram Campaign: ‘The System Is Not Working’",
+      "summary": "Cheyenne Jackson has acted in more than 40 television series, including “Imperfect Women,” “American Horror Story,” “Call Me Kat,” “Glee” and “30 Rock,” as well as several movies. But last year, he was close to losing his SAG-AFTRA health insurance because he didn’t meet the qualifying annual minimum of about $28,000 in earnings. The insurance […]",
+      "published_at": "2026-10-26T18:52:57+00:00",
+      "url": "https://variety.com/2026/film/columns/actors-losing-sag-aftra-health-insurance-one-job-away-instagram-campaign-cheyenne-jackson-1236931317"
+    }
+  ],
+  "created_at": "2026-10-26T19:29:55+00:00"
+}

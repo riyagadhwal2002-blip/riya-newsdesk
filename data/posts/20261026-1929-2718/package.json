@@ -1,0 +1,49 @@
+{
+  "cluster_id": 2718,
+  "score": 90,
+  "credibility": "1 trusted outlet (livemint.com)",
+  "caption": "Tata Motors just wrapped up a massive $4.5 billion deal to buy Italian truckmaker Iveco after facing some serious pushback from minority shareholders. This gives the Indian automaker a massive global footprint across commercial vehicles. 🚚 How do you think this global expansion will play out for their brand? Let us know below! 👇\n\nSource: Livemint Companies\n\n#TataMotors #Iveco #BusinessNews #GlobalBrands #CorporateStrategy",
+  "post": {
+    "news": "Tata Motors completed its $4.5 billion acquisition of Italian truckmaker Iveco after months of shareholder resistance.",
+    "take": "Tata bought an entire Italian truck brand just to make sure we all know who really runs the road.",
+    "insight": "Big M&A deals require patience and sweetening the pot when shareholders push back on valuation.",
+    "caption": "Tata Motors just wrapped up a massive $4.5 billion deal to buy Italian truckmaker Iveco after facing some serious pushback from minority shareholders. This gives the Indian automaker a massive global footprint across commercial vehicles. 🚚 How do you think this global expansion will play out for their brand? Let us know below! 👇",
+    "hashtags": [
+      "#TataMotors",
+      "#Iveco",
+      "#BusinessNews",
+      "#GlobalBrands",
+      "#CorporateStrategy"
+    ],
+    "first_comment": "From Nano to Italian trucks, Tata is playing a different game entirely.",
+    "alt_text": "A text card showing news of Tata Motors completing the Iveco acquisition and a sarcastic take about owning the road."
+  },
+  "claims": [
+    {
+      "text": "Tata Motors completed its $4.5 billion acquisition of Italian truckmaker Iveco",
+      "evidence": "Tata Motors Ltd has completed the acquisition of Italian truckmaker Iveco Group... has an enterprise value of about $4.5 billion."
+    },
+    {
+      "text": "after months of shareholder resistance",
+      "evidence": "The deal comes after a 15-month process that faced delays and resistance from some minority shareholders over the offer price."
+    }
+  ],
+  "category": "Brand strategy",
+  "scores": {
+    "relevance": 22,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Livemint Companies",
+      "domain": "livemint.com",
+      "tier": "trusted",
+      "title": "Tata Motors completes Iveco acquisition to turbocharge global play",
+      "summary": "The $4.5 billion deal will expand the Indian automaker’s global footprint and strengthens its presence across commercial vehicle segments.",
+      "published_at": "2026-10-26T19:01:36+00:00",
+      "url": "https://www.livemint.com/companies/news/tata-motors-completes-iveco-acquisition-to-turbocharge-global-play-11793019547840.html"
+    }
+  ],
+  "created_at": "2026-10-26T19:29:55+00:00"
+}
