@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2192,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Toyota started as a car division of Toyoda Automatic Loom Works. 🧵🚗 Big brands often start somewhere unexpected. Which origin story surprised you most? 👇\n\n@toyota\n\nSource: Wikipedia\n\n#DidYouKnow #Toyota #BrandStory #BusinessFacts #Cars",
+  "post": {
+    "news": "Did you know? Toyota began inside a company that made machines for weaving cloth.",
+    "take": "From weaving cloth to weaving through traffic.",
+    "caption": "Toyota started as a car division of Toyoda Automatic Loom Works. 🧵🚗 Big brands often start somewhere unexpected. Which origin story surprised you most? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Toyota",
+      "#BrandStory",
+      "#BusinessFacts",
+      "#Cars"
+    ],
+    "first_comment": "Seat covers were the original product, apparently. (Kidding.)",
+    "alt_text": "Did you know? Toyota began inside a company that made machines for weaving cloth. From weaving cloth to weaving through traffic."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Toyota began inside a company that made machines for weaving cloth.",
+      "evidence": "https://en.wikipedia.org/wiki/Toyota"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Toyota",
+      "title": "Toyota"
+    }
+  ],
+  "created_at": "2026-10-26T05:16:28+00:00"
+}
