@@ -1,0 +1,45 @@
+{
+  "cluster_id": 2152,
+  "score": 93,
+  "credibility": "1 trusted outlet (digiday.com)",
+  "caption": "Salesforce is buying Braze for over five billion dollars. Everyone says it makes campaigns faster, but it also means fewer choices for brands building their tech stack.\n\nAre you worried about big companies swallowing all your favorite tools, or do you love having everything in one place? Let us know below! 👇\n\nSource: Digiday\n\n#marketingnews #salesforce #braze #martech #marketingstrategy",
+  "post": {
+    "news": "Salesforce announced a definitive agreement to acquire Braze for approximately $5.66 billion.",
+    "take": "Nothing says creative freedom like locking all your marketing tools inside one very expensive room.",
+    "insight": "Big software consolidation saves time, but it leaves brands fighting to stand out using the exact same automated tools.",
+    "caption": "Salesforce is buying Braze for over five billion dollars. Everyone says it makes campaigns faster, but it also means fewer choices for brands building their tech stack.\n\nAre you worried about big companies swallowing all your favorite tools, or do you love having everything in one place? Let us know below! 👇",
+    "hashtags": [
+      "#marketingnews",
+      "#salesforce",
+      "#braze",
+      "#martech",
+      "#marketingstrategy"
+    ],
+    "first_comment": "One dashboard to rule them all, and in the darkness bind them.",
+    "alt_text": "Text card about Salesforce buying Braze for $5.66 billion and the software consolidation debate."
+  },
+  "claims": [
+    {
+      "text": "Salesforce announced a definitive agreement to acquire Braze for approximately $5.66 billion.",
+      "evidence": "the companies announced a definitive agreement on October 20 valuing Braze at approximately $5.66 billion."
+    }
+  ],
+  "category": "Brand strategy",
+  "scores": {
+    "relevance": 24,
+    "interest": 17,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Digiday",
+      "domain": "digiday.com",
+      "tier": "trusted",
+      "title": "Salesforce’s $5.7 billion Braze deal puts marketers at an ecosystem crossroads",
+      "summary": "The deal promises faster, more connected marketing, while raising questions about vendor lock-in and how brands stand out as AI automates campaign execution.",
+      "published_at": "2026-10-26T04:01:00+00:00",
+      "url": "https://digiday.com/marketing/salesforces-5-7-billion-braze-deal-puts-marketers-at-an-ecosystem-crossroads"
+    }
+  ],
+  "created_at": "2026-10-26T04:39:41+00:00"
+}
