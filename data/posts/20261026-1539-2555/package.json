@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2555,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Amul's topical ads have roasted the news for decades with one cute mascot. 🧈 That's consistency. Which Amul ad do you still remember? 👇\n\n@amul_india\n\nSource: Wikipedia\n\n#DidYouKnow #Amul #Marketing #Advertising #IndianBrands",
+  "post": {
+    "news": "Did you know? The Amul girl has been joking about the news in ads since 1966.",
+    "take": "The original Indian meme page. Still posting, still undefeated.",
+    "caption": "Amul's topical ads have roasted the news for decades with one cute mascot. 🧈 That's consistency. Which Amul ad do you still remember? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Amul",
+      "#Marketing",
+      "#Advertising",
+      "#IndianBrands"
+    ],
+    "first_comment": "Utterly butterly undefeated.",
+    "alt_text": "Did you know? The Amul girl has been joking about the news in ads since 1966. The original Indian meme page. Still posting, still undefeated."
+  },
+  "claims": [
+    {
+      "text": "Did you know? The Amul girl has been joking about the news in ads since 1966.",
+      "evidence": "https://en.wikipedia.org/wiki/Amul_girl"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Amul_girl",
+      "title": "Amul girl"
+    }
+  ],
+  "created_at": "2026-10-26T15:39:57+00:00"
+}
