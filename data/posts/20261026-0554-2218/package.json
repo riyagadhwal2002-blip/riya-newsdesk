@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2218,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Peugeot pepper mills are still sold today, long after the cars arrived. 🌶️🚗 Name a brand that does two totally random things 👇\n\n@peugeot\n\nSource: Wikipedia\n\n#DidYouKnow #Peugeot #BrandStory #BusinessFacts #Marketing",
+  "post": {
+    "news": "Did you know? Peugeot made pepper mills before cars. It still sells them.",
+    "take": "Grinding pepper since before grinding gears was a thing.",
+    "caption": "Peugeot pepper mills are still sold today, long after the cars arrived. 🌶️🚗 Name a brand that does two totally random things 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Peugeot",
+      "#BrandStory",
+      "#BusinessFacts",
+      "#Marketing"
+    ],
+    "first_comment": "Free pepper mill with every test drive when?",
+    "alt_text": "Did you know? Peugeot made pepper mills before cars. It still sells them. Grinding pepper since before grinding gears was a thing."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Peugeot made pepper mills before cars. It still sells them.",
+      "evidence": "https://en.wikipedia.org/wiki/Peugeot"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Peugeot",
+      "title": "Peugeot"
+    }
+  ],
+  "created_at": "2026-10-26T05:54:48+00:00"
+}
