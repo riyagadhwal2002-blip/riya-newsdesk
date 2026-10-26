@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2269,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "Coke started in a pharmacy, sold as a health tonic. 🥤 Marketing has always been… creative. What's another brand that changed its whole pitch? 👇\n\n@cocacola\n\nSource: Wikipedia\n\n#DidYouKnow #CocaCola #BrandStory #Marketing #BusinessFacts",
+  "post": {
+    "news": "Did you know? Coca-Cola was invented in 1886 by a pharmacist, John Pemberton, and sold as a medicine.",
+    "take": "Doctor said drink more water. Coke said 'close enough'.",
+    "caption": "Coke started in a pharmacy, sold as a health tonic. 🥤 Marketing has always been… creative. What's another brand that changed its whole pitch? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#CocaCola",
+      "#BrandStory",
+      "#Marketing",
+      "#BusinessFacts"
+    ],
+    "first_comment": "Prescription: one cold Coke, twice a day.",
+    "alt_text": "Did you know? Coca-Cola was invented in 1886 by a pharmacist, John Pemberton, and sold as a medicine. Doctor said drink more water. Coke said 'close enough'."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Coca-Cola was invented in 1886 by a pharmacist, John Pemberton, and sold as a medicine.",
+      "evidence": "https://en.wikipedia.org/wiki/Coca-Cola"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Coca-Cola",
+      "title": "Coca-Cola"
+    }
+  ],
+  "created_at": "2026-10-26T07:28:29+00:00"
+}
