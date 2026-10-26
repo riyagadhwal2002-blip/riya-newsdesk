@@ -1,0 +1,58 @@
+{
+  "cluster_id": 2585,
+  "score": 86,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Instagram is officially jumping into longform horizontal video with a new format called Features. Adam Mosseri used to be against it, but now creators can make full widescreen videos and chop them into shorter clips. Are you actually going to watch full shows on Instagram, or is YouTube safe? 📺👇\n\n@netflix_in @youtube @instagram\n\nSource: The Verge\n\n#InstagramUpdate #ContentCreator #SocialMediaNews #CreatorEconomy #InstagramReels",
+  "post": {
+    "news": "Instagram is launching Features, a new format for longer widescreen videos, starting small in the US and Brazil.",
+    "take": "First they copied TikTok, now they want to be YouTube. Soon your photo app will just be Netflix.",
+    "insight": "Platforms keep expanding into each other's territories until every app does everything and nothing feels special anymore.",
+    "caption": "Instagram is officially jumping into longform horizontal video with a new format called Features. Adam Mosseri used to be against it, but now creators can make full widescreen videos and chop them into shorter clips. Are you actually going to watch full shows on Instagram, or is YouTube safe? 📺👇",
+    "hashtags": [
+      "#InstagramUpdate",
+      "#ContentCreator",
+      "#SocialMediaNews",
+      "#CreatorEconomy",
+      "#InstagramReels"
+    ],
+    "first_comment": "Waiting for Instagram to add a washing machine feature next.",
+    "alt_text": "Text card announcing Instagram is launching Features for longer widescreen videos."
+  },
+  "claims": [
+    {
+      "text": "Instagram is launching Features, a new format for longer widescreen videos",
+      "evidence": "Instagram is announcing a big push into longform horizontal video, which the platform is calling “Features.”"
+    },
+    {
+      "text": "starting small in the US and Brazil",
+      "evidence": "Today, Features are expanding to the US in a small test and is in testing with some creators in Brazil"
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Instagram chases YouTube with a push for longer, widescreen videos",
+      "summary": "Instagram is announcing a big push into longform horizontal video, which the platform is calling \"Features.\" Instagram boss Adam Mosseri has been against doing longform video on the platform \"for a long time,\" he says in a six-and-a-half-minute video (here's the widescreen version) with VP of product Tessa Lyons, saying that \"one of my concerns […]",
+      "published_at": "2026-10-26T16:05:44+00:00",
+      "url": "https://www.theverge.com/tech/1018688/instagram-longform-widescreen-video-features-youtube"
+    },
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Instagram chases YouTube with a push for longer, widescreen videos",
+      "summary": "Instagram chases YouTube with a push for longer, widescreen videos The Verge",
+      "published_at": "2026-10-26T16:05:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdlNlSVNIT2RzeXpVRGJOZkZvbUdNWFdTV2lkT0ZoNW4xRTkxaHJJUy1QdEtJNGRCTk5jNDRnbUI1d1BlcW0wWDI4NWpCczdSbFR2Q0ExNV8xb1JqcWVyeUxCdVIzWVRLVjBpY0thaHFwaGpUazhQNWttZ0NhaXFKbTMtU1MxUkMtXy1rV29GWWt4OUta?oc=5"
+    }
+  ],
+  "created_at": "2026-10-26T17:21:34+00:00"
+}
