@@ -1,0 +1,36 @@
+{
+  "cluster_id": 2501,
+  "score": 100,
+  "credibility": "checked on Wikipedia",
+  "caption": "The free gift was more popular than the product, so the free gift became the company. 💄 Ever bought something just for the freebie? 👇\n\nSource: Wikipedia\n\n#DidYouKnow #Avon #Marketing #BrandStory #Pivot",
+  "post": {
+    "news": "Did you know? Avon's founder sold books door to door and gave away free perfume. People wanted the perfume more.",
+    "take": "Classic case of the freebie becoming the business. Marketers, take notes.",
+    "caption": "The free gift was more popular than the product, so the free gift became the company. 💄 Ever bought something just for the freebie? 👇",
+    "hashtags": [
+      "#DidYouKnow",
+      "#Avon",
+      "#Marketing",
+      "#BrandStory",
+      "#Pivot"
+    ],
+    "first_comment": "Me buying a magazine for the free lip balm in 2010.",
+    "alt_text": "Did you know? Avon's founder sold books door to door and gave away free perfume. People wanted the perfume more. Classic case of the freebie becoming the business. Marketers, take notes."
+  },
+  "claims": [
+    {
+      "text": "Did you know? Avon's founder sold books door to door and gave away free perfume. People wanted the perfume more.",
+      "evidence": "https://en.wikipedia.org/wiki/Avon_Products"
+    }
+  ],
+  "category": "Did you know?",
+  "scores": {},
+  "sources": [
+    {
+      "outlet": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Avon_Products",
+      "title": "Avon Products"
+    }
+  ],
+  "created_at": "2026-10-26T14:09:29+00:00"
+}
