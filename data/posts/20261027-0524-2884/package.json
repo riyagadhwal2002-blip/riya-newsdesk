@@ -1,0 +1,45 @@
+{
+  "cluster_id": 2884,
+  "score": 86,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "Netflix just hired the former marketing head of Apple Podcasts to lead its audio expansion. Meanwhile, they also cut a thousand jobs. So we are losing staff but getting more talk shows on our screens. What podcast do you actually listen to all the way through?\n\n@netflix_in @apple\n\nSource: Variety\n\n#Netflix #Podcasts #ContentStrategy #StreamingNews #CreatorEconomy",
+  "post": {
+    "news": "Netflix hired former Apple podcast marketing head Steve Wilson to lead its podcast content acquisitions.",
+    "take": "First they lay off a thousand people, now they want us to listen to more podcasts.",
+    "insight": "Streaming platforms are doubling down on audio as a cheaper way to keep users hooked between TV seasons.",
+    "caption": "Netflix just hired the former marketing head of Apple Podcasts to lead its audio expansion. Meanwhile, they also cut a thousand jobs. So we are losing staff but getting more talk shows on our screens. What podcast do you actually listen to all the way through?",
+    "hashtags": [
+      "#Netflix",
+      "#Podcasts",
+      "#ContentStrategy",
+      "#StreamingNews",
+      "#CreatorEconomy"
+    ],
+    "first_comment": "Can't wait to skip the podcast intros too.",
+    "alt_text": "Text card showing Netflix hiring Steve Wilson for podcast expansion alongside a sarcastic take on company layoffs."
+  },
+  "claims": [
+    {
+      "text": "Netflix hired former Apple podcast marketing head Steve Wilson to lead its podcast content acquisitions.",
+      "evidence": "Netflix has hired Steve Wilson to head its podcast expansion, Variety has confirmed. Wilson will lead the company’s podcast content acquisitions on a contract basis. Before heading to Netflix, Wilson spent 15 years at Apple, where he most recently headed marketing for Apple Podcasts"
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 22,
+    "interest": 16,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Netflix Hires Steve Wilson to Lead Podcast Content Acquisition",
+      "summary": "Netflix has hired Steve Wilson to head its podcast expansion, Variety has confirmed. Wilson will lead the company’s podcast content acquisitions on a contract basis. Before heading to Netflix, Wilson spent 15 years at Apple, where he most recently headed marketing for Apple Podcasts and partnered with podcasters and networks. He left Apple in December […]",
+      "published_at": "2026-10-27T00:05:03+00:00",
+      "url": "https://variety.com/2026/film/news/netflix-hires-steve-wilson-podcast-content-acquisition-1236931678"
+    }
+  ],
+  "created_at": "2026-10-27T05:24:56+00:00"
+}
