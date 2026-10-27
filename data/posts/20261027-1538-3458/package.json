@@ -1,0 +1,45 @@
+{
+  "cluster_id": 3458,
+  "score": 95,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "From watching YouTube in bed at 2 AM to buying actual cinema tickets for a creator interview show. The creator economy is wild. Would you pay movie ticket prices to watch a YouTube video on a giant screen? 🍿🎬\n\n@youtube\n\nSource: Variety\n\n#CreatorEconomy #YouTube #ContentCreators #MarketingNews #GenZCulture",
+  "post": {
+    "news": "Amelia Dimoldenberg is putting her final Chicken Shop Date series in cinemas for a one-night event across the UK, Ireland and Paris.",
+    "take": "We are now buying movie tickets to watch YouTube videos in a room full of strangers chewing popcorn.",
+    "insight": "Creators are turning digital content into real-world theater events to monetize loyal communities and build massive hype.",
+    "caption": "From watching YouTube in bed at 2 AM to buying actual cinema tickets for a creator interview show. The creator economy is wild. Would you pay movie ticket prices to watch a YouTube video on a giant screen? 🍿🎬",
+    "hashtags": [
+      "#CreatorEconomy",
+      "#YouTube",
+      "#ContentCreators",
+      "#MarketingNews",
+      "#GenZCulture"
+    ],
+    "first_comment": "Next up: paying IMAX prices to watch Instagram reels.",
+    "alt_text": "Text card stating Amelia Dimoldenberg is putting her final Chicken Shop Date series in cinemas, followed by the sarcastic take on buying movie tickets for YouTube videos."
+  },
+  "claims": [
+    {
+      "text": "Amelia Dimoldenberg is putting her final Chicken Shop Date series in cinemas for a one-night event across the UK, Ireland and Paris.",
+      "evidence": "Amelia Dimoldenberg is holding a one-night-only event on Nov. 24 at cinemas in the U.K., Ireland and Paris in collaboration with YouTube’s Cine Club. All six episodes of the final series ... will be screened together"
+    }
+  ],
+  "category": "Creator economy",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Amelia Dimoldenberg’s Final ‘Chicken Shop Date’ Series to Screen in Theaters",
+      "summary": "Amelia Dimoldenberg’s “Chicken Shop Date” is coming to the big screen. To celebrate its final series after 12 years, Dimoldenberg is holding a one-night-only event on Nov. 24 at cinemas in the U.K., Ireland and Paris in collaboration with YouTube’s Cine Club. All six episodes of the final series — which so far includes interviews […]",
+      "published_at": "2026-10-27T15:00:00+00:00",
+      "url": "https://variety.com/2026/film/global/amelia-dimoldenberg-final-chicken-shop-date-series-theaters-1236932009"
+    }
+  ],
+  "created_at": "2026-10-27T15:38:32+00:00"
+}
