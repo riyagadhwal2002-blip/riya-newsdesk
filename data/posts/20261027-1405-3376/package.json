@@ -1,0 +1,58 @@
+{
+  "cluster_id": 3376,
+  "score": 85,
+  "credibility": "2 independent trusted outlets",
+  "caption": "Apple is back with another MacBook Pro refresh, keeping the same classic design while packing in the new M6 chip and faster Wi-Fi 7. But if you want to upgrade that storage, get ready to pay extra. Are you upgrading your laptop every year, or making it last until it gives up? 💻✨\n\n@apple\n\nSource: The Verge, 9to5Mac\n\n#Apple #MacBookPro #TechNews #Gadgets #ConsumerTech",
+  "post": {
+    "news": "Apple just dropped a new 14-inch MacBook Pro powered by the M6 chip, starting at $1,999 with 16GB of memory.",
+    "take": "Same exact look as last year, but upgrading your storage now costs enough to fund a small vacation.",
+    "insight": "Apple continues to iterate safely on hardware while squeezing maximum margins out of component shortages and high-tier storage upgrades.",
+    "caption": "Apple is back with another MacBook Pro refresh, keeping the same classic design while packing in the new M6 chip and faster Wi-Fi 7. But if you want to upgrade that storage, get ready to pay extra. Are you upgrading your laptop every year, or making it last until it gives up? 💻✨",
+    "hashtags": [
+      "#Apple",
+      "#MacBookPro",
+      "#TechNews",
+      "#Gadgets",
+      "#ConsumerTech"
+    ],
+    "first_comment": "At this point buying max storage requires taking out a second home loan.",
+    "alt_text": "Instagram text card about Apple launching the new M6 MacBook Pro."
+  },
+  "claims": [
+    {
+      "text": "Apple just dropped a new 14-inch MacBook Pro powered by the M6 chip, starting at $1,999 with 16GB of memory.",
+      "evidence": "Pricing for the new M6 version of the 14-inch MacBook Pro starts at $1,999 with 16GB of memory"
+    },
+    {
+      "text": "Same exact look as last year",
+      "evidence": "Last year’s entry-level MacBook Pro update brought minimal changes from the M4 model that debuted a year prior, including the same design"
+    }
+  ],
+  "category": "Launches & Products",
+  "scores": {
+    "relevance": 22,
+    "interest": 15,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Apple updates the MacBook Pro with M6 chips",
+      "summary": "Apple is giving its entry-level MacBook Pro a spec bump. After upgrading the entry-level MacBook Pro with its M5 chip a year ago, Apple is refreshing the laptop today with the M6 chip, which the company launched in August as part of recent upgrades to the new Mac Mini. Last year's entry-level MacBook Pro update […]",
+      "published_at": "2026-10-27T13:04:28+00:00",
+      "url": "https://www.theverge.com/tech/1017664/apple-macbook-pro-m6-processor-upgrade"
+    },
+    {
+      "outlet": "9to5Mac",
+      "domain": "9to5mac.com",
+      "tier": "trusted",
+      "title": "Watch the ad for Apple’s new 14-inch MacBook Pro powered by M6",
+      "summary": "Watch the ad for Apple’s new 14-inch MacBook Pro powered by M6 9to5Mac",
+      "published_at": "2026-10-27T13:55:34+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYzJqcG8wNGFtMFh3bjhUaDc3M2JJeExQd1N4VloyS1U5NktzQ2ZIY0hMZW1JOFVjR0UxdW5acnVVeDQ4Rkt2MUN3MmxmM1hXZVg3S2NIZ29PZ3ZaT3RSVk40LXpEazlPaUM0bmJDWUZ5OWNZY1B3SHJCZXgxQzBaUWYwbUNSd2ZJd0YwbmJBbXNYdVN6NzZQaw?oc=5"
+    }
+  ],
+  "created_at": "2026-10-27T14:05:42+00:00"
+}
