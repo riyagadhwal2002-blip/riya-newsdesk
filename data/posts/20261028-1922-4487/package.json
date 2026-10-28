@@ -1,0 +1,45 @@
+{
+  "cluster_id": 4487,
+  "score": 83,
+  "credibility": "official source (blog.google)",
+  "caption": "Google just dropped a new podcast episode about how people are changing the way they search using AI tools. Billions of users are typing longer questions now. Brands have to change how they do marketing to keep up. How long is your usual Google search query? 🎧🤖\n\n@google\n\nSource: Google Blog\n\n#GoogleAds #MarketingNews #SearchMarketing #GenZMarketers #DigitalMarketing",
+  "post": {
+    "news": "Google launched a new podcast episode about how billions of people use AI search features and long queries.",
+    "take": "Google made a whole podcast to explain why people type whole paragraphs into the search bar now.",
+    "insight": "Search habits are changing as users type longer questions into AI tools, forcing brands to rethink SEO and ad strategies.",
+    "caption": "Google just dropped a new podcast episode about how people are changing the way they search using AI tools. Billions of users are typing longer questions now. Brands have to change how they do marketing to keep up. How long is your usual Google search query? 🎧🤖",
+    "hashtags": [
+      "#GoogleAds",
+      "#MarketingNews",
+      "#SearchMarketing",
+      "#GenZMarketers",
+      "#DigitalMarketing"
+    ],
+    "first_comment": "We are literally typing our whole life stories into the search bar now.",
+    "alt_text": "An Instagram text card featuring a news update about Google's podcast on search habits and a sarcastic punchline."
+  },
+  "claims": [
+    {
+      "text": "Google launched a new podcast episode about how billions of people use AI search features and long queries.",
+      "evidence": "In this episode of Ads Decoded, Google Ads Product Liaison Ginny Marvin sits down with Shivani Mohan, Vice President of Data Science and UXR for Search. Shivani and her teams study how billions of users are searching and explore how user habits are shifting with the introduction of AI Overviews and AI Mode."
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 20,
+    "interest": 12,
+    "wit": 6
+  },
+  "sources": [
+    {
+      "outlet": "Google Blog",
+      "domain": "blog.google",
+      "tier": "primary",
+      "title": "Adapt your ad strategy to meet the way people search today.",
+      "summary": "Google's Ads Decoded podcast tells you how to make smarter marketing decisions using the latest data on how consumers search.",
+      "published_at": "2026-10-28T19:00:00+00:00",
+      "url": "https://blog.google/products/ads-commerce/ads-decoded-podcast-search-data"
+    }
+  ],
+  "created_at": "2026-10-28T19:22:31+00:00"
+}
