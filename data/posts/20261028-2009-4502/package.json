@@ -1,0 +1,49 @@
+{
+  "cluster_id": 4502,
+  "score": 92,
+  "credibility": "1 trusted outlet (techcrunch.com)",
+  "caption": "Companies are finally asking where all their money is going after buying AI tools. Anthropic just dropped new reports so managers can see what their teams actually produced. Turns out, burning cash on robots needs a spreadsheet too. 📊\n\nIs your office actually using AI or just pretending for the slides?\n\nSource: TechCrunch\n\n#ArtificialIntelligence #TechNews #BusinessStrategy #CreatorEconomy #MarketingTrends",
+  "post": {
+    "news": "Anthropic launched new reporting tools to show companies what their AI spending is buying, ahead of a planned IPO.",
+    "take": "CFOs finally get a receipt for the expensive robot brains they bought without asking.",
+    "insight": "As AI budgets grow, companies need to prove the return on investment beyond just burning cash on tokens.",
+    "caption": "Companies are finally asking where all their money is going after buying AI tools. Anthropic just dropped new reports so managers can see what their teams actually produced. Turns out, burning cash on robots needs a spreadsheet too. 📊\n\nIs your office actually using AI or just pretending for the slides?",
+    "hashtags": [
+      "#ArtificialIntelligence",
+      "#TechNews",
+      "#BusinessStrategy",
+      "#CreatorEconomy",
+      "#MarketingTrends"
+    ],
+    "first_comment": "Please send this receipt to my boss immediately.",
+    "alt_text": "Text card stating Anthropic launched reporting tools for AI spending, followed by a sarcastic punchline about CFOs getting receipts."
+  },
+  "claims": [
+    {
+      "text": "Anthropic launched new reporting tools to show companies what their AI spending is buying",
+      "evidence": "Anthropic just launched tools to show companies what their AI spending is buying."
+    },
+    {
+      "text": "ahead of a planned IPO",
+      "evidence": "ahead of a planned IPO."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 24,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "Anthropic just launched tools to show companies what their AI spending is buying",
+      "summary": "The frontier lab is lifting the curtain on how users spend money on its models ahead of a planned IPO.",
+      "published_at": "2026-10-28T19:19:58+00:00",
+      "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying"
+    }
+  ],
+  "created_at": "2026-10-28T20:09:57+00:00"
+}
