@@ -1,0 +1,49 @@
+{
+  "cluster_id": 3891,
+  "score": 85,
+  "credibility": "1 trusted outlet (digiday.com)",
+  "caption": "Apple made another move against browser tracking in Safari, and now ad tech companies are scrambling to shift their identity tools over to servers instead. Every time tech giants tighten privacy rules, marketers have to rebuild the entire plumbing just to keep track of clicks. How long until ads just follow us into our group chats? 📱💸\n\nWhat do you think is next for targeted ads?\n\n@apple\n\nSource: Digiday\n\n#AdTech #MarketingNews #DigitalMarketing #Privacy #Apple",
+  "post": {
+    "news": "Apple blocked more browser tracking in Safari, forcing ad tech companies and publishers to rush toward server-side solutions like the IAB Tech Lab framework.",
+    "take": "Privacy is just a great excuse to lock the doors and keep all the ad money inside the house.",
+    "insight": "When browsers block tracking on the device, the ad industry simply moves the servers behind the wall. Privacy updates always change where the plumbing goes.",
+    "caption": "Apple made another move against browser tracking in Safari, and now ad tech companies are scrambling to shift their identity tools over to servers instead. Every time tech giants tighten privacy rules, marketers have to rebuild the entire plumbing just to keep track of clicks. How long until ads just follow us into our group chats? 📱💸\n\nWhat do you think is next for targeted ads?",
+    "hashtags": [
+      "#AdTech",
+      "#MarketingNews",
+      "#DigitalMarketing",
+      "#Privacy",
+      "#Apple"
+    ],
+    "first_comment": "Server-side tracking is just playing hide and seek with Safari.",
+    "alt_text": "Text card showing Apple's Safari tracking restrictions pushing ad tech to server-side solutions."
+  },
+  "claims": [
+    {
+      "text": "Apple blocked more browser tracking in Safari, forcing ad tech companies and publishers to rush toward server-side solutions like the IAB Tech Lab framework.",
+      "evidence": "Apple’s latest crackdown on identity resolution has accelerated efforts among publishers and ad tech companies to move advertising infrastructure beyond the browser... Parties rally behind IAB Tech Lab’s Trusted Server Framework following Apple’s latest tracking restrictions"
+    },
+    {
+      "text": "Privacy is just a great excuse to lock the doors and keep all the ad money inside the house.",
+      "evidence": "When one company can switch off addressability for independent publishers while walled gardens keep theirs, it doesn’t end tracking; it concentrates it"
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 22,
+    "interest": 15,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Digiday",
+      "domain": "digiday.com",
+      "tier": "trusted",
+      "title": "Apple’s Safari crackdown pushes ad tech toward server-side solutions, but doubts remain",
+      "summary": "Parties rally behind IAB Tech Lab’s Trusted Server Framework following Apple’s latest tracking restrictions, although questions remain.",
+      "published_at": "2026-10-28T04:01:00+00:00",
+      "url": "https://digiday.com/media-buying/apples-safari-crackdown-pushes-ad-tech-toward-server-side-solutions-but-doubts-remain"
+    }
+  ],
+  "created_at": "2026-10-28T05:25:05+00:00"
+}
