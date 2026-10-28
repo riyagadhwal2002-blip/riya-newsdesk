@@ -1,0 +1,63 @@
+{
+  "cluster_id": 4396,
+  "score": 92,
+  "credibility": "official source (blog.google)",
+  "caption": "Chrome can now read your Gmail inbox to fill out online forms using AI. 🤖 It pulls up flight details and tracking numbers automatically. It is super convenient, but also wild how deep tech companies go into our stuff just to save us three seconds of typing. Would you let your browser read your emails for convenience? Let me know below. 👇\n\n@google\n\nSource: TechCrunch, Google Blog, The Verge\n\n#Chrome #GoogleGemini #TechNews #ArtificialIntelligence #ProductivityHacks",
+  "post": {
+    "news": "Chrome updated its autofill feature to use Gemini, letting it read your Gmail inbox to suggest flight details and tracking numbers.",
+    "take": "Google reads our emails so we don't have to look for flight tickets. Thanks bestie, totally not creepy.",
+    "insight": "Browser updates are increasingly about lock-in, turning convenience tools into walls that keep users inside the tech ecosystem.",
+    "caption": "Chrome can now read your Gmail inbox to fill out online forms using AI. 🤖 It pulls up flight details and tracking numbers automatically. It is super convenient, but also wild how deep tech companies go into our stuff just to save us three seconds of typing. Would you let your browser read your emails for convenience? Let me know below. 👇",
+    "hashtags": [
+      "#Chrome",
+      "#GoogleGemini",
+      "#TechNews",
+      "#ArtificialIntelligence",
+      "#ProductivityHacks"
+    ],
+    "first_comment": "Next update: Chrome replies to your mom's emails so you don't have to.",
+    "alt_text": "Text card showing Chrome's new Gmail-reading autofill update and a sarcastic take about privacy."
+  },
+  "claims": [
+    {
+      "text": "Chrome updated its autofill feature to use Gemini, letting it read your Gmail inbox to suggest flight details and tracking numbers.",
+      "evidence": "Chrome’s enhanced autofill will use Gemini with Personal Intelligence to suggest information sourced from your Gmail... pull flight confirmations, tracking info, order details"
+    }
+  ],
+  "category": "Platform update",
+  "scores": {
+    "relevance": 24,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "Chrome’s AI-powered Autofill can now dig through your Gmail to fill out forms",
+      "summary": "The autofill update lets Chrome pull flight confirmations, tracking info, order details, and other information from your inbox, with your permission.",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "url": "https://techcrunch.com/2026/10/28/chromes-ai-powered-autofill-can-now-dig-through-your-gmail-to-fill-out-forms"
+    },
+    {
+      "outlet": "Google Blog",
+      "domain": "blog.google",
+      "tier": "primary",
+      "title": "Chrome’s enhanced autofill helps you fill out forms with suggestions pulled from Gmail.",
+      "summary": "Chrome enhanced autofill",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "url": "https://blog.google/products-and-platforms/products/chrome/enhanced-autofill-gmail"
+    },
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Chrome’s enhanced autofill can now pull info from Gmail to help you fill out forms",
+      "summary": "Following improvements made to Chrome's enhanced autofill last year that included your name, passport number, email address, and physical addresses sourced from your Google Accounts and services like Google Wallet, the feature is now expanding. Starting today, Chrome's enhanced autofill will use Gemini with Personal Intelligence to suggest information sourced from your Gmail, potentially saving […]",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "url": "https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence"
+    }
+  ],
+  "created_at": "2026-10-28T17:49:32+00:00"
+}
