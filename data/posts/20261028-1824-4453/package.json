@@ -1,0 +1,45 @@
+{
+  "cluster_id": 4453,
+  "score": 90,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Apple just dropped new MacBook Pros with touch screens and brought back the iconic glowing logo. Nostalgia really is the most expensive feature companies can sell us. Are you upgrading just for the light-up logo? 💻✨\n\n@apple\n\nSource: The Verge\n\n#AppleEvent #MacBookPro #TechNews #MarketingStrategy #GenZCulture",
+  "post": {
+    "news": "Apple brought back the glowing logo on its new MacBook Pro and finally added touch screens.",
+    "take": "Apple spent years telling us touch screens on laptops were dumb, until it needed a new feature to sell.",
+    "insight": "Tech brands love to call features impossible until sales slow down and they need a fresh upgrade cycle.",
+    "caption": "Apple just dropped new MacBook Pros with touch screens and brought back the iconic glowing logo. Nostalgia really is the most expensive feature companies can sell us. Are you upgrading just for the light-up logo? 💻✨",
+    "hashtags": [
+      "#AppleEvent",
+      "#MacBookPro",
+      "#TechNews",
+      "#MarketingStrategy",
+      "#GenZCulture"
+    ],
+    "first_comment": "We traded innovation for a glowing apple and a touch screen. Classic.",
+    "alt_text": "Text card showing Apple's new MacBook Pro features and a sarcastic joke about the glowing logo."
+  },
+  "claims": [
+    {
+      "text": "Apple brought back the glowing logo on its new MacBook Pro and finally added touch screens.",
+      "evidence": "bringing back the glowing Apple logo. While a little less exciting, there's […] The long-awaited laptops feature a Tandem OLED display with full touch capabilities"
+    }
+  ],
+  "category": "Brand strategy",
+  "scores": {
+    "relevance": 22,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Here’s where to preorder the latest MacBook Pros",
+      "summary": "Apple finally showed off its 14- and 16-inch MacBook Pro laptops that have the PROLED XDR display at the October 2026 \"Pro and Tell\" event. The long-awaited laptops feature a Tandem OLED display with full touch capabilities, while also cutting some weight, and bringing back the glowing Apple logo. While a little less exciting, there's […]",
+      "published_at": "2026-10-28T18:10:23+00:00",
+      "url": "https://www.theverge.com/gadgets/1019109/apple-macbook-pro-m6-proled-xdr-how-to-buy-price-release-date"
+    }
+  ],
+  "created_at": "2026-10-28T18:24:39+00:00"
+}
