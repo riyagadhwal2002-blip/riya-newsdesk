@@ -1,0 +1,53 @@
+{
+  "cluster_id": 4587,
+  "score": 95,
+  "credibility": "1 trusted outlet (techcrunch.com)",
+  "caption": "Google is taking its AI search ads worldwide because regular ad growth is slowing down. Parent company Alphabet just pulled in $127.6 billion in quarterly revenue, but the search business is cooling off. So now your robotic search answers come with sponsored shopping links. \n\nAre you clicking on these AI ads or just ignoring them? 🤖\n\n@google\n\nSource: TechCrunch\n\n#GoogleAI #SearchAds #DigitalMarketing #TechNews #MarketingStrategy",
+  "post": {
+    "news": "Google is rolling out ads in AI Search globally as core ad growth slows down, alongside $127.6 billion in quarterly revenue.",
+    "take": "Google found a way to slow down search growth and immediately answer it with more ads.",
+    "insight": "When core search growth slows down, tech giants turn their shiny new AI features into billboards fast.",
+    "caption": "Google is taking its AI search ads worldwide because regular ad growth is slowing down. Parent company Alphabet just pulled in $127.6 billion in quarterly revenue, but the search business is cooling off. So now your robotic search answers come with sponsored shopping links. \n\nAre you clicking on these AI ads or just ignoring them? 🤖",
+    "hashtags": [
+      "#GoogleAI",
+      "#SearchAds",
+      "#DigitalMarketing",
+      "#TechNews",
+      "#MarketingStrategy"
+    ],
+    "first_comment": "We asked the robot for an answer and it handed us a receipt.",
+    "alt_text": "Text card featuring Google rolling out AI search ads globally as core ad growth slows down."
+  },
+  "claims": [
+    {
+      "text": "Google is rolling out ads in AI Search globally",
+      "evidence": "Google is bringing ads in its AI-powered Search experiences to international markets"
+    },
+    {
+      "text": "core ad growth slows down",
+      "evidence": "Search advertising growth continued to decelerate"
+    },
+    {
+      "text": "$127.6 billion in quarterly revenue",
+      "evidence": "reported $127.6 billion in revenue"
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "TechCrunch",
+      "domain": "techcrunch.com",
+      "tier": "trusted",
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "summary": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion.",
+      "published_at": "2026-10-28T21:48:37+00:00",
+      "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows"
+    }
+  ],
+  "created_at": "2026-10-29T05:01:53+00:00"
+}
