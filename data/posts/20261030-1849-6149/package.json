@@ -1,0 +1,45 @@
+{
+  "cluster_id": 6149,
+  "score": 87,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Starbucks wants to use AI at the drive-thru to recognize you and show a custom menu. Because deciding what iced coffee to get wasn't stressful enough, now the speakers are learning our habits ☕️\n\nWould you want your local coffee shop to know your usual order instantly? 👇\n\n@starbucks\n\nSource: The Verge\n\n#Starbucks #MarketingNews #ArtificialIntelligence #ConsumerBehavior #BrandStrategy",
+  "post": {
+    "news": "Starbucks CEO Brian Niccol announced plans to use AI to recognize customers at the drive-thru and show personalized digital menus.",
+    "take": "My coffee addiction already knows me too well. Now even the menu is going to judge my daily sugar choices.",
+    "insight": "Brands are turning the drive-thru into a personalized screen, using data to speed up ordering and sell you more.",
+    "caption": "Starbucks wants to use AI at the drive-thru to recognize you and show a custom menu. Because deciding what iced coffee to get wasn't stressful enough, now the speakers are learning our habits ☕️\n\nWould you want your local coffee shop to know your usual order instantly? 👇",
+    "hashtags": [
+      "#Starbucks",
+      "#MarketingNews",
+      "#ArtificialIntelligence",
+      "#ConsumerBehavior",
+      "#BrandStrategy"
+    ],
+    "first_comment": "The robot can keep the iced coffee, just give me my password back.",
+    "alt_text": "Text card with Starbucks AI drive-thru news and a sarcastic take about personalized digital menus."
+  },
+  "claims": [
+    {
+      "text": "Starbucks CEO Brian Niccol announced plans to use AI to recognize customers at the drive-thru and show personalized digital menus.",
+      "evidence": "During an earnings call on Thursday, Starbucks CEO Brian Niccol said the company is going to explore \"experiences that recognize participating customers as they arrive, present personalized digital menus, and make payment more effortless\""
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Starbucks wants to use AI to show you a ‘personalized digital menu’ at the drive-thru",
+      "summary": "Starbucks could eventually show you a personalized digital menu when you pull up to the drive-thru. During an earnings call on Thursday, Starbucks CEO Brian Niccol said the company is going to explore \"experiences that recognize participating customers as they arrive, present personalized digital menus, and make payment more effortless,\" as spotted earlier by More […]",
+      "published_at": "2026-10-30T17:38:04+00:00",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru"
+    }
+  ],
+  "created_at": "2026-10-30T18:49:13+00:00"
+}
