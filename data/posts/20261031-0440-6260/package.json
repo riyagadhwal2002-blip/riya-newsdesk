@@ -1,0 +1,45 @@
+{
+  "cluster_id": 6260,
+  "score": 95,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Sam Altman just explained that having RAM in your own personal laptop is actually terrible because data centers need it more. Translation: please stop buying good gear so his servers can hoard every chip on the planet. 💻\n\nAre you Team Local AI or Team Cloud? Let me know below.\n\n@openai\n\nSource: The Verge\n\n#SamAltman #OpenAI #TechNews #ArtificialIntelligence #CloudComputing",
+  "post": {
+    "news": "OpenAI CEO Sam Altman said it is terrible to have RAM in personal PCs instead of data centers.",
+    "take": "Translation: please stop buying laptops so my servers can hoard every chip on earth.",
+    "insight": "Big tech buying up all the hardware means everyday tech gets pricier while companies push everything to the cloud.",
+    "caption": "Sam Altman just explained that having RAM in your own personal laptop is actually terrible because data centers need it more. Translation: please stop buying good gear so his servers can hoard every chip on the planet. 💻\n\nAre you Team Local AI or Team Cloud? Let me know below.",
+    "hashtags": [
+      "#SamAltman",
+      "#OpenAI",
+      "#TechNews",
+      "#ArtificialIntelligence",
+      "#CloudComputing"
+    ],
+    "first_comment": "Bro really wants us to rent our own thoughts from the cloud.",
+    "alt_text": "Instagram card featuring Sam Altman RAM quote and a sarcastic take about cloud servers."
+  },
+  "claims": [
+    {
+      "text": "OpenAI CEO Sam Altman said it is terrible to have RAM in personal PCs instead of data centers.",
+      "evidence": "OpenAI CEO Sam Altman said in an interview that it’s “terrible” to have RAM in personal PCs instead of data centers."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Sam Altman says it’s better for RAM to be in a data center than on your desk",
+      "summary": "Asked about supply chain shortages, like the ongoing RAM shortage, OpenAI CEO Sam Altman said in an interview that it's \"terrible\" to have RAM in personal PCs instead of data centers. During his appearance on the Cheeky Pint podcast, where he also commented on AI's impact on math, Altman said: \"A lot of people want […]",
+      "published_at": "2026-10-30T20:48:43+00:00",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers"
+    }
+  ],
+  "created_at": "2026-10-31T04:40:33+00:00"
+}
