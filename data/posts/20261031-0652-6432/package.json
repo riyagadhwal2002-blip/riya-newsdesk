@@ -1,0 +1,53 @@
+{
+  "cluster_id": 6432,
+  "score": 92,
+  "credibility": "1 trusted outlet (variety.com)",
+  "caption": "JioStar just posted a 10% jump in revenue to INR68.1 billion for the quarter, with Sourav Ganguly hosting Bigg Boss Bangla and features like Pay Kisi Aur Se driving growth. Platforms are really finding new ways to make us pay for our streaming habits. Would you ever ask a friend to fund your subscription? Let me know below.\n\nSource: Variety\n\n#jiostar #streamingmedia #mediabusiness #contentstrategy #indianmedia",
+  "post": {
+    "news": "JioStar revenue rose 10.1% to INR68.1 billion in the July-September quarter, powered by digital ads and subscriptions despite a weak ad market.",
+    "take": "When your cricket captain hosts reality TV and your app begs your friends to pay, the numbers always go up.",
+    "insight": "Media giants are leaning heavily into regional reality formats and clever subscription hacks like Pay Kisi Aur Se to keep growing.",
+    "caption": "JioStar just posted a 10% jump in revenue to INR68.1 billion for the quarter, with Sourav Ganguly hosting Bigg Boss Bangla and features like Pay Kisi Aur Se driving growth. Platforms are really finding new ways to make us pay for our streaming habits. Would you ever ask a friend to fund your subscription? Let me know below.",
+    "hashtags": [
+      "#jiostar",
+      "#streamingmedia",
+      "#mediabusiness",
+      "#contentstrategy",
+      "#indianmedia"
+    ],
+    "first_comment": "Asking a friend to pay for my reality TV addiction feels like peak survival mode.",
+    "alt_text": "Text card showing JioStar revenue growth stats and a sarcastic take on streaming subscriptions."
+  },
+  "claims": [
+    {
+      "text": "JioStar revenue rose 10.1% to INR68.1 billion in the July-September quarter, powered by digital ads and subscriptions despite a weak ad market.",
+      "evidence": "JioStar, the Indian media giant backed by Reliance Industries, grew revenue from operations 10.1% year-on-year to INR68.1 billion ($710 million) in the July–September quarter despite a weak advertising market."
+    },
+    {
+      "text": "Sourav Ganguly hosting Bigg Boss Bangla",
+      "evidence": "Former India cricket captain Sourav Ganguly hosted the first-ever “Bigg Boss Bangla,” which launched this quarter on streaming service JioHotstar."
+    },
+    {
+      "text": "features like Pay Kisi Aur Se driving growth",
+      "evidence": "The company also introduced “Pay Kisi Aur Se” (“Ask Others to Pay”), which lets users send a subscription payment request to a friend or relative. Reliance said the feature raised payment initiations by 10%."
+    }
+  ],
+  "category": "Brand strategy & media",
+  "scores": {
+    "relevance": 24,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Variety",
+      "domain": "variety.com",
+      "tier": "trusted",
+      "title": "Sourav Ganguly’s ‘Bigg Boss Bangla’ Among Highlights as Indian Media Giant JioStar Revenues Climb 10%",
+      "summary": "JioStar, the Indian media giant backed by Reliance Industries, grew revenue from operations 10.1% year-on-year to INR68.1 billion ($710 million) in the July–September quarter despite a weak advertising market. Profit after tax fell 13.2% to INR11.5 billion ($120 million). Former India cricket captain Sourav Ganguly hosted the first-ever “Bigg Boss Bangla,” which launched this quarter […]",
+      "published_at": "2026-10-31T06:20:09+00:00",
+      "url": "https://variety.com/2026/tv/news/sourav-ganguly-bigg-boss-highlight-jiostar-revenue-rises-1236935940"
+    }
+  ],
+  "created_at": "2026-10-31T06:52:21+00:00"
+}
