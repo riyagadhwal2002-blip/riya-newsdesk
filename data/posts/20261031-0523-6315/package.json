@@ -1,0 +1,45 @@
+{
+  "cluster_id": 6315,
+  "score": 92,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Apple is finally bringing its AI tools to China starting with a November beta, working with local partners like Alibaba to make it happen. Big tech can never just launch a product globally anymore without playing local politics first. Would you trust your phone's AI to summarize your work texts?\n\n@apple\n\nSource: The Verge\n\n#AppleIntelligence #TechNews #ArtificialIntelligence #MarketingStrategy #GenZCulture",
+  "post": {
+    "news": "Apple is bringing Apple Intelligence to China in December with iOS 27.3, starting with a beta on November 4th.",
+    "take": "Apple finally cracked the China market by bringing it basic writing tools and notification summaries. Tim Cook discovered the secret to geopolitics is spellcheck.",
+    "insight": "Even the biggest tech brands have to localize their AI features piece by piece to play nice with local rules and partners.",
+    "caption": "Apple is finally bringing its AI tools to China starting with a November beta, working with local partners like Alibaba to make it happen. Big tech can never just launch a product globally anymore without playing local politics first. Would you trust your phone's AI to summarize your work texts?",
+    "hashtags": [
+      "#AppleIntelligence",
+      "#TechNews",
+      "#ArtificialIntelligence",
+      "#MarketingStrategy",
+      "#GenZCulture"
+    ],
+    "first_comment": "Next up: Siri learning how to negotiate tea prices.",
+    "alt_text": "Text card showing Apple is launching Apple Intelligence in China with iOS 27.3."
+  },
+  "claims": [
+    {
+      "text": "Apple is bringing Apple Intelligence to China in December with iOS 27.3, starting with a beta on November 4th.",
+      "evidence": "Apple will launch Apple Intelligence in China with iOS 27.3... available first in an iOS 27.3 beta that's set to launch on November 4th, with a full iOS 27.3 release scheduled for December."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Apple Intelligence is finally coming to China with iOS 27.3",
+      "summary": "Apple will launch Apple Intelligence in China with iOS 27.3, the company announced on its Chinese newsroom website, as reported by MacRumors. The Apple Intelligence features will be available first in an iOS 27.3 beta that's set to launch on November 4th, with a full iOS 27.3 release scheduled for December. This launch doesn't bring […]",
+      "published_at": "2026-10-30T22:32:53+00:00",
+      "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3"
+    }
+  ],
+  "created_at": "2026-10-31T05:23:26+00:00"
+}

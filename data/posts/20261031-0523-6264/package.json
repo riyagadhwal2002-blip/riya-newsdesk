@@ -1,0 +1,49 @@
+{
+  "cluster_id": 6264,
+  "score": 84,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Akai just teased the new MPC Sample Key, but the real twist is the software. They are making it open source so creators and coders can hack and mod it however they want. Most brands lock their gear down, but Akai is letting users run wild. 🎹\n\nWould you buy music gear you can recode yourself?\n\nSource: The Verge\n\n#Akai #MusicProduction #OpenSource #CreatorEconomy #MusicTech",
+  "post": {
+    "news": "Akai teased its new MPC Sample Key and plans to open-source its software so the community can hack it.",
+    "take": "Akai basically handed over a keyboard and told the internet to finish building the software.",
+    "insight": "Turning hardware into an open playground makes your community do the product development for you.",
+    "caption": "Akai just teased the new MPC Sample Key, but the real twist is the software. They are making it open source so creators and coders can hack and mod it however they want. Most brands lock their gear down, but Akai is letting users run wild. 🎹\n\nWould you buy music gear you can recode yourself?",
+    "hashtags": [
+      "#Akai",
+      "#MusicProduction",
+      "#OpenSource",
+      "#CreatorEconomy",
+      "#MusicTech"
+    ],
+    "first_comment": "Free labor disguised as community building. Honestly, respect the hustle.",
+    "alt_text": "A tweet style graphic reporting that Akai plans to open-source its new MPC Sample Key software, paired with a sarcastic punchline."
+  },
+  "claims": [
+    {
+      "text": "Akai teased its new MPC Sample Key on Instagram.",
+      "evidence": "Akai teased its new MPC Sample Key on Instagram earlier this week"
+    },
+    {
+      "text": "Akai plans to open-source the software so people can hack and mod it.",
+      "evidence": "said it plans to open-source its software so the modding community can hack it to their hearts' delight"
+    }
+  ],
+  "category": "Product launch",
+  "scores": {
+    "relevance": 19,
+    "interest": 16,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Exclusive details about Akai’s MPC Sample Key",
+      "summary": "Akai teased its new MPC Sample Key on Instagram earlier this week, and said it plans to open-source its software so the modding community can hack it to their hearts' delight. While there's no word yet on when the device will launch or how much it will cost, The Verge has received exclusive images of […]",
+      "published_at": "2026-10-30T21:01:32+00:00",
+      "url": "https://www.theverge.com/gadgets/1023649/akai-mpc-sample-key-exclusive"
+    }
+  ],
+  "created_at": "2026-10-31T05:23:26+00:00"
+}
