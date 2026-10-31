@@ -1,0 +1,45 @@
+{
+  "cluster_id": 6678,
+  "score": 91,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Meta wants you to carry an AI helper around like a Tamagotchi this holiday season. But why buy the official gadget when tech enthusiasts are just building their own version with cheap dev kits and a bit of coding? Would you wear your AI pet on a chain? 🤖✨\n\nDrop your thoughts below!\n\nSource: The Verge\n\n#AICulture #TechTrends #CreatorEconomy #Gadgets #GenZCulture",
+  "post": {
+    "news": "Meta is selling the Muse Charm this holiday season, a tiny AI pendant that acts like a digital Tamagotchi.",
+    "take": "We really evolved from Tamagotchis to paying tech giants to let us feed our artificial anxiety.",
+    "insight": "AI hardware needs to do things our phones can't, or it's just an expensive pocket watch.",
+    "caption": "Meta wants you to carry an AI helper around like a Tamagotchi this holiday season. But why buy the official gadget when tech enthusiasts are just building their own version with cheap dev kits and a bit of coding? Would you wear your AI pet on a chain? 🤖✨\n\nDrop your thoughts below!",
+    "hashtags": [
+      "#AICulture",
+      "#TechTrends",
+      "#CreatorEconomy",
+      "#Gadgets",
+      "#GenZCulture"
+    ],
+    "first_comment": "Brb coding my AI pet to demand snacks and emotional labor.",
+    "alt_text": "Text card about Meta's AI pendant and building a DIY version."
+  },
+  "claims": [
+    {
+      "text": "Meta is selling the Muse Charm this holiday season, a tiny AI pendant that acts like a digital Tamagotchi.",
+      "evidence": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi."
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 24,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "I built an AI Tamagotchi before Meta could",
+      "summary": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It […]",
+      "published_at": "2026-10-31T16:05:00+00:00",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code"
+    }
+  ],
+  "created_at": "2026-10-31T16:52:31+00:00"
+}
