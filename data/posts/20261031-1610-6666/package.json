@@ -1,0 +1,45 @@
+{
+  "cluster_id": 6666,
+  "score": 88,
+  "credibility": "1 trusted outlet (livemint.com)",
+  "caption": "Imagine building a product so good that your customers literally pay to fund your next round instead of raising support tickets. Docterz just raised ₹5 crore, with most of the money coming from doctors who actually use its clinic software every day. When your users double as your investors, you've officially won the market. Have you ever loved a tool so much you wished you could invest in it? 👇\n\nSource: Livemint Companies\n\n#StartupFunding #HealthTech #BusinessNews #IndianStartups #B2BSaaS",
+  "post": {
+    "news": "Mumbai healthtech startup Docterz raised ₹5 crore, with nearly 60% coming from doctors who use its clinic software platform.",
+    "take": "When your customers fund your company instead of complaining in a WhatsApp group, you know the product works.",
+    "insight": "Customer-led funding is the ultimate proof of product-market fit. When users become investors, retention is practically guaranteed.",
+    "caption": "Imagine building a product so good that your customers literally pay to fund your next round instead of raising support tickets. Docterz just raised ₹5 crore, with most of the money coming from doctors who actually use its clinic software every day. When your users double as your investors, you've officially won the market. Have you ever loved a tool so much you wished you could invest in it? 👇",
+    "hashtags": [
+      "#StartupFunding",
+      "#HealthTech",
+      "#BusinessNews",
+      "#IndianStartups",
+      "#B2BSaaS"
+    ],
+    "first_comment": "Finally, customers putting their money where their mouth is.",
+    "alt_text": "Text card showing news about Docterz raising money from its user base and a witty take on customer retention."
+  },
+  "claims": [
+    {
+      "text": "Mumbai healthtech startup Docterz raised ₹5 crore, with nearly 60% coming from doctors who use its clinic software platform.",
+      "evidence": "Mumbai-based healthtech startup Docterz has raised ₹5 crore from around 35 investors. Nearly 60% of the amount, close to ₹3 crore, came from about 20 doctors who already use the company’s platform."
+    }
+  ],
+  "category": "Startup funding",
+  "scores": {
+    "relevance": 22,
+    "interest": 15,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Livemint Companies",
+      "domain": "livemint.com",
+      "tier": "trusted",
+      "title": "Doctors back their own software: Docterz raises ₹5 cr, nearly 60% from users of its clinic platform",
+      "summary": "Docterz aims to deepen its presence in the Indian clinic software market while adding AI capabilities that reduce administrative load. For a company founded by a practising doctor and now backed substantially by its own users, the funding reinforces a model built on practical utility.",
+      "published_at": "2026-10-31T15:34:40+00:00",
+      "url": "https://www.livemint.com/companies/doctors-back-their-own-software-docterz-raises-rs-5-cr-nearly-60-from-users-of-its-clinic-platform-11793457204580.html"
+    }
+  ],
+  "created_at": "2026-10-31T16:10:38+00:00"
+}
