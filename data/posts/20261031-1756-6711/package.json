@@ -1,0 +1,49 @@
+{
+  "cluster_id": 6711,
+  "score": 86,
+  "credibility": "1 trusted outlet (theverge.com)",
+  "caption": "Nintendo just made up a brand new holiday called Pikmin Day because why not. 🌿 Now we have cute little plant creatures taking over our feeds and actual new game updates to keep us busy. Are you ready to celebrate, or is this just another excuse to buy merch? 👇\n\n@nintendoamerica\n\nSource: The Verge\n\n#Nintendo #Pikmin #GamingNews #GenZCulture #MarketingStrategy",
+  "post": {
+    "news": "Nintendo just declared November 1st as the first annual Pikmin Day, complete with a new Switch 2 game mode and animated shorts.",
+    "take": "Nintendo really looked at tiny plant creatures and decided they deserved a national holiday before most of us.",
+    "insight": "Brands don't need a massive product launch to create a new holiday; sometimes you just invent an annual day and let superfans do the rest.",
+    "caption": "Nintendo just made up a brand new holiday called Pikmin Day because why not. 🌿 Now we have cute little plant creatures taking over our feeds and actual new game updates to keep us busy. Are you ready to celebrate, or is this just another excuse to buy merch? 👇",
+    "hashtags": [
+      "#Nintendo",
+      "#Pikmin",
+      "#GamingNews",
+      "#GenZCulture",
+      "#MarketingStrategy"
+    ],
+    "first_comment": "Waiting for my company to give me a paid day off for Pikmin Day.",
+    "alt_text": "Text card stating Nintendo declared November 1st as the first annual Pikmin Day with new game updates."
+  },
+  "claims": [
+    {
+      "text": "Nintendo just declared November 1st as the first annual Pikmin Day",
+      "evidence": "Nintendo announced that tomorrow, November 1st, would be the first annual Pikmin Day."
+    },
+    {
+      "text": "complete with a new Switch 2 game mode and animated shorts",
+      "evidence": "Pikmin 4 will also have a Dandori Academy mode... announced the Hello! Pikmin series of shorts."
+    }
+  ],
+  "category": "Brand strategy",
+  "scores": {
+    "relevance": 20,
+    "interest": 15,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "The Verge",
+      "domain": "theverge.com",
+      "tier": "trusted",
+      "title": "Happy Pikmin Day Eve",
+      "summary": "This morning, Nintendo announced that tomorrow, November 1st, would be the first annual Pikmin Day. As part of the short Pikmin Day Direct, Shigeru Miyamoto shared new info about Pikmin 4 for the Switch 2, as well as an update for the mobile app Pikmin Bloom, and announced the Hello! Pikmin series of shorts. Players […]",
+      "published_at": "2026-10-31T17:50:12+00:00",
+      "url": "https://www.theverge.com/games/1024085/happy-pikmin-day-eve"
+    }
+  ],
+  "created_at": "2026-10-31T17:56:50+00:00"
+}
