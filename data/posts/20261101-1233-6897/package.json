@@ -1,0 +1,53 @@
+{
+  "cluster_id": 6897,
+  "score": 93,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Tech founders spent two years promising that AI agents would run our daily errands. DoorDash just gave everyone a reality check. People might track gift prices with bots, but when dinner is on the line, we open the food delivery app ourselves. 🍟\n\nWould you let an AI bot order your dinner?\n\nSource: Business Insider\n\n#DoorDash #AIAgents #TechNews #ConsumerBehavior #ArtificialIntelligence",
+  "post": {
+    "news": "DoorDash delivered 3.2 billion orders in 2025, but its CEO says AI agents placed only several hundred orders in total.",
+    "take": "Turns out nobody trusts a smart bot with something as deeply emotional as picking midnight fries.",
+    "insight": "Consumer habits move way slower than tech hype demos, especially when money and dinner are involved.",
+    "caption": "Tech founders spent two years promising that AI agents would run our daily errands. DoorDash just gave everyone a reality check. People might track gift prices with bots, but when dinner is on the line, we open the food delivery app ourselves. 🍟\n\nWould you let an AI bot order your dinner?",
+    "hashtags": [
+      "#DoorDash",
+      "#AIAgents",
+      "#TechNews",
+      "#ConsumerBehavior",
+      "#ArtificialIntelligence"
+    ],
+    "first_comment": "Imagine letting an AI bot decide how many chicken nuggets you deserve.",
+    "alt_text": "Text card stating that DoorDash delivered 3.2 billion orders in 2025 but AI agents placed only several hundred in total, followed by a witty take on why humans still order food themselves."
+  },
+  "claims": [
+    {
+      "text": "DoorDash delivered 3.2 billion orders in 2025.",
+      "evidence": "DoorDash delivered 3.2 billion orders worldwide in 2025."
+    },
+    {
+      "text": "DoorDash's CEO says AI agents placed only several hundred orders in total.",
+      "evidence": "The food delivery service has received \"several hundred orders in total\" from agents such as Meta's Muse, DoorDash CEO Tony Xu said"
+    },
+    {
+      "text": "People use AI agents to track gift prices.",
+      "evidence": "The agents can be useful for tracking the prices of holiday gifts or airline tickets, users told Business Insider"
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 23,
+    "interest": 18,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "DoorDash's CEO: Don't be 'delusional' after just a few hundred AI agent orders",
+      "summary": "DoorDash CEO Tony Xu discusses AI agents like Meta's Muse, revealing low order numbers but plans for enhancing DoorDash's AI tools.",
+      "published_at": "2026-11-01T10:09:01+00:00",
+      "url": "https://www.businessinsider.com/doordash-sees-limited-ai-orders-but-explores-new-tools-2026-11"
+    }
+  ],
+  "created_at": "2026-11-01T12:33:05+00:00"
+}
