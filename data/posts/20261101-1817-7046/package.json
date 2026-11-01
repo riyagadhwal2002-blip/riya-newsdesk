@@ -1,0 +1,45 @@
+{
+  "cluster_id": 7046,
+  "score": 86,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Saturday Night Live just came for the entire tech bros in Austin vibe, turning creepy clowns into startup founders building AI balloons. When mainstream comedy starts mocking your pivot to Texas, maybe it is time to log off.\n\nWould you invest in WeAllFloat.ai?\n\nSource: Business Insider\n\n#StartupCulture #TechBros #ArtificialIntelligence #SaturdayNightLive #CreatorEconomy",
+  "post": {
+    "news": "Saturday Night Live lampooned AI startup culture and tech guys moving to Texas in its latest Halloween episode.",
+    "take": "Pennywise finally found a gig scarier than eating kids: pretending to build an AI startup in Austin.",
+    "insight": "When late night TV starts roasting your tech hub clichés, the meme phase of your industry is officially over.",
+    "caption": "Saturday Night Live just came for the entire tech bros in Austin vibe, turning creepy clowns into startup founders building AI balloons. When mainstream comedy starts mocking your pivot to Texas, maybe it is time to log off.\n\nWould you invest in WeAllFloat.ai?",
+    "hashtags": [
+      "#StartupCulture",
+      "#TechBros",
+      "#ArtificialIntelligence",
+      "#SaturdayNightLive",
+      "#CreatorEconomy"
+    ],
+    "first_comment": "Even the clown has a pitch deck now.",
+    "alt_text": "Text card with a news line about SNL mocking AI startups and a sarcastic punchline about Pennywise in Austin."
+  },
+  "claims": [
+    {
+      "text": "Saturday Night Live lampooned AI startup culture and tech guys moving to Texas in its latest Halloween episode.",
+      "evidence": "\"Saturday Night Live\" took aim at startup culture and AI across multiple sketches in its Halloween broadcast... honing in on the Lone Star State as a place where soulless, profit-driven techies are flocking to start new companies."
+    }
+  ],
+  "category": "Gen Z culture",
+  "scores": {
+    "relevance": 23,
+    "interest": 17,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "'SNL' goes after AI, startup culture, and 'predatory tech guys'",
+      "summary": "'SNL' fired shots at AI startup culture in its latest episode.",
+      "published_at": "2026-11-01T17:13:48+00:00",
+      "url": "https://www.businessinsider.com/saturday-night-live-snl-ai-startup-culture-tech-comedy-2026-11"
+    }
+  ],
+  "created_at": "2026-11-01T18:17:45+00:00"
+}
