@@ -1,0 +1,53 @@
+{
+  "cluster_id": 6998,
+  "score": 91,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Anthropic revealed in its IPO filing that its internal AI usage now costs more at customer rates than its monthly employee payroll. Even wilder, Claude wrote over 90% of their new code in September. 🤖\n\nTech companies are shifting fast. Would you trust AI to do 90% of your daily work?\n\nSource: Business Insider\n\n#anthropic #claudeai #techtrends #futureofwork #siliconvalley",
+  "post": {
+    "news": "Anthropic says the AI used internally by its staff is now worth more at retail prices than their monthly salaries.",
+    "take": "At this point the humans at the office are just emotional support pets for Claude.",
+    "insight": "Tech companies are driving product growth through AI consumption instead of expanding headcount.",
+    "caption": "Anthropic revealed in its IPO filing that its internal AI usage now costs more at customer rates than its monthly employee payroll. Even wilder, Claude wrote over 90% of their new code in September. 🤖\n\nTech companies are shifting fast. Would you trust AI to do 90% of your daily work?",
+    "hashtags": [
+      "#anthropic",
+      "#claudeai",
+      "#techtrends",
+      "#futureofwork",
+      "#siliconvalley"
+    ],
+    "first_comment": "Claude is definitely going to ask for a desk by the window next.",
+    "alt_text": "Text card stating that Anthropic's internal AI usage now exceeds employee pay when valued at retail prices, with a joke about humans being emotional support pets for Claude."
+  },
+  "claims": [
+    {
+      "text": "Anthropic says the AI used internally by its staff is now worth more at retail prices than their monthly salaries.",
+      "evidence": "Anthropic's internal AI use, valued at retail prices, now exceeds its employee pay."
+    },
+    {
+      "text": "Anthropic revealed in its IPO filing that its internal AI usage now costs more at customer rates than its monthly employee payroll.",
+      "evidence": "The company revealed this in its IPO filing. In April, the value of Claude AI used internally, calculated at prices Anthropic charges customers, exceeded its monthly employee compensation costs, excluding stock awards."
+    },
+    {
+      "text": "Claude wrote over 90% of their new code in September.",
+      "evidence": "More than 90% of the code added to its software in September was written by Claude."
+    }
+  ],
+  "category": "AI x workplace",
+  "scores": {
+    "relevance": 24,
+    "interest": 19,
+    "wit": 9
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "Anthropic's internal AI use, valued at retail prices, now exceeds its employee pay",
+      "summary": "Anthropic's IPO filing reveals a striking milestone: Its internal AI usage is now valued above employee compensation.",
+      "published_at": "2026-11-01T15:00:01+00:00",
+      "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11"
+    }
+  ],
+  "created_at": "2026-11-01T15:59:12+00:00"
+}
