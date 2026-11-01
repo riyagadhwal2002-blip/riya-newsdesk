@@ -1,0 +1,45 @@
+{
+  "cluster_id": 7083,
+  "score": 93,
+  "credibility": "1 trusted outlet (businessinsider.com)",
+  "caption": "Microsoft AI boss Mustafa Suleyman just dropped a thread saying we need to make sure our bots stay mindless tools and never gain consciousness. Bro is literally preemptively ghosting the robot uprising. Would you trust a toaster that suddenly started expressing feelings? 🤖💬\n\nSource: Business Insider\n\n#ArtificialIntelligence #TechNews #Microsoft #FutureOfTech #GenZCulture",
+  "post": {
+    "news": "Microsoft AI chief Mustafa Suleyman said developers should only build AI models that are not conscious and do not deserve rights.",
+    "take": "Bro is out here setting boundaries with his own group project before it even starts texting in the chat.",
+    "insight": "Tech bosses are suddenly very concerned about what happens when our screen assistants start developing feelings and demanding rights.",
+    "caption": "Microsoft AI boss Mustafa Suleyman just dropped a thread saying we need to make sure our bots stay mindless tools and never gain consciousness. Bro is literally preemptively ghosting the robot uprising. Would you trust a toaster that suddenly started expressing feelings? 🤖💬",
+    "hashtags": [
+      "#ArtificialIntelligence",
+      "#TechNews",
+      "#Microsoft",
+      "#FutureOfTech",
+      "#GenZCulture"
+    ],
+    "first_comment": "Bro saw one sci-fi movie and panicked.",
+    "alt_text": "A text card featuring tech news about Microsoft AI chief wanting robots to stay unconscious."
+  },
+  "claims": [
+    {
+      "text": "Microsoft AI chief Mustafa Suleyman said developers should only build AI models that are not conscious and do not deserve rights.",
+      "evidence": "Microsoft AI CEO Mustafa Suleyman said developers should only build AI models that \"are not conscious and not deserving of rights.\""
+    }
+  ],
+  "category": "AI x marketing",
+  "scores": {
+    "relevance": 25,
+    "interest": 17,
+    "wit": 8
+  },
+  "sources": [
+    {
+      "outlet": "Business Insider",
+      "domain": "businessinsider.com",
+      "tier": "trusted",
+      "title": "Microsoft AI chief says AI is not conscious and we should keep it that way",
+      "summary": "Microsoft AI CEO Mustafa Suleyman said developers should only build AI models that \"are not conscious and not deserving of rights.\"",
+      "published_at": "2026-11-01T19:45:17+00:00",
+      "url": "https://www.businessinsider.com/mustafa-suleyman-microsoft-ai-consciousness-2026-11"
+    }
+  ],
+  "created_at": "2026-11-01T20:15:33+00:00"
+}
