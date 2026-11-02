@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect LinkedIn</title>
+<style>
+  :root { --bg:#FFFDF5; --ink:#141414; --muted:#5d5d5d; --accent:#FFC72C; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--bg); color:var(--ink);
+         font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; padding:16px; }
+  .card { max-width:460px; width:100%; background:#fff; border:2px solid var(--ink); border-radius:18px; padding:32px;
+          box-shadow:6px 6px 0 var(--ink); }
+  h1 { font-size:26px; line-height:1.2; margin:0 0 10px; }
+  p { color:var(--muted); margin:0 0 22px; }
+  a.btn { display:block; text-align:center; background:var(--accent); color:var(--ink); font-weight:700; font-size:18px;
+          text-decoration:none; padding:16px; border-radius:12px; border:2px solid var(--ink); }
+  a.btn:hover { transform:translate(-1px,-1px); box-shadow:3px 3px 0 var(--ink); }
+  .small { font-size:14px; margin-top:16px; }
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <h1>Connect LinkedIn to your autopilot</h1>
+  <p>Tap the button, check it's your LinkedIn account, then tap <b>Allow</b>.</p>
+  <a class="btn" id="go" href="#">Connect LinkedIn</a>
+  <p class="small">This only lets your own app post on your profile. Remove it any time in LinkedIn → Settings → Data privacy → Permitted services.</p>
+</main>
+<script>
+  const CLIENT_ID = "";   // filled in after the LinkedIn app is created
+  const REDIRECT = "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect-linkedin.html";
+  const REPO = "riyagadhwal2002-blip/riya-newsdesk";
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code") || "";
+  const card = document.getElementById("card");
+  document.getElementById("go").href = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=" +
+    CLIENT_ID + "&redirect_uri=" + encodeURIComponent(REDIRECT) + "&state=newsdesk&scope=" +
+    encodeURIComponent("openid profile w_member_social");
+  if (params.get("error")) {
+    card.innerHTML = "<h1>Not connected</h1><p>LinkedIn said: " +
+      (params.get("error_description") || params.get("error")).replace(/[<>]/g, "") +
+      "</p><a class='btn' href='" + REDIRECT + "'>Try again</a>";
+  } else if (code) {
+    const issue = "https://github.com/" + REPO + "/issues/new?title=connect-linkedin&body=" + encodeURIComponent(code);
+    card.innerHTML = "<h1>Almost done ✅</h1><p>On the next page, just click the green <b>Create</b> button. " +
+      "LinkedIn posting then switches on by itself within a minute.</p><a class='btn' href='" + issue + "'>Continue</a>";
+    history.replaceState(null, "", REDIRECT);
+    setTimeout(() => { location.href = issue; }, 2500);
+  }
+</script>
+</body>
+</html>
