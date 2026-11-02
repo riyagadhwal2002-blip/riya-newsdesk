@@ -271,6 +271,56 @@ def cmd_connect_fb(args) -> int:
     return 0
 
 
+def cmd_linkedin_run(args) -> int:
+    settings, db, pipe, _ = build(args)
+    from .li_runner import LinkedInRunner
+    try:
+        stats = LinkedInRunner(settings, db, pipe.llm, pipe.now_fn).run()
+    finally:
+        db.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+        db.conn.close()
+    print(json.dumps(stats))
+    return 0
+
+
+def cmd_linkedin_preview(args) -> int:
+    settings, db, pipe, _ = build(args)
+    from .li_runner import LinkedInRunner
+    drafts = LinkedInRunner(settings, db, pipe.llm, pipe.now_fn).preview()
+    path = settings.data_dir / "linkedin_previews.json"
+    path.write_text(json.dumps(drafts, ensure_ascii=False, indent=2), encoding="utf-8")
+    for d in drafts:
+        print(f"--- {d.get('kind')} ---\n{d.get('text') or d.get('error')}\n")
+    db.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    return 0
+
+
+def cmd_connect_li(args) -> int:
+    """LinkedIn: one-time code → 60-day token (stored encrypted) + member id."""
+    from datetime import timedelta
+    from . import tokens
+    from .linkedin import LIError, LinkedIn, exchange_code
+    settings, db, _, _ = build(args)
+    cfg = settings.section("linkedin")
+    secret = settings.secret("LINKEDIN_CLIENT_SECRET")
+    if not secret or not cfg.get("client_id"):
+        print("LINKEDIN_CLIENT_SECRET secret or linkedin.client_id is missing")
+        return 1
+    try:
+        data = exchange_code(args.code.strip(), cfg["client_id"], secret, cfg["redirect_uri"])
+        me = LinkedIn(data["access_token"], cfg.get("api_version", "202606")).me()
+    except LIError as exc:
+        print(f"LinkedIn connection failed: {exc}")
+        return 1
+    tokens.save(db, data["access_token"], secret, key="li_token_enc")
+    db.set("li_person_id", me["sub"])
+    db.set("li_paused", "0")
+    db.set("li_token_expires_at", iso(utcnow() + timedelta(seconds=int(data.get("expires_in", 5184000)))))
+    db.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    print(f"Connected LinkedIn for {me.get('name', 'you')}")
+    return 0
+
+
 def cmd_report(args) -> int:
     settings, db, _, tg = build(args)
     rows = db.conn.execute(
@@ -320,6 +370,10 @@ def main(argv=None) -> int:
     cp.add_argument("--code", required=True)
     cf = sub.add_parser("connect-fb", help="finish Facebook login (Reels music) with a one-time code")
     cf.add_argument("--code", required=True)
+    cl = sub.add_parser("connect-li", help="finish LinkedIn login with a one-time code")
+    cl.add_argument("--code", required=True)
+    sub.add_parser("linkedin-run", help="post to LinkedIn if a slot is due")
+    sub.add_parser("linkedin-preview", help="write sample LinkedIn drafts without posting")
     sub.add_parser("status")
     sub.add_parser("pause", help="emergency stop for publishing")
     sub.add_parser("resume")
@@ -331,7 +385,8 @@ def main(argv=None) -> int:
 
     handlers = {
         "run-once": cmd_run_once, "loop": cmd_loop, "check": cmd_check, "feeds": cmd_feeds, "demo": cmd_demo,
-        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id, "connect": cmd_connect, "connect-fb": cmd_connect_fb,
+        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id, "connect": cmd_connect, "connect-fb": cmd_connect_fb, "connect-li": cmd_connect_li,
+        "linkedin-run": cmd_linkedin_run, "linkedin-preview": cmd_linkedin_preview,
         "pause": lambda a: cmd_set(a, "paused", "1", "⏸ Publishing paused."),
         "resume": lambda a: cmd_set(a, "paused", "0", "▶️ Publishing resumed."),
         "live": lambda a: cmd_set(a, "mode_override", "live", "🔴 LIVE mode: posts publish automatically."),
