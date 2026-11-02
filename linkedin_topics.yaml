@@ -1,0 +1,56 @@
+# Angles for LinkedIn posts on days without a news story. The AI writes a fresh post on one angle at a time
+# (never repeating an angle within 60 days). Add or remove lines freely.
+
+personal_branding:
+  - "Why your personal brand is what people say about you when you leave the room, and 3 ways to shape it"
+  - "The difference between being visible and being known for something"
+  - "Why most people's LinkedIn headline describes their job title instead of the value they bring"
+  - "Consistency beats talent: what posting regularly actually builds over a year"
+  - "How to pick 2-3 topics to be known for, instead of posting about everything"
+  - "Why being relatable often beats being impressive in personal branding"
+  - "Personal branding for introverts: you don't have to be loud to be memorable"
+  - "Your comments are content too: how thoughtful comments build a brand faster than posts"
+  - "Why your personal brand should outlive your current job title"
+  - "Stop waiting to be an expert before you start sharing what you're learning"
+  - "The 'portfolio of proof': collecting small wins people can see"
+  - "Why storytelling works better than listing achievements"
+
+linkedin_growth:
+  - "The first two lines of a LinkedIn post decide whether anyone reads the rest. How to write a strong hook"
+  - "Why engagement in the first hour matters, and how to show up for your own post"
+  - "Profile checklist: photo, banner, headline, About section and Featured, in plain words"
+  - "Why personal stories with a lesson get more reach than pure tips"
+  - "How to write a LinkedIn About section that sounds like a human, not a resume"
+  - "Posting frequency: why 3 good posts a week beat 7 rushed ones"
+  - "How to network on LinkedIn without sending awkward 'Hi, can you refer me' messages"
+  - "Why saves and thoughtful comments matter more than likes"
+  - "Repurposing: turning one idea into a post, a carousel and a comment thread"
+  - "Common LinkedIn mistakes students make in their first year on the platform"
+  - "How to reach out to someone you admire on LinkedIn (and actually get a reply)"
+  - "Why your network is built in comment sections, not just connection requests"
+
+genz_careers:
+  - "Internship lessons nobody tells you: asking questions is part of the job"
+  - "Why your first job is about learning speed, not job title"
+  - "How to handle feedback at work without taking it personally"
+  - "The underrated career skill: writing clear emails and messages"
+  - "Why Gen Z is redefining what 'work-life balance' means, and what managers can learn"
+  - "How to prepare for a placement or job interview in plain, practical steps"
+  - "Why side projects make you more hireable than another certificate"
+  - "Switching careers early is not failure: how to explain a pivot confidently"
+  - "Small habits that make you the person everyone wants on their team"
+  - "How to ask for a raise or more responsibility without feeling awkward"
+  - "Learning in public: how sharing your journey opens doors"
+  - "The difference between a mentor and a sponsor, and why you need both"
+
+hot_takes:
+  - "Unpopular opinion: 'hustle culture' posts are hurting young professionals more than helping them"
+  - "Hot take: a good portfolio beats a perfect resume"
+  - "Unpopular opinion: most brands don't need to be on every social platform"
+  - "Hot take: 'We're like a family' in a job post is a red flag"
+  - "Unpopular opinion: follower count is a vanity metric; trust is the real one"
+  - "Hot take: the best marketing is a product people recommend without being paid"
+  - "Unpopular opinion: networking events matter less than a strong online presence today"
+  - "Hot take: 'Open to work' banners are not desperate; hiding your intent is the real mistake"
+  - "Unpopular opinion: most viral campaigns were bought with budget, not creativity"
+  - "Hot take: personal branding is not just for founders and influencers"

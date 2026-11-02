@@ -30,6 +30,18 @@ instagram:
   fb_app_id: "1689024269257510"   # Meta app ID (Facebook Login, needed for Reels music)
   fb_redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect-facebook.html"
 
+# LinkedIn autopilot (posts as Riya on her personal profile via LinkedIn's official Share on LinkedIn API)
+linkedin:
+  enabled: true
+  mode: "live"                    # "dry_run" = write and save posts without publishing
+  client_id: ""                   # filled in after the LinkedIn developer app is created
+  redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect-linkedin.html"
+  api_version: "202606"
+  post_times: ["09:30"]           # India time; LinkedIn's morning peak
+  topics_file: "linkedin_topics.yaml"
+  # Mon news-based marketing breakdown · Tue personal branding · Wed brand/campaign lesson · Thu LinkedIn growth ·
+  # Fri Gen Z & careers · Sat hot take · Sun off. News days fall back to an insight post if no good story exists.
+
 # Reels with music (used when publishing.format is "reel" and the Facebook connection is done)
 music:
   seconds: 8                      # Reel length
