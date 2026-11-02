@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   connect:
-    if: github.event.issue.title == 'connect-instagram' && github.event.issue.user.login == github.repository_owner
+    if: (github.event.issue.title == 'connect-instagram' || github.event.issue.title == 'connect-facebook' || github.event.issue.title == 'connect-linkedin') && github.event.issue.user.login == github.repository_owner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,19 +38,25 @@ jobs:
         env:
           IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          TITLE: ${{ github.event.issue.title }}
           CODE: ${{ github.event.issue.body }}
           NEWSDESK_DATA_DIR: data
         run: |
           set -o pipefail
-          python -m newsdesk connect --code "$CODE" | tee result.txt
+          case "$TITLE" in connect-facebook) CMD=connect-fb;; connect-linkedin) CMD=connect-li;; *) CMD=connect;; esac
+          python -m newsdesk $CMD --code "$CODE" | tee result.txt
 
       - name: Save state
         if: success()
+        env:
+          TITLE: ${{ github.event.issue.title }}
         run: |
           git config user.name "newsdesk-bot"
           git config user.email "newsdesk-bot@users.noreply.github.com"
           git add -A data
-          git diff --cached --quiet || git commit -q -m "connect instagram"
+          git diff --cached --quiet || git commit -q -m "connect $TITLE"
           git pull --rebase -q || true
           git push -q
 

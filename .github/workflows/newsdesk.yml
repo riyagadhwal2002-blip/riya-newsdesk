@@ -52,6 +52,15 @@ jobs:
           PUBLIC_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/public
         run: python -m newsdesk run-once
 
+      - name: LinkedIn
+        if: always()
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          GITHUB_TOKEN: ${{ github.token }}
+          NEWSDESK_DATA_DIR: data
+        run: python -m newsdesk linkedin-run
+
       - name: Save state
         if: always()
         run: |
