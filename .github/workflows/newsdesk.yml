@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: newsdesk
@@ -40,10 +41,12 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           HOSTING: git
+          GITHUB_TOKEN: ${{ github.token }}
           NEWSDESK_DATA_DIR: data
           PUBLIC_DIR: public
           PUBLIC_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/public
