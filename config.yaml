@@ -20,12 +20,23 @@ publishing:
   daily_cap: 48                   # max posts per rolling 24 hours (Instagram allows 50 via the API)
   min_gap_minutes: 25             # minimum time between two posts (runs every 30 min)
   post_story: false               # Riya asked: don't share posts to stories
+  format: "image"                 # Riya chose image posts (Reels-with-music code kept but switched off)
   post_first_comment: true        # posts the "pinned comment" text as the first comment (pinning itself is manual)
   instagram_api_version: "v26.0"
 
 instagram:
   app_id: "1592311015512899"      # Instagram app ID of "Riya Newsdesk" (public, not a secret)
   redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html"
+  fb_app_id: "1689024269257510"   # Meta app ID (Facebook Login, needed for Reels music)
+  fb_redirect_uri: "https://riyagadhwal2002-blip.github.io/riya-newsdesk/connect-facebook.html"
+
+# Reels with music (used when publishing.format is "reel" and the Facebook connection is done)
+music:
+  seconds: 8                      # Reel length
+  min_duration_seconds: 8         # skip tracks shorter than the Reel
+  dont_repeat_last: 30            # don't reuse a song from the last 30 Reels
+  require_music: true             # no music found → post as an image instead of a silent Reel
+  fallback_queries: ["bollywood", "trending", "viral"]
 
 # Posts that fill quiet stretches between news, in rotation:
 # "Did you know?" facts (facts.yaml) → Bollywood-song marketing explainers → hot takes (content.yaml)
