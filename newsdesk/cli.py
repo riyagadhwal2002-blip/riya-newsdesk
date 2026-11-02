@@ -209,6 +209,68 @@ def cmd_connect(args) -> int:
     return 0
 
 
+def cmd_connect_fb(args) -> int:
+    """Facebook-Login connection (needed for Reels music): code → long-lived user token → Page token + IG id."""
+    import requests
+    from . import tokens
+    from .instagram import IGError, Instagram
+    settings, db, pipe, tg = build(args)
+    ig_cfg = settings.section("instagram")
+    secret = settings.secret("FB_APP_SECRET")
+    if not secret:
+        print("FB_APP_SECRET is not set")
+        return 1
+    ver = settings.section("publishing").get("instagram_api_version", "v26.0")
+    g = f"https://graph.facebook.com/{ver}"
+    code = args.code.strip().split("#")[0].strip()
+    r = requests.get(f"{g}/oauth/access_token", timeout=30, params={
+        "client_id": ig_cfg["fb_app_id"], "client_secret": secret,
+        "redirect_uri": ig_cfg["fb_redirect_uri"], "code": code}).json()
+    if "access_token" not in r:
+        print(f"Code exchange failed: {(r.get('error') or {}).get('message', r)}")
+        return 1
+    r2 = requests.get(f"{g}/oauth/access_token", timeout=30, params={
+        "grant_type": "fb_exchange_token", "client_id": ig_cfg["fb_app_id"], "client_secret": secret,
+        "fb_exchange_token": r["access_token"]}).json()
+    user_token = r2.get("access_token") or r["access_token"]
+    expires_in = int(r2.get("expires_in") or r.get("expires_in") or 0)
+    pages = requests.get(f"{g}/me/accounts", timeout=30, params={
+        "fields": "id,name,access_token,instagram_business_account{id,username}", "access_token": user_token,
+        "limit": 50}).json().get("data", [])
+    handle = settings.section("brand").get("handle", "").lower()
+    linked = [p for p in pages if p.get("instagram_business_account")]
+    page = next((p for p in linked if p["instagram_business_account"].get("username", "").lower() == handle),
+                linked[0] if linked else None)
+    if not page:
+        print("No Facebook Page with a linked Instagram account was shared. Link the Page in Instagram, then retry.")
+        return 1
+    ig_id = page["instagram_business_account"]["id"]
+    kind = None
+    for k, tok in (("page", page.get("access_token")), ("user", user_token)):
+        if not tok:
+            continue
+        try:
+            n = len(Instagram(ig_id, tok, ver, host="https://graph.facebook.com").search_audio(None, "music", 5))
+            kind = k
+            print(f"Music check with {k} token: {n} trending tracks available")
+            break
+        except IGError as exc:
+            print(f"Music check with {k} token failed: {exc}")
+    if not kind:
+        print("Connected, but Instagram's music library isn't available to this account yet.")
+        return 1
+    tokens.save(db, user_token, secret, key="fb_user_token_enc")
+    if page.get("access_token"):
+        tokens.save(db, page["access_token"], secret, key="fb_page_token_enc")
+    db.set("fb_token_kind", kind)
+    db.set("ig_fb_user_id", ig_id)
+    if expires_in:
+        db.set("fb_token_expires_at", iso(utcnow() + __import__("datetime").timedelta(seconds=expires_in)))
+    db.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    print(f"Connected music for @{page['instagram_business_account'].get('username')} via Page '{page.get('name')}'")
+    return 0
+
+
 def cmd_report(args) -> int:
     settings, db, _, tg = build(args)
     rows = db.conn.execute(
@@ -256,6 +318,8 @@ def main(argv=None) -> int:
     sub.add_parser("telegram-id", help="print your Telegram chat id")
     cp = sub.add_parser("connect", help="finish Instagram login with a one-time code")
     cp.add_argument("--code", required=True)
+    cf = sub.add_parser("connect-fb", help="finish Facebook login (Reels music) with a one-time code")
+    cf.add_argument("--code", required=True)
     sub.add_parser("status")
     sub.add_parser("pause", help="emergency stop for publishing")
     sub.add_parser("resume")
@@ -267,7 +331,7 @@ def main(argv=None) -> int:
 
     handlers = {
         "run-once": cmd_run_once, "loop": cmd_loop, "check": cmd_check, "feeds": cmd_feeds, "demo": cmd_demo,
-        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id, "connect": cmd_connect,
+        "status": cmd_status, "report": cmd_report, "telegram-id": cmd_telegram_id, "connect": cmd_connect, "connect-fb": cmd_connect_fb,
         "pause": lambda a: cmd_set(a, "paused", "1", "⏸ Publishing paused."),
         "resume": lambda a: cmd_set(a, "paused", "0", "▶️ Publishing resumed."),
         "live": lambda a: cmd_set(a, "mode_override", "live", "🔴 LIVE mode: posts publish automatically."),

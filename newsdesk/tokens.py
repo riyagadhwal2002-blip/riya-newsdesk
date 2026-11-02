@@ -15,14 +15,14 @@ def _fernet(seed: str) -> Fernet:
     return Fernet(base64.urlsafe_b64encode(hashlib.sha256(("newsdesk:" + seed).encode()).digest()))
 
 
-def save(db, token: str, seed: str | None) -> None:
+def save(db, token: str, seed: str | None, key: str = "ig_token_enc") -> None:
     if not seed:
         return
-    db.set("ig_token_enc", _fernet(seed).encrypt(token.encode()).decode())
+    db.set(key, _fernet(seed).encrypt(token.encode()).decode())
 
 
-def load(db, seed: str | None) -> str | None:
-    blob = db.get("ig_token_enc")
+def load(db, seed: str | None, key: str = "ig_token_enc") -> str | None:
+    blob = db.get(key)
     if not blob or not seed:
         return None
     try:

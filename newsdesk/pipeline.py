@@ -4,17 +4,19 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import cluster as clu
-from . import factcheck, facts, hosting, schedule, scoring, tokens
+from . import alerts, factcheck, facts, hosting, schedule, scoring, tokens
 from .db import DB, iso, parse_iso, utcnow
 from .feeds import fetch_all, fetch_article_text
 from .instagram import IGError, Instagram, TokenExpired
 from .llm import BudgetExceeded, LLMError
 from .log import log
 from .prompts import CHECKER_SYSTEM, WRITER_SYSTEM, checker_user, writer_user
+from .reel import render_reel
 from .render import render_card, render_story
 from .telegram import HELP, Telegram
 
@@ -35,6 +37,7 @@ class Pipeline:
         self.article_fn = article_fn
         self.verify_public_url = verify_public_url
         self.wiki_fn = wiki_fn or facts.wiki_text
+        self.fb_factory = self._default_fb
         self.disc = settings.section("discovery")
         self.pub = settings.section("publishing")
         self.kw = settings.section("keywords")
@@ -61,6 +64,64 @@ class Pipeline:
 
     def story_start(self, first_published: datetime, now: datetime) -> datetime:
         return schedule.effective_start(first_published, self.windows(), now, self.tz())
+
+    def notify(self, key: str, text: str, every_hours: int = 12) -> None:
+        """Email-style alert through GitHub (once per `every_hours` per key) + Telegram if configured."""
+        now = self.now_fn()
+        last = self.db.get(f"alert_{key}")
+        if last and now - parse_iso(last) < timedelta(hours=every_hours):
+            return
+        self.db.set(f"alert_{key}", iso(now))
+        self.tg.send(text)
+        alerts.send(text)
+
+    @staticmethod
+    def is_block(exc: Exception) -> bool:
+        msg = str(exc).lower()
+        return getattr(exc, "code", None) in (10, 200, 368) or "access blocked" in msg or "blocked" in msg
+
+    def handle_block(self, exc: Exception) -> None:
+        if self.db.get("paused_reason") != "meta_blocked":
+            self.db.set("paused", "1")
+            self.db.set("paused_reason", "meta_blocked")
+            self.db.set("blocked_since", iso(self.now_fn()))
+        self.notify("meta_blocked",
+                    "⛔ Instagram posting is paused: Meta blocked API access (" + str(exc)[:120] + "). "
+                    "Fix: open developers.facebook.com on your laptop, log in, and complete 'Confirm account'. "
+                    "Posting restarts automatically within 2 hours after that.", every_hours=24)
+
+    def repair_burned_content(self) -> None:
+        if self.db.get("repair_v1_done"):
+            return
+        rows = self.db.conn.execute("SELECT title FROM clusters WHERE status='failed' AND title LIKE '%:%'").fetchall()
+        keys = {"fact": "facts_used", "song": "content_used_song", "hot_take": "content_used_hot_take"}
+        restored = 0
+        for (title,) in rows:
+            kind, _, item_id = title.partition(":")
+            if kind in keys:
+                used = set(json.loads(self.db.get(keys[kind], "[]")))
+                if item_id in used:
+                    used.discard(item_id)
+                    self.db.set(keys[kind], json.dumps(sorted(used)))
+                    restored += 1
+        self.db.set("repair_v1_done", "1")
+        log.info("restored %d evergreen posts that failed to publish", restored)
+
+    def maybe_auto_resume(self, now: datetime) -> None:
+        if self.db.get("paused_reason") != "meta_blocked":
+            return
+        last = self.db.get("block_probe_at")
+        if last and now - parse_iso(last) < timedelta(hours=2):
+            return
+        self.db.set("block_probe_at", iso(now))
+        try:
+            self.ig_factory().me()
+        except IGError as exc:
+            log.info("still blocked: %s", exc)
+            return
+        self.db.set("paused", "0")
+        self.db.set("paused_reason", "")
+        self.notify("meta_unblocked", "✅ Instagram access is back. Posting has restarted automatically.", every_hours=1)
 
     def token_seed(self) -> str | None:
         """Secret used to encrypt the stored token: the token secret if set, else the app secret."""
@@ -116,6 +177,9 @@ class Pipeline:
         stats.update(self.ingest(items, now))
         self.expire(now)
 
+        self.repair_burned_content()
+        if self.paused():
+            self.maybe_auto_resume(now)
         if self.paused():
             log.info("paused — ingested %d new items, not processing", stats["new_items"])
         else:
@@ -362,14 +426,18 @@ class Pipeline:
         post_id = self.db.add_post(cid, "publishing", list(toks), package, iso(now), str(card))
         self.db.update_cluster(cid, status="ready")
         try:
-            url = hosting.publish_image(card, self.s.public_dir, self.s.public_base_url, verify=self.verify_public_url,
-                                        git_push=os.environ.get("HOSTING") == "git")
-            self.db.update_post(post_id, image_url=url)
-            ig = self.ig_factory()
-            container = ig.create_image_container(url, caption, post.get("alt_text"))
-            self.db.update_post(post_id, ig_container_id=container)
-            ig.wait_until_ready(container)
-            media_id = ig.publish_container(container, caption)
+            media_id, ig = None, None
+            if self.reels_enabled():
+                media_id, ig = self.publish_reel(card, caption, brand, post_id, post_dir)
+            if media_id is None:  # image post (default, and fallback if the Reel couldn't be made)
+                url = hosting.publish_image(card, self.s.public_dir, self.s.public_base_url,
+                                            verify=self.verify_public_url, git_push=os.environ.get("HOSTING") == "git")
+                self.db.update_post(post_id, image_url=url)
+                ig = self.ig_factory()
+                container = ig.create_image_container(url, caption, post.get("alt_text"))
+                self.db.update_post(post_id, ig_container_id=container)
+                ig.wait_until_ready(container)
+                media_id = ig.publish_container(container, caption)
             permalink = ig.permalink(media_id)
             self.db.update_post(post_id, status="published", ig_media_id=media_id, permalink=permalink,
                                 published_at=iso(self.now_fn()))
@@ -388,15 +456,84 @@ class Pipeline:
             self.db.update_post(post_id, status="failed", error=str(exc)[:500])
             self.db.update_cluster(cid, status="failed", reason="token expired")
             self.db.set("paused", "1")
-            self.tg.send("🛑 Instagram token expired or revoked. Auto-publishing PAUSED. "
-                         "Generate a new token, put it in .env, then run `newsdesk resume`.")
+            self.db.set("paused_reason", "token")
+            self.notify("token_expired", "🛑 Instagram connection expired. Posting is paused. Open "
+                        "riyagadhwal2002-blip.github.io/riya-newsdesk/connect.html, tap Allow, then click Create.")
             return "failed"
         except (IGError, hosting.HostingError, OSError) as exc:
             self.db.update_post(post_id, status="failed", error=str(exc)[:500])
             self.db.update_cluster(cid, status="failed", reason=str(exc)[:300])
-            self.tg.send(f"❌ Publishing failed (nothing went live): {exc}")
             log.error("publish failed: %s", exc)
+            if isinstance(exc, IGError) and self.is_block(exc):
+                self.handle_block(exc)
+            else:
+                self.notify("publish_failed", f"❌ A post failed to publish (nothing went live): {str(exc)[:200]}")
             return "failed"
+
+    # ── Reels with music ────────────────────────────────────────────────────
+    def reels_enabled(self) -> bool:
+        return self.pub.get("format", "image") == "reel" and bool(self.db.get("ig_fb_user_id"))
+
+    def _default_fb(self) -> Instagram:
+        seed = self.s.secret("FB_APP_SECRET")
+        kind = self.db.get("fb_token_kind", "page")
+        token = tokens.load(self.db, seed, key=f"fb_{kind}_token_enc")
+        user_id = self.db.get("ig_fb_user_id")
+        if not token or not user_id:
+            raise IGError("Facebook-Login connection for music is not set up")
+        return Instagram(user_id, token, self.pub.get("instagram_api_version", "v26.0"), host="https://graph.facebook.com")
+
+    def pick_audio(self, fb) -> dict | None:
+        cfg = self.s.section("music")
+        used = json.loads(self.db.get("audio_used", "[]"))
+        tracks: list[dict] = []
+        try:
+            tracks = fb.search_audio(None, "music", 50)            # trending first
+        except IGError as exc:
+            log.warning("trending audio lookup failed: %s", exc)
+        for q in cfg.get("fallback_queries", []):
+            if len(tracks) >= 5:
+                break
+            try:
+                tracks += fb.search_audio(q, "music", 25)
+            except IGError:
+                continue
+        min_ms = int(cfg.get("min_duration_seconds", 8)) * 1000
+        fresh = [t for t in tracks if t.get("audio_id") and t["audio_id"] not in used
+                 and (t.get("duration_in_ms") or min_ms) >= min_ms]
+        pick = (fresh or [t for t in tracks if t.get("audio_id")] or [None])[0]
+        if pick:
+            used = ([pick["audio_id"]] + used)[:int(cfg.get("dont_repeat_last", 30))]
+            self.db.set("audio_used", json.dumps(used))
+        return pick
+
+    def publish_reel(self, card: Path, caption: str, brand: dict, post_id: int, post_dir: Path):
+        """Returns (media_id, client) or (None, None) to fall back to an image post."""
+        try:
+            fb = self.fb_factory()
+            track = self.pick_audio(fb)
+            if not track and self.s.section("music").get("require_music", True):
+                log.warning("no music available — posting as image instead")
+                return None, None
+            video = render_reel(card, post_dir / "reel.mp4", brand, int(self.s.section("music").get("seconds", 8)))
+            audio = None
+            if track:
+                audio = {"audio_id": track["audio_id"], "audio_volume": 100, "video_volume": 1}
+            container, uri = fb.create_reel_container(caption, audio)
+            self.db.update_post(post_id, ig_container_id=container)
+            fb.upload_video(uri, video)
+            fb.wait_until_ready(container, max_checks=16, every=20)
+            media_id = fb.publish_container(container, caption)
+            if track:
+                self.db.set(f"audio_for_post_{post_id}",
+                            json.dumps({"title": track.get("title"), "artist": track.get("display_artist")}))
+                log.info("reel published with %s — %s", track.get("title"), track.get("display_artist"))
+            return media_id, fb
+        except TokenExpired:
+            raise
+        except (IGError, OSError, subprocess.SubprocessError) as exc:
+            log.warning("reel failed, falling back to image post: %s", exc)
+            return None, None
 
     # ── "Did you know?" posts ───────────────────────────────────────────────
     EVERGREEN_CATEGORIES = {"fact": "Did you know?", "song": "Marketing x Bollywood", "hot_take": "Hot take"}
@@ -450,7 +587,11 @@ class Pipeline:
             if not ok:
                 log.warning("fact %s skipped — not confirmed on Wikipedia (missing: %s)", fact["id"], missing)
                 continue
-            return self.publish_fact(fact, now)
+            result = self.publish_fact(fact, now)
+            if not (result.get("posted") or result.get("previews")):
+                used.discard(fact["id"])  # failed to publish → keep it for later
+                self.db.set("facts_used", json.dumps(sorted(used)))
+            return result
         return {}
 
     def content_turn(self, kind: str, now: datetime) -> dict:
@@ -473,6 +614,9 @@ class Pipeline:
             cid = self.db.add_cluster(f"{kind}:{item['id']}", [], iso(now), True, "pending", iso(now))
             outcome = self.produce_and_publish(self.db.get_cluster(cid), [], pkg,
                                                {"articles": [], "source_text": ""}, 100, "opinion/evergreen", set(), now)
+            if outcome not in ("published", "dry_run"):
+                used.discard(item["id"])  # failed to publish → keep it for later
+                self.db.set(key, json.dumps(sorted(used)))
             return {kind: 1, "posted" if outcome == "published" else "previews":
                     int(outcome in ("published", "dry_run"))}
         return {}

@@ -1,6 +1,9 @@
-"""Instagram API with Instagram Login (graph.instagram.com) — image publishing, comments, insights, token refresh."""
+"""Instagram publishing: graph.instagram.com (Instagram Login) for image posts, graph.facebook.com (Facebook Login)
+for Reels with licensed music via the Audio API (ig_audio + audio_configuration)."""
 from __future__ import annotations
 
+import json
+import os
 import time
 
 import requests
@@ -8,6 +11,8 @@ import requests
 from .log import log
 
 BASE = "https://graph.instagram.com"
+FB_BASE = "https://graph.facebook.com"
+RUPLOAD = "https://rupload.facebook.com/ig-api-upload"
 
 
 class IGError(Exception):
@@ -22,16 +27,18 @@ class TokenExpired(IGError):
 
 
 class Instagram:
-    def __init__(self, user_id: str, token: str, version: str = "v26.0", session=None, sleep=time.sleep):
+    def __init__(self, user_id: str, token: str, version: str = "v26.0", session=None, sleep=time.sleep,
+                 host: str = BASE):
         self.user_id = user_id
         self.token = token
         self.version = version
+        self.host = host
         self.http = session or requests.Session()
         self.sleep = sleep
 
     # low level ---------------------------------------------------------------
     def _url(self, path: str, versioned: bool = True) -> str:
-        return f"{BASE}/{self.version}/{path}" if versioned else f"{BASE}/{path}"
+        return f"{self.host}/{self.version}/{path}" if versioned else f"{self.host}/{path}"
 
     def _request(self, method: str, path: str, versioned: bool = True, **params) -> dict:
         params["access_token"] = self.token
@@ -95,6 +102,47 @@ class Instagram:
     def publish_story(self, container_id: str) -> str:
         """Stories are published once, without the caption-matching recovery used for feed posts."""
         return self._request("POST", f"{self.user_id}/media_publish", creation_id=container_id)["id"]
+
+    # reels + music (Facebook Login only) ---------------------------------------------
+    def search_audio(self, query: str | None = None, audio_type: str = "music", limit: int = 25) -> list[dict]:
+        """Trending tracks when query is None (Meta's behaviour), else keyword search."""
+        params = {"audio_type": audio_type, "user_id": self.user_id, "limit": limit}
+        if query:
+            params["search_query"] = query
+        return self._request("GET", "ig_audio", **params).get("data", [])
+
+    def create_reel_container(self, caption: str, audio: dict | None = None, thumb_offset_ms: int = 0) -> tuple[str, str]:
+        params = {"media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true",
+                  "thumb_offset": str(thumb_offset_ms)}
+        if audio:
+            params["audio_configuration"] = json.dumps(audio)
+        data = self._retry(lambda: self._request("POST", f"{self.user_id}/media", **params))
+        uri = data.get("uri") or f"{RUPLOAD}/{self.version}/{data['id']}"
+        return data["id"], uri
+
+    def upload_video(self, uri: str, path) -> None:
+        size = os.path.getsize(path)
+        for attempt in range(3):
+            try:
+                with open(path, "rb") as fh:
+                    r = self.http.post(uri, data=fh, timeout=300, headers={
+                        "Authorization": f"OAuth {self.token}", "offset": "0", "file_size": str(size)})
+                if r.status_code < 300:
+                    return
+                msg = f"video upload HTTP {r.status_code}: {r.text[:200]}"
+                if r.status_code < 500:
+                    raise IGError(msg)
+            except requests.RequestException as exc:
+                msg = f"video upload network error: {type(exc).__name__}"
+            log.warning("%s (attempt %d)", msg, attempt + 1)
+            self.sleep(10 * (attempt + 1))
+        raise IGError("video upload failed after retries")
+
+    def media_audio_type(self, media_id: str) -> str | None:
+        try:
+            return self._request("GET", media_id, fields="media_audio_type").get("media_audio_type")
+        except IGError:
+            return None
 
     def container_status(self, container_id: str) -> str:
         return self._request("GET", container_id, fields="status_code").get("status_code", "")
